@@ -148,7 +148,11 @@ if (isNewArchitectureEnabled()) {
 }
 
 repositories {
-  mavenLocal()
+    maven {
+    name = "GitHubPackages"
+    url = uri("https://maven.pkg.github.com/Cycurid/android-cycurid-sdk")
+  }
+  // mavenLocal()
   mavenCentral()
   google()
 }
