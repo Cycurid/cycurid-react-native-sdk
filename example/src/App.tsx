@@ -38,7 +38,7 @@ export default function App() {
         />
         <View style={styles.spacer} />
         <Button
-          title="Identification"
+          title="Onboarding"
           color="orange"
           onPress={() => handleButtonPress(CycurIdType.onboarding)}
         />

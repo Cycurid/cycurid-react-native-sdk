@@ -10,23 +10,73 @@ npm install react-native-cycurid-sdk
 
 ## Usage
 
+https://docs.cycurid.com/
 
 ```js
-import { multiply } from 'react-native-cycurid-sdk';
+export default function App() {
+  const [livenessResult, setLivenessResult] = useState<string | null>(null);
 
-// ...
+  const handleButtonPress = async (type: CycurIdType) => {
 
-const result = multiply(3, 7);
+    const config = new CycuridConfig(
+      'API_KEY',
+      'SECRET_KEY',
+      'test_user_react_native_01'
+    );
+
+    // CycurIdType can be either CycurIdType.isHuman or CycurIdType.onboarding. See documentation for more details.
+    try {
+      const result = await initCycurid(type, config);
+      setLivenessResult(result);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
+  return (
+    <View style={styles.container}>
+      <View style={styles.buttonContainer}>
+        <Button
+          title="Is Human"
+          color="skyblue"
+          onPress={() => handleButtonPress(CycurIdType.isHuman)}
+        />
+        <View style={styles.spacer} />
+        <Button
+          title="Onboarding"
+          color="orange"
+          onPress={() => handleButtonPress(CycurIdType.onboarding)}
+        />
+      </View>
+      {livenessResult && (
+        <Text style={styles.resultText}>Liveness Result: {livenessResult}</Text>
+      )}
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  buttonContainer: {
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  spacer: {
+    height: 20,
+  },
+  resultText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginVertical: 10,
+  },
+});
+
 ```
-
-
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
-## License
-
-MIT
 
 ---
 
