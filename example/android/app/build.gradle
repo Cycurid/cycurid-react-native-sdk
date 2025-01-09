@@ -111,6 +111,16 @@ dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
 
+  implementation "androidx.lifecycle:lifecycle-viewmodel:2.5.1"
+  implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+
+  configurations.all {
+    resolutionStrategy {
+      force 'androidx.lifecycle:lifecycle-viewmodel:2.5.1'
+      force 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    }
+  }
+
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")
     } else {
@@ -135,4 +145,10 @@ if (isNewArchitectureEnabled()) {
       }
     }
     preBuild.dependsOn invokeLibraryCodegen
+}
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+  google()
 }

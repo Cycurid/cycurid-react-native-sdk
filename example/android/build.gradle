@@ -8,7 +8,12 @@ buildscript {
         kotlinVersion = "1.9.24"
     }
     repositories {
+      mavenLocal()
         google()
+    //     maven {
+    //         name = "GitHubPackages"
+    //         url = uri("https://maven.pkg.github.com/Cycurid/android-cycurid-sdk")
+    //   }
         mavenCentral()
     }
     dependencies {
@@ -16,6 +21,12 @@ buildscript {
         classpath("com.facebook.react:react-native-gradle-plugin")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
     }
+}
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+  google()
 }
 
 apply plugin: "com.facebook.react.rootproject"

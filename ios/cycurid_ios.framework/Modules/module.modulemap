@@ -1,0 +1,11 @@
+framework module cycurid_ios {
+  umbrella header "cycurid_ios.h"
+  export *
+
+  module * { export * }
+}
+
+module cycurid_ios.Swift {
+  header "cycurid_ios-Swift.h"
+  requires objc
+}

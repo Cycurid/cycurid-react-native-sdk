@@ -1,0 +1,4012 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name cycurid_ios
+import AVFoundation
+import AVKit
+import AudioToolbox
+import CommonCrypto
+import CoreImage
+import CoreNFC
+import CoreTelephony
+import CryptoKit
+import CryptoTokenKit
+import Darwin
+import DeveloperToolsSupport
+import Foundation
+import ImageIO
+import MachO
+import ObjectiveC
+import Swift
+import SwiftUI
+import SystemConfiguration
+import UIKit
+import Vision
+import _Concurrency
+import _CoreNFC_UIKit
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_exported import cycurid_ios
+extension cycurid_ios.CS.BigUInt {
+  public mutating func multiply(byWord y: cycurid_ios.CS.BigUInt.Word)
+  public func multiplied(byWord y: cycurid_ios.CS.BigUInt.Word) -> cycurid_ios.CS.BigUInt
+  public mutating func multiplyAndAdd(_ x: cycurid_ios.CS.BigUInt, _ y: cycurid_ios.CS.BigUInt.Word, shiftedBy shift: Swift.Int = 0)
+  public func multiplied(by y: cycurid_ios.CS.BigUInt) -> cycurid_ios.CS.BigUInt
+  public static var directMultiplicationLimit: Swift.Int
+  public static func * (x: cycurid_ios.CS.BigUInt, y: cycurid_ios.CS.BigUInt) -> cycurid_ios.CS.BigUInt
+  public static func *= (a: inout cycurid_ios.CS.BigUInt, b: cycurid_ios.CS.BigUInt)
+}
+extension cycurid_ios.CS.BigInt {
+  public static func * (a: cycurid_ios.CS.BigInt, b: cycurid_ios.CS.BigInt) -> cycurid_ios.CS.BigInt
+  public static func *= (a: inout cycurid_ios.CS.BigInt, b: cycurid_ios.CS.BigInt)
+}
+final public class Poly1305 : cycurid_ios.Authenticator {
+  public enum Error : Swift.Error {
+    case authenticateError
+    public static func == (a: cycurid_ios.Poly1305.Error, b: cycurid_ios.Poly1305.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static let blockSize: Swift.Int
+  public init(key: Swift.Array<Swift.UInt8>)
+  final public func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+@available(iOS 13, macOS 10.15, *)
+public enum CertificateType {
+  case documentSigningCertificate
+  case issuerSigningCertificate
+  public static func == (a: cycurid_ios.CertificateType, b: cycurid_ios.CertificateType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@available(iOS 13, macOS 10.15, *)
+public enum CertificateItem : Swift.String {
+  case fingerprint
+  case issuerName
+  case subjectName
+  case serialNumber
+  case signatureAlgorithm
+  case publicKeyAlgorithm
+  case notBefore
+  case notAfter
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@available(iOS 13, macOS 10.15, *)
+public class X509Wrapper {
+  final public let cert: Swift.OpaquePointer
+  public init?(with cert: Swift.OpaquePointer?)
+  public func getItemsAsDict() -> [cycurid_ios.CertificateItem : Swift.String]
+  public func certToPEM() -> Swift.String
+  public func getFingerprint() -> Swift.String?
+  public func getNotBeforeDate() -> Swift.String?
+  public func getNotAfterDate() -> Swift.String?
+  public func getSerialNumber() -> Swift.String?
+  public func getSignatureAlgorithm() -> Swift.String?
+  public func getPublicKeyAlgorithm() -> Swift.String?
+  public func getIssuerName() -> Swift.String?
+  public func getSubjectName() -> Swift.String?
+  @objc deinit
+}
+public struct ECB : cycurid_ios.BlockMode {
+  public let options: cycurid_ios.BlockModeOption
+  public let customBlockSize: Swift.Int?
+  public init()
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping cycurid_ios.CipherOperationOnBlock, encryptionOperation: @escaping cycurid_ios.CipherOperationOnBlock) throws -> any cycurid_ios.CipherModeWorker
+}
+extension cycurid_ios.CS.BigUInt {
+  public init?<T>(exactly source: T) where T : Swift.BinaryFloatingPoint
+  public init<T>(_ source: T) where T : Swift.BinaryFloatingPoint
+}
+extension cycurid_ios.CS.BigInt {
+  public init?<T>(exactly source: T) where T : Swift.BinaryFloatingPoint
+  public init<T>(_ source: T) where T : Swift.BinaryFloatingPoint
+}
+extension Swift.BinaryFloatingPoint where Self.RawExponent : Swift.FixedWidthInteger, Self.RawSignificand : Swift.FixedWidthInteger {
+  public init(_ value: cycurid_ios.CS.BigInt)
+  public init(_ value: cycurid_ios.CS.BigUInt)
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class SecurityInfo {
+  public func getObjectIdentifier() -> Swift.String
+  public func getProtocolOIDString() -> Swift.String
+  @objc deinit
+}
+@objc public protocol BiometricResultDelegate {
+  @objc func biometricResult(result: Swift.String)
+}
+@available(*, renamed: "Digest")
+public typealias Hash = cycurid_ios.Digest
+public struct Digest {
+  public static func md5(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha1(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha224(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha256(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha384(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha512(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha2(_ bytes: Swift.Array<Swift.UInt8>, variant: cycurid_ios.SHA2.Variant) -> Swift.Array<Swift.UInt8>
+  public static func sha3(_ bytes: Swift.Array<Swift.UInt8>, variant: cycurid_ios.SHA3.Variant) -> Swift.Array<Swift.UInt8>
+}
+@available(iOS 13, macOS 10.15, *)
+public enum DocTypeEnum : Swift.String {
+  case TD1
+  case TD2
+  case OTHER
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup1 : cycurid_ios.DataGroup {
+  public var elements: [Swift.String : Swift.String] {
+    get
+  }
+  @objc deinit
+}
+@available(iOS 13, macOS 10.15, *)
+public func AESEncrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func AESDecrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func AESECBEncrypt(key: [Swift.UInt8], message: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func tripleDESEncrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func tripleDESDecrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func DESEncrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8], options: Swift.UInt32 = 0) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func DESDecrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8], options: Swift.UInt32 = 0) -> [Swift.UInt8]
+extension Foundation.Data {
+  public func checksum() -> Swift.UInt16
+  public func md5() -> Foundation.Data
+  public func sha1() -> Foundation.Data
+  public func sha224() -> Foundation.Data
+  public func sha256() -> Foundation.Data
+  public func sha384() -> Foundation.Data
+  public func sha512() -> Foundation.Data
+  public func sha3(_ variant: cycurid_ios.SHA3.Variant) -> Foundation.Data
+  public func crc32(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Foundation.Data
+  public func crc32c(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Foundation.Data
+  public func crc16(seed: Swift.UInt16? = nil) -> Foundation.Data
+  public func encrypt(cipher: any cycurid_ios.Cipher) throws -> Foundation.Data
+  public func decrypt(cipher: any cycurid_ios.Cipher) throws -> Foundation.Data
+  public func authenticate(with authenticator: any cycurid_ios.Authenticator) throws -> Foundation.Data
+}
+extension Foundation.Data {
+  public init(hex: Swift.String)
+  public var bytes: Swift.Array<Swift.UInt8> {
+    get
+  }
+  public func toHexString() -> Swift.String
+}
+extension cycurid_ios.CS.BigUInt : Swift.Comparable {
+  public static func compare(_ a: cycurid_ios.CS.BigUInt, _ b: cycurid_ios.CS.BigUInt) -> Foundation.ComparisonResult
+  public static func == (a: cycurid_ios.CS.BigUInt, b: cycurid_ios.CS.BigUInt) -> Swift.Bool
+  public static func < (a: cycurid_ios.CS.BigUInt, b: cycurid_ios.CS.BigUInt) -> Swift.Bool
+}
+extension cycurid_ios.CS.BigInt {
+  public static func == (a: cycurid_ios.CS.BigInt, b: cycurid_ios.CS.BigInt) -> Swift.Bool
+  public static func < (a: cycurid_ios.CS.BigInt, b: cycurid_ios.CS.BigInt) -> Swift.Bool
+}
+public struct PCBC : cycurid_ios.BlockMode {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    public static func == (a: cycurid_ios.PCBC.Error, b: cycurid_ios.PCBC.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: cycurid_ios.BlockModeOption
+  public let customBlockSize: Swift.Int?
+  public init(iv: Swift.Array<Swift.UInt8>)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping cycurid_ios.CipherOperationOnBlock, encryptionOperation: @escaping cycurid_ios.CipherOperationOnBlock) throws -> any cycurid_ios.CipherModeWorker
+}
+@objc @_hasMissingDesignatedInitializers public class AAMVADocumentData : cycurid_ios.DocumentData {
+  @objc override public var firstName: Swift.String? {
+    @objc get
+  }
+  @objc override public var lastName: Swift.String? {
+    @objc get
+  }
+  @objc override public var address: Swift.String? {
+    @objc get
+  }
+  @objc override public var dateOfBirth: Swift.String? {
+    @objc get
+  }
+  @objc override public var dateOfIssue: Swift.String? {
+    @objc get
+  }
+  @objc override public var dateOfExpiry: Swift.String? {
+    @objc get
+  }
+  @objc override public var documentNumber: Swift.String? {
+    @objc get
+  }
+  @objc override public var sex: Swift.String? {
+    @objc get
+  }
+  @objc deinit
+}
+public enum PassportAuthenticationStatus {
+  case notDone
+  case success
+  case failed
+  public static func == (a: cycurid_ios.PassportAuthenticationStatus, b: cycurid_ios.PassportAuthenticationStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@available(iOS 13, macOS 10.15, *)
+public class NFCPassportModel {
+  public var documentType: Swift.String {
+    get
+  }
+  public var documentSubType: Swift.String {
+    get
+  }
+  public var documentNumber: Swift.String {
+    get
+  }
+  public var issuingAuthority: Swift.String {
+    get
+  }
+  public var documentExpiryDate: Swift.String {
+    get
+  }
+  public var dateOfBirth: Swift.String {
+    get
+  }
+  public var gender: Swift.String {
+    get
+  }
+  public var nationality: Swift.String {
+    get
+  }
+  public var lastName: Swift.String {
+    get
+  }
+  public var firstName: Swift.String {
+    get
+  }
+  public var passportMRZ: Swift.String {
+    get
+  }
+  public var placeOfBirth: Swift.String? {
+    get
+  }
+  public var residenceAddress: Swift.String? {
+    get
+  }
+  public var phoneNumber: Swift.String? {
+    get
+  }
+  public var personalNumber: Swift.String? {
+    get
+  }
+  public var documentSigningCertificate: cycurid_ios.X509Wrapper? {
+    get
+  }
+  public var countrySigningCertificate: cycurid_ios.X509Wrapper? {
+    get
+  }
+  public var LDSVersion: Swift.String {
+    get
+  }
+  public var dataGroupsPresent: [Swift.String] {
+    get
+  }
+  public var dataGroupsAvailable: [cycurid_ios.DataGroupId] {
+    get
+  }
+  public var dataGroupsRead: [cycurid_ios.DataGroupId : cycurid_ios.DataGroup] {
+    get
+  }
+  public var dataGroupHashes: [cycurid_ios.DataGroupId : cycurid_ios.DataGroupHash] {
+    get
+  }
+  public var cardAccess: cycurid_ios.CardAccess? {
+    get
+  }
+  public var BACStatus: cycurid_ios.PassportAuthenticationStatus {
+    get
+  }
+  public var PACEStatus: cycurid_ios.PassportAuthenticationStatus {
+    get
+  }
+  public var chipAuthenticationStatus: cycurid_ios.PassportAuthenticationStatus {
+    get
+  }
+  public var passportCorrectlySigned: Swift.Bool {
+    get
+  }
+  public var documentSigningCertificateVerified: Swift.Bool {
+    get
+  }
+  public var passportDataNotTampered: Swift.Bool {
+    get
+  }
+  public var activeAuthenticationPassed: Swift.Bool {
+    get
+  }
+  public var activeAuthenticationChallenge: [Swift.UInt8] {
+    get
+  }
+  public var activeAuthenticationSignature: [Swift.UInt8] {
+    get
+  }
+  public var verificationErrors: [any Swift.Error] {
+    get
+  }
+  public var isPACESupported: Swift.Bool {
+    get
+  }
+  public var isChipAuthenticationSupported: Swift.Bool {
+    get
+  }
+  public var passportImage: UIKit.UIImage? {
+    get
+  }
+  public var signatureImage: UIKit.UIImage? {
+    get
+  }
+  public var activeAuthenticationSupported: Swift.Bool {
+    get
+  }
+  public init()
+  public init(from dump: [Swift.String : Swift.String])
+  public func addDataGroup(_ id: cycurid_ios.DataGroupId, dataGroup: cycurid_ios.DataGroup)
+  public func getDataGroup(_ id: cycurid_ios.DataGroupId) -> cycurid_ios.DataGroup?
+  public func dumpPassportData(selectedDataGroups: [cycurid_ios.DataGroupId], includeActiveAuthenticationData: Swift.Bool = false) -> [Swift.String : Swift.String]
+  public func getHashesForDatagroups(hashAlgorythm: Swift.String) -> [cycurid_ios.DataGroupId : [Swift.UInt8]]
+  public func verifyPassport(masterListURL: Foundation.URL?, useCMSVerification: Swift.Bool = false)
+  public func verifyActiveAuthentication(challenge: [Swift.UInt8], signature: [Swift.UInt8])
+  @objc deinit
+}
+public typealias CipherOperationOnBlock = (_ block: Swift.ArraySlice<Swift.UInt8>) -> Swift.Array<Swift.UInt8>?
+public protocol BlockMode {
+  var options: cycurid_ios.BlockModeOption { get }
+  @inlinable func worker(blockSize: Swift.Int, cipherOperation: @escaping cycurid_ios.CipherOperationOnBlock, encryptionOperation: @escaping cycurid_ios.CipherOperationOnBlock) throws -> any cycurid_ios.CipherModeWorker
+  var customBlockSize: Swift.Int? { get }
+}
+public struct DataField {
+  public let description: Swift.String
+  public let originalValue: Swift.String
+  public let parsedValue: Swift.String
+  public init(description: Swift.String, originalValue: Swift.String, parsedValue: Swift.String)
+}
+@_hasMissingDesignatedInitializers @objc public class AAMVAv1DocumentData : cycurid_ios.AAMVADocumentData {
+  @objc override public var lastName: Swift.String? {
+    @objc get
+  }
+  @objc deinit
+}
+extension Swift.UInt64 {
+  @_specialize(exported: false, kind: full, where T == Swift.ArraySlice<Swift.UInt8>)
+  @inlinable internal init<T>(bytes: T, fromIndex index: T.Index) where T : Swift.Collection, T.Element == Swift.UInt8, T.Index == Swift.Int {
+    if bytes.isEmpty {
+      self = 0
+      return
+    }
+
+    let count = bytes.count
+
+    let val0 = count > 0 ? UInt64(bytes[index.advanced(by: 0)]) << 56 : 0
+    let val1 = count > 1 ? UInt64(bytes[index.advanced(by: 1)]) << 48 : 0
+    let val2 = count > 2 ? UInt64(bytes[index.advanced(by: 2)]) << 40 : 0
+    let val3 = count > 3 ? UInt64(bytes[index.advanced(by: 3)]) << 32 : 0
+    let val4 = count > 4 ? UInt64(bytes[index.advanced(by: 4)]) << 24 : 0
+    let val5 = count > 5 ? UInt64(bytes[index.advanced(by: 5)]) << 16 : 0
+    let val6 = count > 6 ? UInt64(bytes[index.advanced(by: 6)]) << 8 : 0
+    let val7 = count > 7 ? UInt64(bytes[index.advanced(by: 7)]) : 0
+
+    self = val0 | val1 | val2 | val3 | val4 | val5 | val6 | val7
+  }
+}
+public enum PKCS5 {
+}
+extension cycurid_ios.CS.BigUInt {
+  public init?<S>(_ text: S, radix: Swift.Int = 10) where S : Swift.StringProtocol
+}
+extension cycurid_ios.CS.BigInt {
+  public init?<S>(_ text: S, radix: Swift.Int = 10) where S : Swift.StringProtocol
+}
+extension Swift.String {
+  public init(_ v: cycurid_ios.CS.BigUInt)
+  public init(_ v: cycurid_ios.CS.BigUInt, radix: Swift.Int, uppercase: Swift.Bool = false)
+  public init(_ value: cycurid_ios.CS.BigInt, radix: Swift.Int = 10, uppercase: Swift.Bool = false)
+}
+extension cycurid_ios.CS.BigUInt : Swift.ExpressibleByStringLiteral {
+  public init(unicodeScalarLiteral value: Swift.UnicodeScalar)
+  public init(extendedGraphemeClusterLiteral value: Swift.String)
+  public init(stringLiteral value: Swift.StringLiteralType)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringLiteralType = Swift.StringLiteralType
+  public typealias UnicodeScalarLiteralType = Swift.UnicodeScalar
+}
+extension cycurid_ios.CS.BigInt : Swift.ExpressibleByStringLiteral {
+  public init(unicodeScalarLiteral value: Swift.UnicodeScalar)
+  public init(extendedGraphemeClusterLiteral value: Swift.String)
+  public init(stringLiteral value: Swift.StringLiteralType)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringLiteralType = Swift.StringLiteralType
+  public typealias UnicodeScalarLiteralType = Swift.UnicodeScalar
+}
+extension cycurid_ios.CS.BigUInt : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension cycurid_ios.CS.BigInt : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension cycurid_ios.CS.BigUInt : Swift.CustomPlaygroundDisplayConvertible {
+  public var playgroundDescription: Any {
+    get
+  }
+}
+extension cycurid_ios.CS.BigInt : Swift.CustomPlaygroundDisplayConvertible {
+  public var playgroundDescription: Any {
+    get
+  }
+}
+@available(iOS 13, *)
+public class PACEHandler {
+  public init(cardAccess: cycurid_ios.CardAccess, tagReader: cycurid_ios.TagReader) throws
+  #if compiler(>=5.3) && $AsyncAwait
+  public func doPACE(mrzKey: Swift.String) async throws
+  #endif
+  @objc deinit
+}
+@available(iOS 13, *)
+public class BACHandler {
+  public var ksenc: [Swift.UInt8]
+  public var ksmac: [Swift.UInt8]
+  public var kifd: [Swift.UInt8]
+  public init()
+  public init(tagReader: cycurid_ios.TagReader)
+  #if compiler(>=5.3) && $AsyncAwait
+  public func performBACAndGetSessionKeys(mrzKey: Swift.String) async throws
+  #endif
+  public func sessionKeys(data: [Swift.UInt8]) throws -> ([Swift.UInt8], [Swift.UInt8], [Swift.UInt8])
+  @objc deinit
+}
+extension cycurid_ios.CS.BigUInt {
+  public func isStrongProbablePrime(_ base: cycurid_ios.CS.BigUInt) -> Swift.Bool
+  public func isPrime(rounds: Swift.Int = 10) -> Swift.Bool
+}
+extension cycurid_ios.CS.BigInt {
+  public func isStrongProbablePrime(_ base: cycurid_ios.CS.BigInt) -> Swift.Bool
+  public func isPrime(rounds: Swift.Int = 10) -> Swift.Bool
+}
+public protocol CipherModeWorker {
+  var cipherOperation: cycurid_ios.CipherOperationOnBlock { get }
+  var additionalBufferSize: Swift.Int { get }
+  @inlinable mutating func encrypt(block plaintext: Swift.ArraySlice<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  @inlinable mutating func decrypt(block ciphertext: Swift.ArraySlice<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+}
+public protocol BlockModeWorker : cycurid_ios.CipherModeWorker {
+  var blockSize: Swift.Int { get }
+}
+public protocol CounterModeWorker : cycurid_ios.CipherModeWorker {
+  associatedtype Counter
+  var counter: Self.Counter { get set }
+}
+public protocol SeekableModeWorker : cycurid_ios.CipherModeWorker {
+  mutating func seek(to position: Swift.Int) throws
+}
+public protocol StreamModeWorker : cycurid_ios.CipherModeWorker {
+}
+public protocol FinalizingEncryptModeWorker : cycurid_ios.CipherModeWorker {
+  mutating func finalize(encrypt ciphertext: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.ArraySlice<Swift.UInt8>
+}
+public protocol FinalizingDecryptModeWorker : cycurid_ios.CipherModeWorker {
+  @discardableResult
+  mutating func willDecryptLast(bytes ciphertext: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.ArraySlice<Swift.UInt8>
+  mutating func didDecryptLast(bytes plaintext: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.ArraySlice<Swift.UInt8>
+  mutating func finalize(decrypt plaintext: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.ArraySlice<Swift.UInt8>
+}
+public enum Environment {
+  case dev
+  case staging
+  case production
+  public static func == (a: cycurid_ios.Environment, b: cycurid_ios.Environment) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct MultipartRequest {
+  public let boundary: Swift.String
+  public init(boundary: Swift.String = UUID().uuidString)
+  public mutating func add(key: Swift.String, value: Swift.String)
+  public mutating func add(key: Swift.String, fileName: Swift.String, fileMimeType: Swift.String, fileData: Foundation.Data)
+  public var httpContentTypeHeadeValue: Swift.String {
+    get
+  }
+  public var httpBody: Foundation.Data {
+    get
+  }
+}
+extension Foundation.Data {
+  public mutating func append(_ string: Swift.String, encoding: Swift.String.Encoding = .utf8)
+}
+extension cycurid_ios.AES : cycurid_ios.Cryptors {
+  @inlinable final public func makeEncryptor() throws -> any cycurid_ios.Cryptor & cycurid_ios.Updatable {
+    let blockSize = blockMode.customBlockSize ?? AES.blockSize
+    let worker = try blockMode.worker(blockSize: blockSize, cipherOperation: encrypt, encryptionOperation: encrypt)
+    if worker is StreamModeWorker {
+      return try StreamEncryptor(blockSize: blockSize, padding: padding, worker)
+    }
+    return try BlockEncryptor(blockSize: blockSize, padding: padding, worker)
+  }
+  @inlinable final public func makeDecryptor() throws -> any cycurid_ios.Cryptor & cycurid_ios.Updatable {
+    let blockSize = blockMode.customBlockSize ?? AES.blockSize
+    let cipherOperation: CipherOperationOnBlock = blockMode.options.contains(.useEncryptToDecrypt) == true ? encrypt : decrypt
+    let worker = try blockMode.worker(blockSize: blockSize, cipherOperation: cipherOperation, encryptionOperation: encrypt)
+    if worker is StreamModeWorker {
+      return try StreamDecryptor(blockSize: blockSize, padding: padding, worker)
+    }
+    return try BlockDecryptor(blockSize: blockSize, padding: padding, worker)
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup14 : cycurid_ios.DataGroup {
+  public var securityInfos: [cycurid_ios.SecurityInfo] {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class OpenSSLUtils {
+  public static func getOpenSSLError() -> Swift.String
+  @available(iOS 13, macOS 10.15, *)
+  public static func getPublicKeyData(from key: Swift.OpaquePointer) -> [Swift.UInt8]?
+  @available(iOS 13, macOS 10.15, *)
+  public static func decodePublicKeyFromBytes(pubKeyData: [Swift.UInt8], params: Swift.OpaquePointer) -> Swift.OpaquePointer?
+  public static func computeSharedSecret(privateKeyPair: Swift.OpaquePointer, publicKey: Swift.OpaquePointer) -> [Swift.UInt8]
+  @objc deinit
+}
+@objc public enum BarcodeParserError : Swift.Int, Swift.Error {
+  case aamvaVersionParsingError
+  case subfileParserCreationError
+  case numberOfEntriesParsingError
+  case offsetParsingError
+  case dataLengthParsingError
+  case parseError, unsupportedBarcodeEncoding, emptyDocument
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public static var _nsErrorDomain: Swift.String {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum FileIntegrityCheck {
+  case bundleID(Swift.String)
+  case mobileProvision(Swift.String)
+  case machO(Swift.String, Swift.String)
+}
+extension cycurid_ios.FileIntegrityCheck {
+  public var description: Swift.String {
+    get
+  }
+}
+public typealias FileIntegrityCheckResult = (result: Swift.Bool, hitChecks: [cycurid_ios.FileIntegrityCheck])
+public enum IntegrityCheckerImageTarget {
+  case `default`
+  case custom(Swift.String)
+}
+public struct CFB : cycurid_ios.BlockMode {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    public static func == (a: cycurid_ios.CFB.Error, b: cycurid_ios.CFB.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum SegmentSize : Swift.Int {
+    case cfb8
+    case cfb128
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public let options: cycurid_ios.BlockModeOption
+  public let customBlockSize: Swift.Int?
+  public init(iv: Swift.Array<Swift.UInt8>, segmentSize: cycurid_ios.CFB.SegmentSize = .cfb128)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping cycurid_ios.CipherOperationOnBlock, encryptionOperation: @escaping cycurid_ios.CipherOperationOnBlock) throws -> any cycurid_ios.CipherModeWorker
+}
+@usableFromInline
+final internal class StreamEncryptor : cycurid_ios.Cryptor, cycurid_ios.Updatable {
+  @usableFromInline
+  internal enum Error : Swift.Error {
+    case unsupported
+    @usableFromInline
+    internal static func == (a: cycurid_ios.StreamEncryptor.Error, b: cycurid_ios.StreamEncryptor.Error) -> Swift.Bool
+    @usableFromInline
+    internal func hash(into hasher: inout Swift.Hasher)
+    @usableFromInline
+    internal var hashValue: Swift.Int {
+      @usableFromInline
+      get
+    }
+  }
+  @usableFromInline
+  final internal let blockSize: Swift.Int
+  @usableFromInline
+  final internal var worker: any cycurid_ios.CipherModeWorker
+  @usableFromInline
+  final internal let padding: cycurid_ios.Padding
+  @usableFromInline
+  final internal var lastBlockRemainder: Swift.Int
+  @usableFromInline
+  internal init(blockSize: Swift.Int, padding: cycurid_ios.Padding, _ worker: any cycurid_ios.CipherModeWorker) throws
+  @inlinable final public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool) throws -> Swift.Array<Swift.UInt8> {
+    var accumulated = Array(bytes)
+    if isLast {
+      // CTR doesn't need padding. Really. Add padding to the last block if really want. but... don't.
+      accumulated = self.padding.add(to: accumulated, blockSize: self.blockSize - self.lastBlockRemainder)
+    }
+
+    var encrypted = Array<UInt8>(reserveCapacity: bytes.count)
+    for chunk in accumulated.batched(by: self.blockSize) {
+      encrypted += self.worker.encrypt(block: chunk)
+    }
+
+    // omit unecessary calculation if not needed
+    if self.padding != .noPadding {
+      self.lastBlockRemainder = encrypted.count.quotientAndRemainder(dividingBy: self.blockSize).remainder
+    }
+
+    if var finalizingWorker = worker as? FinalizingEncryptModeWorker, isLast == true {
+      encrypted = Array(try finalizingWorker.finalize(encrypt: encrypted.slice))
+    }
+
+    return encrypted
+  }
+  @usableFromInline
+  final internal func seek(to: Swift.Int) throws
+  @objc @usableFromInline
+  deinit
+}
+public struct OFB : cycurid_ios.BlockMode {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    public static func == (a: cycurid_ios.OFB.Error, b: cycurid_ios.OFB.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: cycurid_ios.BlockModeOption
+  public let customBlockSize: Swift.Int?
+  public init(iv: Swift.Array<Swift.UInt8>)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping cycurid_ios.CipherOperationOnBlock, encryptionOperation: @escaping cycurid_ios.CipherOperationOnBlock) throws -> any cycurid_ios.CipherModeWorker
+}
+public enum SecureMessagingSupportedAlgorithms {
+  case DES
+  case AES
+  public static func == (a: cycurid_ios.SecureMessagingSupportedAlgorithms, b: cycurid_ios.SecureMessagingSupportedAlgorithms) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@available(iOS 13, *)
+public class SecureMessaging {
+  public init(encryptionAlgorithm: cycurid_ios.SecureMessagingSupportedAlgorithms = .DES, ksenc: [Swift.UInt8], ksmac: [Swift.UInt8], ssc: [Swift.UInt8])
+  @objc deinit
+}
+public protocol Updatable {
+  mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool) throws -> Swift.Array<Swift.UInt8>
+  mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool, output: (_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+}
+extension cycurid_ios.Updatable {
+  @inlinable public mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false, output: (_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Void) throws {
+    let processed = try update(withBytes: bytes, isLast: isLast)
+    if !processed.isEmpty {
+      output(processed)
+    }
+  }
+  @inlinable public mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8> {
+    try self.update(withBytes: bytes, isLast: isLast)
+  }
+  @inlinable public mutating func update(withBytes bytes: Swift.Array<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8> {
+    try self.update(withBytes: bytes.slice, isLast: isLast)
+  }
+  @inlinable public mutating func update(withBytes bytes: Swift.Array<Swift.UInt8>, isLast: Swift.Bool = false, output: (_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Void) throws {
+    try self.update(withBytes: bytes.slice, isLast: isLast, output: output)
+  }
+  @inlinable public mutating func finish(withBytes bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8> {
+    try self.update(withBytes: bytes, isLast: true)
+  }
+  @inlinable public mutating func finish(withBytes bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8> {
+    try self.finish(withBytes: bytes.slice)
+  }
+  @inlinable public mutating func finish() throws -> Swift.Array<Swift.UInt8> {
+    try self.update(withBytes: [], isLast: true)
+  }
+  @inlinable public mutating func finish(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, output: (_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Void) throws {
+    let processed = try update(withBytes: bytes, isLast: true)
+    if !processed.isEmpty {
+      output(processed)
+    }
+  }
+  @inlinable public mutating func finish(withBytes bytes: Swift.Array<Swift.UInt8>, output: (_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Void) throws {
+    try self.finish(withBytes: bytes.slice, output: output)
+  }
+  @inlinable public mutating func finish(output: (Swift.Array<Swift.UInt8>) -> Swift.Void) throws {
+    try self.finish(withBytes: [], output: output)
+  }
+}
+extension cycurid_ios.CS.BigUInt {
+  public static func randomInteger<RNG>(withMaximumWidth width: Swift.Int, using generator: inout RNG) -> cycurid_ios.CS.BigUInt where RNG : Swift.RandomNumberGenerator
+  public static func randomInteger(withMaximumWidth width: Swift.Int) -> cycurid_ios.CS.BigUInt
+  public static func randomInteger<RNG>(withExactWidth width: Swift.Int, using generator: inout RNG) -> cycurid_ios.CS.BigUInt where RNG : Swift.RandomNumberGenerator
+  public static func randomInteger(withExactWidth width: Swift.Int) -> cycurid_ios.CS.BigUInt
+  public static func randomInteger<RNG>(lessThan limit: cycurid_ios.CS.BigUInt, using generator: inout RNG) -> cycurid_ios.CS.BigUInt where RNG : Swift.RandomNumberGenerator
+  public static func randomInteger(lessThan limit: cycurid_ios.CS.BigUInt) -> cycurid_ios.CS.BigUInt
+}
+@_inheritsConvenienceInitializers @objc public class AAMVABarcodeParser : ObjectiveC.NSObject, cycurid_ios.BarcodeParsing {
+  @objc public func parseData(_ data: Foundation.Data) throws -> cycurid_ios.DocumentData
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol PaddingProtocol {
+  func add(to: Swift.Array<Swift.UInt8>, blockSize: Swift.Int) -> Swift.Array<Swift.UInt8>
+  func remove(from: Swift.Array<Swift.UInt8>, blockSize: Swift.Int?) -> Swift.Array<Swift.UInt8>
+}
+public enum Padding : cycurid_ios.PaddingProtocol {
+  case noPadding, zeroPadding, pkcs7, pkcs5, eme_pkcs1v15, emsa_pkcs1v15, iso78164, iso10126
+  public func add(to: Swift.Array<Swift.UInt8>, blockSize: Swift.Int) -> Swift.Array<Swift.UInt8>
+  public func remove(from: Swift.Array<Swift.UInt8>, blockSize: Swift.Int?) -> Swift.Array<Swift.UInt8>
+  public static func == (a: cycurid_ios.Padding, b: cycurid_ios.Padding) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension cycurid_ios.CS.BigUInt {
+  public func greatestCommonDivisor(with b: cycurid_ios.CS.BigUInt) -> cycurid_ios.CS.BigUInt
+  public func inverse(_ modulus: cycurid_ios.CS.BigUInt) -> cycurid_ios.CS.BigUInt?
+}
+extension cycurid_ios.CS.BigInt {
+  public func greatestCommonDivisor(with b: cycurid_ios.CS.BigInt) -> cycurid_ios.CS.BigInt
+  public func inverse(_ modulus: cycurid_ios.CS.BigInt) -> cycurid_ios.CS.BigInt?
+}
+@_hasMissingDesignatedInitializers @objc public class AAMVAv4DocumentData : cycurid_ios.AAMVADocumentData {
+  @objc deinit
+}
+extension cycurid_ios.CS.BigInt : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension cycurid_ios.CS.BigUInt : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public enum CycuridType : Swift.String {
+  case isHuman
+  case identification
+  case verification
+  case dataExtraction
+  case onboarding
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct CycuridOptions {
+  public let userId: Swift.String
+  public let apiKey: Swift.String
+  public let secretKey: Swift.String
+  public init(userId: Swift.String, apiKey: Swift.String, secretKey: Swift.String)
+}
+@_hasMissingDesignatedInitializers public class CycurIDConfiguration {
+  public static var isSandbox: Swift.Bool
+  public static func isExistingUser() -> Swift.Bool
+  public static func Configure(apiKey: Swift.String, secretKey: Swift.String, userId: Swift.String, isSandbox: Swift.Bool = true, completion: @escaping (Swift.Result<cycurid_ios.CycurIDClass, any Swift.Error>) -> Swift.Void)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class CycurIDClass : ObjectiveC.NSObject {
+  public func Configure(apiKey: Swift.String)
+  public static func testSaveKeychain(jwt: Swift.String)
+  public func beginProcess(flow: cycurid_ios.CycuridType, delegateClass: Any)
+  public func beginProcessReact(vc: UIKit.UIViewController)
+  public func beginProcessDocumentUpload(flow: cycurid_ios.CycuridType, delegateClass: Any)
+  public static func getCryptoKeys() -> Swift.String?
+  public static func getIdData() -> [Swift.String : Swift.String]?
+  public static func getLicenseData() -> [Swift.String : Swift.String]?
+  public static func getPassportData() -> [Swift.String : Swift.String]?
+  public static func deleteAllData()
+  public static func returnUserInfo() -> [Swift.String : Swift.String]?
+  public static func getClaims(params: [Swift.String : Any], completionHandler: @escaping ([Swift.String]?) -> Swift.Void)
+  public static func getClaimData(params: [Swift.String : Any], completionHandler: @escaping ([Swift.String : Swift.String]?) -> Swift.Void)
+  public static func verifyMerchantDetails(params: [Swift.String : Swift.String], completionHandler: @escaping (Any?) -> Swift.Void)
+  public static func allowMerchantAcces(params: [Swift.String : Swift.String], completionHandler: @escaping (Swift.String?) -> Swift.Void)
+  public static func denyMerchantAccess(params: [Swift.String : Swift.String], completionHandler: @escaping (Swift.String?) -> Swift.Void)
+  public static func getProfilePicture() -> UIKit.UIImage?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class CycuridObj : ObjectiveC.NSObject {
+  @objc public static func Configure(apiKey: Swift.String, secretKey: Swift.String, userId: Swift.String, completion: @escaping (Swift.Bool, (any Swift.Error)?) -> Swift.Void)
+  @objc public static func beginProcess(flow: Swift.String, delegateClass: Any)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@available(iOS 13, macOS 10.15, *)
+public class ASN1Item : Swift.CustomDebugStringConvertible {
+  public init(line: Swift.String)
+  public func getChild(_ child: Swift.Int) -> cycurid_ios.ASN1Item?
+  public func getNumberOfChildren() -> Swift.Int
+  public var debugDescription: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@available(iOS 13, macOS 10.15, *)
+public class SimpleASN1DumpParser {
+  public init()
+  public func parse(data: Foundation.Data) throws -> cycurid_ios.ASN1Item
+  public func test()
+  @objc deinit
+}
+public protocol Authenticator {
+  func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+public func loadMyFonts()
+extension Swift.String {
+  public func charAt(_ index: Swift.Int) -> Swift.Character
+  public mutating func setCharAt(_ index: Swift.Int, _ new: Swift.Character)
+  public mutating func setCharAt(_ index: Swift.Int, _ new: Swift.String)
+}
+extension cycurid_ios.CS.BigUInt {
+  public func power(_ exponent: Swift.Int) -> cycurid_ios.CS.BigUInt
+  public func power(_ exponent: cycurid_ios.CS.BigUInt, modulus: cycurid_ios.CS.BigUInt) -> cycurid_ios.CS.BigUInt
+}
+extension cycurid_ios.CS.BigInt {
+  public func power(_ exponent: Swift.Int) -> cycurid_ios.CS.BigInt
+  public func power(_ exponent: cycurid_ios.CS.BigInt, modulus: cycurid_ios.CS.BigInt) -> cycurid_ios.CS.BigInt
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup {
+  public var datagroupType: cycurid_ios.DataGroupId
+  public var body: [Swift.UInt8] {
+    get
+  }
+  public var data: [Swift.UInt8] {
+    get
+  }
+  public func hash(_ hashAlgorythm: Swift.String) -> [Swift.UInt8]
+  @objc deinit
+}
+extension Swift.Array where Element == Swift.UInt8 {
+  public func toBase64(options: Foundation.Data.Base64EncodingOptions = []) -> Swift.String
+  public init(base64: Swift.String, options: Foundation.Data.Base64DecodingOptions = .ignoreUnknownCharacters)
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class ChipAuthenticationPublicKeyInfo : cycurid_ios.SecurityInfo {
+  override public func getObjectIdentifier() -> Swift.String
+  override public func getProtocolOIDString() -> Swift.String
+  public func getKeyId() -> Swift.Int
+  @objc deinit
+}
+final public class Checksum {
+  @usableFromInline
+  internal static let table32: [Swift.UInt32]
+  @usableFromInline
+  internal static let table32c: [Swift.UInt32]
+  @usableFromInline
+  internal static let table16: [Swift.UInt16]
+  @usableFromInline
+  internal init()
+  @inlinable final internal func crc32(_ message: Swift.Array<Swift.UInt8>, seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.UInt32 {
+    var crc: UInt32 = seed != nil ? seed! : 0xFFFF_FFFF
+    for chunk in message.batched(by: 256) {
+      for b in chunk {
+        let idx = Int((crc ^ UInt32(reflect ? b : reversed(b))) & 0xFF)
+        crc = (crc >> 8) ^ Checksum.table32[idx]
+      }
+    }
+    return (reflect ? crc : reversed(crc)) ^ 0xFFFF_FFFF
+  }
+  @inlinable final internal func crc32c(_ message: Swift.Array<Swift.UInt8>, seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.UInt32 {
+    var crc: UInt32 = seed != nil ? seed! : 0xFFFF_FFFF
+    for chunk in message.batched(by: 256) {
+      for b in chunk {
+        let idx = Int((crc ^ UInt32(reflect ? b : reversed(b))) & 0xFF)
+        crc = (crc >> 8) ^ Checksum.table32c[idx]
+      }
+    }
+    return (reflect ? crc : reversed(crc)) ^ 0xFFFF_FFFF
+  }
+  @inlinable final internal func crc16(_ message: Swift.Array<Swift.UInt8>, seed: Swift.UInt16? = nil) -> Swift.UInt16 {
+    var crc: UInt16 = seed != nil ? seed! : 0x0000
+    for chunk in message.batched(by: 256) {
+      for b in chunk {
+        crc = (crc >> 8) ^ Checksum.table16[Int((crc ^ UInt16(b)) & 0xFF)]
+      }
+    }
+    return crc
+  }
+  @objc deinit
+}
+extension cycurid_ios.Checksum {
+  @inlinable public static func crc32(_ message: Swift.Array<Swift.UInt8>, seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.UInt32 {
+    Checksum().crc32(message, seed: seed, reflect: reflect)
+  }
+  @inlinable public static func crc32c(_ message: Swift.Array<Swift.UInt8>, seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.UInt32 {
+    Checksum().crc32c(message, seed: seed, reflect: reflect)
+  }
+  @inlinable public static func crc16(_ message: Swift.Array<Swift.UInt8>, seed: Swift.UInt16? = nil) -> Swift.UInt16 {
+    Checksum().crc16(message, seed: seed)
+  }
+}
+extension UIKit.UIImageView {
+  @_Concurrency.MainActor(unsafe) public func loadGif(name: Swift.String)
+  @available(iOS 9.0, *)
+  @_Concurrency.MainActor(unsafe) public func loadGif(asset: Swift.String)
+}
+extension UIKit.UIImage {
+  public class func gif(data: Foundation.Data) -> UIKit.UIImage?
+  public class func gif(url: Swift.String) -> UIKit.UIImage?
+  public class func gif(name: Swift.String) -> UIKit.UIImage?
+  @available(iOS 9.0, *)
+  public class func gif(asset: Swift.String) -> UIKit.UIImage?
+}
+@_inheritsConvenienceInitializers @objc open class DocumentData : ObjectiveC.NSObject {
+  @objc public var isEmpty: Swift.Bool {
+    @objc get
+  }
+  @objc open var firstName: Swift.String? {
+    @objc get
+  }
+  @objc open var lastName: Swift.String? {
+    @objc get
+  }
+  @objc open var address: Swift.String? {
+    @objc get
+  }
+  @objc open var dateOfBirth: Swift.String? {
+    @objc get
+  }
+  @objc open var dateOfExpiry: Swift.String? {
+    @objc get
+  }
+  @objc open var dateOfIssue: Swift.String? {
+    @objc get
+  }
+  @objc open var documentNumber: Swift.String? {
+    @objc get
+  }
+  @objc open var sex: Swift.String? {
+    @objc get
+  }
+  @objc public var rawData: Foundation.Data?
+  @objc public subscript(id: Swift.String) -> Swift.String? {
+    @objc get
+  }
+  @objc public var entryMap: [Swift.String : Swift.String] {
+    @objc get
+  }
+  public var entries: [(key: Swift.String, value: Swift.String)] {
+    get
+  }
+  public func setValue(_ value: cycurid_ios.DataField, forEntryID id: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension Swift.String {
+  public var a: Swift.String {
+    get
+  }
+  public var b: Swift.String {
+    get
+  }
+  public var c: Swift.String {
+    get
+  }
+  public var d: Swift.String {
+    get
+  }
+  public var e: Swift.String {
+    get
+  }
+  public var f: Swift.String {
+    get
+  }
+  public var g: Swift.String {
+    get
+  }
+  public var h: Swift.String {
+    get
+  }
+  public var i: Swift.String {
+    get
+  }
+  public var j: Swift.String {
+    get
+  }
+  public var k: Swift.String {
+    get
+  }
+  public var l: Swift.String {
+    get
+  }
+  public var m: Swift.String {
+    get
+  }
+  public var n: Swift.String {
+    get
+  }
+  public var o: Swift.String {
+    get
+  }
+  public var p: Swift.String {
+    get
+  }
+  public var q: Swift.String {
+    get
+  }
+  public var r: Swift.String {
+    get
+  }
+  public var s: Swift.String {
+    get
+  }
+  public var t: Swift.String {
+    get
+  }
+  public var u: Swift.String {
+    get
+  }
+  public var v: Swift.String {
+    get
+  }
+  public var w: Swift.String {
+    get
+  }
+  public var x: Swift.String {
+    get
+  }
+  public var y: Swift.String {
+    get
+  }
+  public var z: Swift.String {
+    get
+  }
+}
+@objc extension Foundation.NSMutableString {
+  @objc dynamic public var a: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var b: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var c: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var d: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var e: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var f: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var g: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var h: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var i: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var j: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var k: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var l: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var m: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var n: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var o: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var p: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var q: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var r: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var s: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var t: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var u: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var v: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var w: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var x: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var y: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var z: Foundation.NSMutableString {
+    @objc get
+  }
+}
+extension Swift.String {
+  public var A: Swift.String {
+    get
+  }
+  public var B: Swift.String {
+    get
+  }
+  public var C: Swift.String {
+    get
+  }
+  public var D: Swift.String {
+    get
+  }
+  public var E: Swift.String {
+    get
+  }
+  public var F: Swift.String {
+    get
+  }
+  public var G: Swift.String {
+    get
+  }
+  public var H: Swift.String {
+    get
+  }
+  public var I: Swift.String {
+    get
+  }
+  public var J: Swift.String {
+    get
+  }
+  public var K: Swift.String {
+    get
+  }
+  public var L: Swift.String {
+    get
+  }
+  public var M: Swift.String {
+    get
+  }
+  public var N: Swift.String {
+    get
+  }
+  public var O: Swift.String {
+    get
+  }
+  public var P: Swift.String {
+    get
+  }
+  public var Q: Swift.String {
+    get
+  }
+  public var R: Swift.String {
+    get
+  }
+  public var S: Swift.String {
+    get
+  }
+  public var T: Swift.String {
+    get
+  }
+  public var U: Swift.String {
+    get
+  }
+  public var V: Swift.String {
+    get
+  }
+  public var W: Swift.String {
+    get
+  }
+  public var X: Swift.String {
+    get
+  }
+  public var Y: Swift.String {
+    get
+  }
+  public var Z: Swift.String {
+    get
+  }
+}
+@objc extension Foundation.NSMutableString {
+  @objc dynamic public var A: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var B: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var C: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var D: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var E: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var F: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var G: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var H: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var I: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var J: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var K: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var L: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var M: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var N: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var O: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var P: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var Q: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var R: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var S: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var T: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var U: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var V: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var W: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var X: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var Y: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var Z: Foundation.NSMutableString {
+    @objc get
+  }
+}
+extension Swift.String {
+  public var _1: Swift.String {
+    get
+  }
+  public var _2: Swift.String {
+    get
+  }
+  public var _3: Swift.String {
+    get
+  }
+  public var _4: Swift.String {
+    get
+  }
+  public var _5: Swift.String {
+    get
+  }
+  public var _6: Swift.String {
+    get
+  }
+  public var _7: Swift.String {
+    get
+  }
+  public var _8: Swift.String {
+    get
+  }
+  public var _9: Swift.String {
+    get
+  }
+  public var _0: Swift.String {
+    get
+  }
+}
+@objc extension Foundation.NSMutableString {
+  @objc dynamic public var _1: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var _2: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var _3: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var _4: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var _5: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var _6: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var _7: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var _8: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var _9: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var _0: Foundation.NSMutableString {
+    @objc get
+  }
+}
+extension Swift.String {
+  public var space: Swift.String {
+    get
+  }
+  public var point: Swift.String {
+    get
+  }
+  public var dash: Swift.String {
+    get
+  }
+  public var comma: Swift.String {
+    get
+  }
+  public var semicolon: Swift.String {
+    get
+  }
+  public var colon: Swift.String {
+    get
+  }
+  public var apostrophe: Swift.String {
+    get
+  }
+  public var quotation: Swift.String {
+    get
+  }
+  public var plus: Swift.String {
+    get
+  }
+  public var equals: Swift.String {
+    get
+  }
+  public var paren_left: Swift.String {
+    get
+  }
+  public var paren_right: Swift.String {
+    get
+  }
+  public var asterisk: Swift.String {
+    get
+  }
+  public var ampersand: Swift.String {
+    get
+  }
+  public var caret: Swift.String {
+    get
+  }
+  public var percent: Swift.String {
+    get
+  }
+  public var $: Swift.String {
+    get
+  }
+  public var pound: Swift.String {
+    get
+  }
+  public var at: Swift.String {
+    get
+  }
+  public var exclamation: Swift.String {
+    get
+  }
+  public var question_mark: Swift.String {
+    get
+  }
+  public var back_slash: Swift.String {
+    get
+  }
+  public var forward_slash: Swift.String {
+    get
+  }
+  public var curly_left: Swift.String {
+    get
+  }
+  public var curly_right: Swift.String {
+    get
+  }
+  public var bracket_left: Swift.String {
+    get
+  }
+  public var bracket_right: Swift.String {
+    get
+  }
+  public var bar: Swift.String {
+    get
+  }
+  public var less_than: Swift.String {
+    get
+  }
+  public var greater_than: Swift.String {
+    get
+  }
+  public var underscore: Swift.String {
+    get
+  }
+  public var tilda: Swift.String {
+    get
+  }
+}
+@objc extension Foundation.NSMutableString {
+  @objc dynamic public var space: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var point: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var dash: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var comma: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var semicolon: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var colon: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var apostrophe: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var quotation: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var plus: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var equals: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var paren_left: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var paren_right: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var asterisk: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var ampersand: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var caret: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var percent: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var $: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var pound: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var at: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var exclamation: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var question_mark: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var back_slash: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var forward_slash: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var curly_left: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var curly_right: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var bracket_left: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var bracket_right: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var bar: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var less_than: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var greater_than: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var underscore: Foundation.NSMutableString {
+    @objc get
+  }
+  @objc dynamic public var tilda: Foundation.NSMutableString {
+    @objc get
+  }
+}
+extension Swift.String {
+  public var dot: Swift.String {
+    get
+  }
+}
+@objc extension Foundation.NSMutableString {
+  @objc dynamic public var dot: Foundation.NSMutableString {
+    @objc get
+  }
+}
+extension cycurid_ios.HMAC {
+  convenience public init(key: Swift.String, variant: cycurid_ios.HMAC.Variant = .md5) throws
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class NotImplementedDG : cycurid_ios.DataGroup {
+  @objc deinit
+}
+extension cycurid_ios.CS.BigUInt {
+  public init(_ buffer: Swift.UnsafeRawBufferPointer)
+  public init(_ data: Foundation.Data)
+  public func serialize() -> Foundation.Data
+}
+extension cycurid_ios.CS.BigInt {
+  public init(_ buffer: Swift.UnsafeRawBufferPointer)
+  public init(_ data: Foundation.Data)
+  public func serialize() -> Foundation.Data
+}
+@_hasMissingDesignatedInitializers @objc public class AAMVAv7DocumentData : cycurid_ios.AAMVADocumentData {
+  @objc deinit
+}
+@usableFromInline
+final internal class BlockEncryptor : cycurid_ios.Cryptor, cycurid_ios.Updatable {
+  public enum Error : Swift.Error {
+    case unsupported
+    public static func == (a: cycurid_ios.BlockEncryptor.Error, b: cycurid_ios.BlockEncryptor.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @usableFromInline
+  internal init(blockSize: Swift.Int, padding: cycurid_ios.Padding, _ worker: any cycurid_ios.CipherModeWorker) throws
+  final public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool) throws -> Swift.Array<Swift.UInt8>
+  @usableFromInline
+  final internal func seek(to: Swift.Int) throws
+  @objc @usableFromInline
+  deinit
+}
+@_hasMissingDesignatedInitializers @objc public class AAMVAv8DocumentData : cycurid_ios.AAMVADocumentData {
+  @objc deinit
+}
+final public class Blowfish {
+  public enum Error : Swift.Error {
+    case dataPaddingRequired
+    case invalidKeyOrInitializationVector
+    case invalidInitializationVector
+    case invalidBlockMode
+    public static func == (a: cycurid_ios.Blowfish.Error, b: cycurid_ios.Blowfish.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static let blockSize: Swift.Int
+  final public let keySize: Swift.Int
+  public init(key: Swift.Array<Swift.UInt8>, blockMode: any cycurid_ios.BlockMode = CBC(iv: Array<UInt8>(repeating: 0, count: Blowfish.blockSize)), padding: cycurid_ios.Padding) throws
+  @objc deinit
+}
+extension cycurid_ios.Blowfish : cycurid_ios.Cipher {
+  final public func encrypt<C>(_ bytes: C) throws -> Swift.Array<Swift.UInt8> where C : Swift.Collection, C.Element == Swift.UInt8, C.Index == Swift.Int
+  final public func decrypt<C>(_ bytes: C) throws -> Swift.Array<Swift.UInt8> where C : Swift.Collection, C.Element == Swift.UInt8, C.Index == Swift.Int
+}
+@_inheritsConvenienceInitializers final public class CBCMAC : cycurid_ios.CMAC {
+  override final public func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  override public init(key: Swift.Array<Swift.UInt8>) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @available(iOSApplicationExtension, unavailable)
+public class IOSSecuritySuite {
+  public static func amIJailbroken() -> Swift.Bool
+  public static func amIJailbrokenWithFailMessage() -> (jailbroken: Swift.Bool, failMessage: Swift.String)
+  public static func amIJailbrokenWithFailedChecks() -> (jailbroken: Swift.Bool, failedChecks: [cycurid_ios.FailedCheckType])
+  public static func amIRunInEmulator() -> Swift.Bool
+  public static func amIDebugged() -> Swift.Bool
+  public static func denyDebugger()
+  public static func amITampered(_ checks: [cycurid_ios.FileIntegrityCheck]) -> cycurid_ios.FileIntegrityCheckResult
+  public static func amIReverseEngineered() -> Swift.Bool
+  public static func amIReverseEngineeredWithFailedChecks() -> (reverseEngineered: Swift.Bool, failedChecks: [cycurid_ios.FailedCheckType])
+  public static func amIRuntimeHooked(dyldWhiteList: [Swift.String], detectionClass: Swift.AnyClass, selector: ObjectiveC.Selector, isClassMethod: Swift.Bool) -> Swift.Bool
+  public static func amIProxied() -> Swift.Bool
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+extension cycurid_ios.IOSSecuritySuite {
+  public static func amIMSHooked(_ functionAddress: Swift.UnsafeMutableRawPointer) -> Swift.Bool
+  public static func denyMSHook(_ functionAddress: Swift.UnsafeMutableRawPointer) -> Swift.UnsafeMutableRawPointer?
+  public static func denySymbolHook(_ symbol: Swift.String)
+  public static func denySymbolHook(_ symbol: Swift.String, at image: Swift.UnsafePointer<MachO.mach_header>, imageSlide slide: Swift.Int)
+  public static func getMachOFileHashValue(_ target: cycurid_ios.IntegrityCheckerImageTarget = .default) -> Swift.String?
+  public static func findLoadedDylibs(_ target: cycurid_ios.IntegrityCheckerImageTarget = .default) -> [Swift.String]?
+  public static func hasBreakpointAt(_ functionAddr: Swift.UnsafeRawPointer, functionSize: Darwin.vm_size_t?) -> Swift.Bool
+  public static func hasWatchpoint() -> Swift.Bool
+}
+public class BlockDecryptor : cycurid_ios.Cryptor, cycurid_ios.Updatable {
+  public enum Error : Swift.Error {
+    case unsupported
+    public static func == (a: cycurid_ios.BlockDecryptor.Error, b: cycurid_ios.BlockDecryptor.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @usableFromInline
+  final internal let blockSize: Swift.Int
+  @usableFromInline
+  final internal let padding: cycurid_ios.Padding
+  @usableFromInline
+  internal var worker: any cycurid_ios.CipherModeWorker
+  @usableFromInline
+  internal var accumulated: [Swift.UInt8]
+  @usableFromInline
+  internal init(blockSize: Swift.Int, padding: cycurid_ios.Padding, _ worker: any cycurid_ios.CipherModeWorker) throws
+  @inlinable public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8> {
+    self.accumulated += bytes
+
+    // If a worker (eg GCM) can combine ciphertext + tag
+    // we need to remove tag from the ciphertext.
+    if !isLast && self.accumulated.count < self.blockSize + self.worker.additionalBufferSize {
+      return []
+    }
+
+    let accumulatedWithoutSuffix: Array<UInt8>
+    if self.worker.additionalBufferSize > 0 {
+      // FIXME: how slow is that?
+      accumulatedWithoutSuffix = Array(self.accumulated.prefix(self.accumulated.count - self.worker.additionalBufferSize))
+    } else {
+      accumulatedWithoutSuffix = self.accumulated
+    }
+
+    var processedBytesCount = 0
+    var plaintext = Array<UInt8>(reserveCapacity: accumulatedWithoutSuffix.count)
+    // Processing in a block-size manner. It's good for block modes, but bad for stream modes.
+    for var chunk in accumulatedWithoutSuffix.batched(by: self.blockSize) {
+      if isLast || (accumulatedWithoutSuffix.count - processedBytesCount) >= blockSize {
+        let isLastChunk = processedBytesCount + chunk.count == accumulatedWithoutSuffix.count
+
+        if isLast, isLastChunk, var finalizingWorker = worker as? FinalizingDecryptModeWorker {
+          chunk = try finalizingWorker.willDecryptLast(bytes: chunk + accumulated.suffix(worker.additionalBufferSize)) // tag size
+        }
+
+        if !chunk.isEmpty {
+          plaintext += worker.decrypt(block: chunk)
+        }
+
+        if isLast, isLastChunk, var finalizingWorker = worker as? FinalizingDecryptModeWorker {
+          plaintext = Array(try finalizingWorker.didDecryptLast(bytes: plaintext.slice))
+        }
+
+        processedBytesCount += chunk.count
+      }
+    }
+    accumulated.removeFirst(processedBytesCount) // super-slow
+
+    if isLast {
+      if accumulatedWithoutSuffix.isEmpty, var finalizingWorker = worker as? FinalizingDecryptModeWorker {
+        try finalizingWorker.willDecryptLast(bytes: self.accumulated.suffix(self.worker.additionalBufferSize))
+        plaintext = Array(try finalizingWorker.didDecryptLast(bytes: plaintext.slice))
+      }
+      plaintext = self.padding.remove(from: plaintext, blockSize: self.blockSize)
+    }
+
+    return plaintext
+  }
+  public func seek(to position: Swift.Int) throws
+  @objc deinit
+}
+public protocol Cryptor {
+  mutating func seek(to: Swift.Int) throws
+}
+final public class OCB : cycurid_ios.BlockMode {
+  public enum Mode {
+    case combined
+    case detached
+    public static func == (a: cycurid_ios.OCB.Mode, b: cycurid_ios.OCB.Mode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public let options: cycurid_ios.BlockModeOption
+  public enum Error : Swift.Error {
+    case invalidNonce
+    case fail
+    public static func == (a: cycurid_ios.OCB.Error, b: cycurid_ios.OCB.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public let customBlockSize: Swift.Int?
+  final public var authenticationTag: Swift.Array<Swift.UInt8>?
+  public init(nonce N: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, tagLength: Swift.Int = 16, mode: cycurid_ios.OCB.Mode = .detached)
+  @inlinable convenience public init(nonce N: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, mode: cycurid_ios.OCB.Mode = .detached) {
+    self.init(nonce: N, additionalAuthenticatedData: additionalAuthenticatedData, tagLength: authenticationTag.count, mode: mode)
+    self.authenticationTag = authenticationTag
+  }
+  final public func worker(blockSize: Swift.Int, cipherOperation: @escaping cycurid_ios.CipherOperationOnBlock, encryptionOperation: @escaping cycurid_ios.CipherOperationOnBlock) throws -> any cycurid_ios.CipherModeWorker
+  @objc deinit
+}
+public enum PACEMappingType {
+  case GM
+  case IM
+  case CAM
+  public static func == (a: cycurid_ios.PACEMappingType, b: cycurid_ios.PACEMappingType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class PACEInfo : cycurid_ios.SecurityInfo {
+  public static let PARAM_ID_GFP_1024_160: Swift.Int
+  public static let PARAM_ID_GFP_2048_224: Swift.Int
+  public static let PARAM_ID_GFP_2048_256: Swift.Int
+  public static let PARAM_ID_ECP_NIST_P192_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P192_R1: Swift.Int
+  public static let PARAM_ID_ECP_NIST_P224_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P224_R1: Swift.Int
+  public static let PARAM_ID_ECP_NIST_P256_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P256_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P320_R1: Swift.Int
+  public static let PARAM_ID_ECP_NIST_P384_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P384_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P512_R1: Swift.Int
+  public static let PARAM_ID_ECP_NIST_P521_R1: Swift.Int
+  override public func getObjectIdentifier() -> Swift.String
+  override public func getProtocolOIDString() -> Swift.String
+  public func getVersion() -> Swift.Int
+  public func getParameterId() -> Swift.Int?
+  public func getParameterSpec() throws -> Swift.Int32
+  public func getMappingType() throws -> cycurid_ios.PACEMappingType
+  public func getKeyAgreementAlgorithm() throws -> Swift.String
+  public func getCipherAlgorithm() throws -> Swift.String
+  public func getDigestAlgorithm() throws -> Swift.String
+  public func getKeyLength() throws -> Swift.Int
+  public func createMappingKey() throws -> Swift.OpaquePointer
+  public static func getParameterSpec(stdDomainParam: Swift.Int) throws -> Swift.Int32
+  public static func toMappingType(oid: Swift.String) throws -> cycurid_ios.PACEMappingType
+  public static func toKeyAgreementAlgorithm(oid: Swift.String) throws -> Swift.String
+  public static func toCipherAlgorithm(oid: Swift.String) throws -> Swift.String
+  public static func toDigestAlgorithm(oid: Swift.String) throws -> Swift.String
+  public static func toKeyLength(oid: Swift.String) throws -> Swift.Int
+  @objc deinit
+}
+final public class MD5 {
+  public init()
+  final public func calculate(for bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  final public func callAsFunction(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+extension cycurid_ios.MD5 : cycurid_ios.Updatable {
+  final public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+}
+extension cycurid_ios.CS.BigUInt {
+  public subscript(bitAt index: Swift.Int) -> Swift.Bool {
+    get
+    set
+  }
+}
+extension cycurid_ios.CS.BigUInt {
+  public var bitWidth: Swift.Int {
+    get
+  }
+  public var leadingZeroBitCount: Swift.Int {
+    get
+  }
+  public var trailingZeroBitCount: Swift.Int {
+    get
+  }
+}
+extension cycurid_ios.CS.BigInt {
+  public var bitWidth: Swift.Int {
+    get
+  }
+  public var trailingZeroBitCount: Swift.Int {
+    get
+  }
+}
+extension cycurid_ios.CS.BigUInt {
+  public struct Words : Swift.RandomAccessCollection {
+    public var startIndex: Swift.Int {
+      get
+    }
+    public var endIndex: Swift.Int {
+      get
+    }
+    public subscript(index: Swift.Int) -> cycurid_ios.CS.BigUInt.Word {
+      get
+    }
+    public typealias Element = cycurid_ios.CS.BigUInt.Word
+    public typealias Index = Swift.Int
+    public typealias Indices = Swift.Range<Swift.Int>
+    public typealias Iterator = Swift.IndexingIterator<cycurid_ios.CS.BigUInt.Words>
+    public typealias SubSequence = Swift.Slice<cycurid_ios.CS.BigUInt.Words>
+  }
+  public var words: cycurid_ios.CS.BigUInt.Words {
+    get
+  }
+  public init<Words>(words: Words) where Words : Swift.Sequence, Words.Element == Swift.UInt
+}
+extension cycurid_ios.CS.BigInt {
+  public struct Words : Swift.RandomAccessCollection {
+    public typealias Indices = Swift.CountableRange<Swift.Int>
+    public var count: Swift.Int {
+      get
+    }
+    public var indices: cycurid_ios.CS.BigInt.Words.Indices {
+      get
+    }
+    public var startIndex: Swift.Int {
+      get
+    }
+    public var endIndex: Swift.Int {
+      get
+    }
+    public subscript(index: Swift.Int) -> Swift.UInt {
+      get
+    }
+    public typealias Element = Swift.UInt
+    public typealias Index = Swift.Int
+    public typealias Iterator = Swift.IndexingIterator<cycurid_ios.CS.BigInt.Words>
+    public typealias SubSequence = Swift.Slice<cycurid_ios.CS.BigInt.Words>
+  }
+  public var words: cycurid_ios.CS.BigInt.Words {
+    get
+  }
+  public init<S>(words: S) where S : Swift.Sequence, S.Element == Swift.UInt
+}
+@_hasMissingDesignatedInitializers final public class ChaCha20 {
+  public enum Error : Swift.Error {
+    case invalidKeyOrInitializationVector
+    case notSupported
+    public static func == (a: cycurid_ios.ChaCha20.Error, b: cycurid_ios.ChaCha20.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static let blockSize: Swift.Int
+  final public let keySize: Swift.Int
+  convenience public init(key: Swift.Array<Swift.UInt8>, iv nonce: Swift.Array<Swift.UInt8>) throws
+  @objc deinit
+}
+extension cycurid_ios.ChaCha20 : cycurid_ios.Cipher {
+  final public func encrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  final public func decrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+extension cycurid_ios.ChaCha20 {
+  public struct ChaChaEncryptor : cycurid_ios.Cryptor, cycurid_ios.Updatable {
+    public mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+    public func seek(to: Swift.Int) throws
+  }
+}
+extension cycurid_ios.ChaCha20 {
+  public struct ChaChaDecryptor : cycurid_ios.Cryptor, cycurid_ios.Updatable {
+    public mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = true) throws -> Swift.Array<Swift.UInt8>
+    public func seek(to: Swift.Int) throws
+  }
+}
+extension cycurid_ios.ChaCha20 : cycurid_ios.Cryptors {
+  final public func makeEncryptor() -> any cycurid_ios.Cryptor & cycurid_ios.Updatable
+  final public func makeDecryptor() -> any cycurid_ios.Cryptor & cycurid_ios.Updatable
+}
+@available(iOS 13, macOS 10.15, *)
+public struct DataGroupHash {
+  public var id: Swift.String
+  public var sodHash: Swift.String
+  public var computedHash: Swift.String
+  public var match: Swift.Bool
+}
+public protocol RNCryptorType {
+  init(password: Swift.String)
+  func update(withData data: Foundation.Data) throws -> Foundation.Data
+  func finalData() throws -> Foundation.Data
+}
+public enum RNCryptor {
+  public enum Error : Swift.Int, Swift.Error {
+    case hmacMismatch
+    case unknownHeader
+    case messageTooShort
+    case memoryFailure
+    case invalidCredentialType
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public static func encrypt(data: Foundation.Data, withPassword password: Swift.String) -> Foundation.Data
+  public static func decrypt(data: Foundation.Data, withPassword password: Swift.String) throws -> Foundation.Data
+  public static func randomData(ofLength length: Swift.Int) -> Foundation.Data
+  final public class Encryptor : cycurid_ios.RNCryptorType {
+    public init(password: Swift.String)
+    final public func update(withData data: Foundation.Data) -> Foundation.Data
+    final public func finalData() -> Foundation.Data
+    final public func encrypt(data: Foundation.Data) -> Foundation.Data
+    @objc deinit
+  }
+  final public class Decryptor : cycurid_ios.RNCryptorType {
+    public init(password: Swift.String)
+    final public func decrypt(data: Foundation.Data) throws -> Foundation.Data
+    final public func update(withData data: Foundation.Data) throws -> Foundation.Data
+    final public func finalData() throws -> Foundation.Data
+    @objc deinit
+  }
+}
+extension cycurid_ios.RNCryptor {
+  @_hasMissingDesignatedInitializers final public class FormatV3 {
+    public static let keySize: Swift.Int
+    public static let saltSize: Swift.Int
+    public static func makeKey(forPassword password: Swift.String, withSalt salt: Foundation.Data) -> Foundation.Data
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers final public class EncryptorV3 : cycurid_ios.RNCryptorType {
+    convenience public init(password: Swift.String)
+    convenience public init(encryptionKey: Foundation.Data, hmacKey: Foundation.Data)
+    final public func encrypt(data: Foundation.Data) -> Foundation.Data
+    final public func update(withData data: Foundation.Data) -> Foundation.Data
+    final public func finalData() -> Foundation.Data
+    @objc deinit
+  }
+  final public class DecryptorV3 {
+    public init(password: Swift.String)
+    public init(encryptionKey: Foundation.Data, hmacKey: Foundation.Data)
+    final public func decrypt(data: Foundation.Data) throws -> Foundation.Data
+    final public func update(withData data: Foundation.Data) throws -> Foundation.Data
+    final public func finalData() throws -> Foundation.Data
+    @objc deinit
+  }
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class CardAccess {
+  public var securityInfos: [cycurid_ios.SecurityInfo] {
+    get
+  }
+  @objc deinit
+}
+extension Swift.String {
+  public func decryptBase64ToString(cipher: any cycurid_ios.Cipher) throws -> Swift.String
+  public func decryptBase64(cipher: any cycurid_ios.Cipher) throws -> Swift.Array<Swift.UInt8>
+}
+public struct HKDF {
+  public enum Error : Swift.Error {
+    case invalidInput
+    case derivedKeyTooLong
+    public static func == (a: cycurid_ios.HKDF.Error, b: cycurid_ios.HKDF.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(password: Swift.Array<Swift.UInt8>, salt: Swift.Array<Swift.UInt8>? = nil, info: Swift.Array<Swift.UInt8>? = nil, keyLength: Swift.Int? = nil, variant: cycurid_ios.HMAC.Variant = .sha2(.sha256)) throws
+  public func calculate() throws -> Swift.Array<Swift.UInt8>
+  public func callAsFunction() throws -> Swift.Array<Swift.UInt8>
+}
+@_hasMissingDesignatedInitializers @objc public class AAMVAv5DocumentData : cycurid_ios.AAMVADocumentData {
+  @objc deinit
+}
+final public class GCM : cycurid_ios.BlockMode {
+  public enum Mode {
+    case combined
+    case detached
+    public static func == (a: cycurid_ios.GCM.Mode, b: cycurid_ios.GCM.Mode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public let options: cycurid_ios.BlockModeOption
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    case fail
+    public static func == (a: cycurid_ios.GCM.Error, b: cycurid_ios.GCM.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public let customBlockSize: Swift.Int?
+  final public var authenticationTag: Swift.Array<Swift.UInt8>?
+  public init(iv: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, tagLength: Swift.Int = 16, mode: cycurid_ios.GCM.Mode = .detached)
+  convenience public init(iv: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, mode: cycurid_ios.GCM.Mode = .detached)
+  final public func worker(blockSize: Swift.Int, cipherOperation: @escaping cycurid_ios.CipherOperationOnBlock, encryptionOperation: @escaping cycurid_ios.CipherOperationOnBlock) throws -> any cycurid_ios.CipherModeWorker
+  @objc deinit
+}
+extension cycurid_ios.PKCS5 {
+  public struct PBKDF2 {
+    public enum Error : Swift.Error {
+      case invalidInput
+      case derivedKeyTooLong
+      public static func == (a: cycurid_ios.PKCS5.PBKDF2.Error, b: cycurid_ios.PKCS5.PBKDF2.Error) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public init(password: Swift.Array<Swift.UInt8>, salt: Swift.Array<Swift.UInt8>, iterations: Swift.Int = 4096, keyLength: Swift.Int? = nil, variant: cycurid_ios.HMAC.Variant = .sha2(.sha256)) throws
+    public func calculate() throws -> Swift.Array<Swift.UInt8>
+    public func callAsFunction() throws -> Swift.Array<Swift.UInt8>
+  }
+}
+final public class Scrypt {
+  public init(password: Swift.Array<Swift.UInt8>, salt: Swift.Array<Swift.UInt8>, dkLen: Swift.Int, N: Swift.Int, r: Swift.Int, p: Swift.Int) throws
+  final public func calculate() throws -> [Swift.UInt8]
+  final public func callAsFunction() throws -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+extension cycurid_ios.PKCS5 {
+  public struct PBKDF1 {
+    public enum Error : Swift.Error {
+      case invalidInput
+      case derivedKeyTooLong
+      public static func == (a: cycurid_ios.PKCS5.PBKDF1.Error, b: cycurid_ios.PKCS5.PBKDF1.Error) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public enum Variant {
+      case md5, sha1
+      @usableFromInline
+      internal var size: Swift.Int {
+        get
+      }
+      @usableFromInline
+      internal func calculateHash(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+      public static func == (a: cycurid_ios.PKCS5.PBKDF1.Variant, b: cycurid_ios.PKCS5.PBKDF1.Variant) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    @usableFromInline
+    internal let iterations: Swift.Int
+    @usableFromInline
+    internal let variant: cycurid_ios.PKCS5.PBKDF1.Variant
+    @usableFromInline
+    internal let keyLength: Swift.Int
+    @usableFromInline
+    internal let t1: Swift.Array<Swift.UInt8>
+    public init(password: Swift.Array<Swift.UInt8>, salt: Swift.Array<Swift.UInt8>, variant: cycurid_ios.PKCS5.PBKDF1.Variant = .sha1, iterations: Swift.Int = 4096, keyLength: Swift.Int? = nil) throws
+    @inlinable public func calculate() -> Swift.Array<Swift.UInt8> {
+      var t = self.t1
+      for _ in 2...self.iterations {
+        t = self.variant.calculateHash(t)
+      }
+      return Array(t[0..<self.keyLength])
+    }
+    public func callAsFunction() -> Swift.Array<Swift.UInt8>
+  }
+}
+public struct QKMRZResult {
+  public let documentType: Swift.String
+  public let countryCode: Swift.String
+  public let surnames: Swift.String
+  public let givenNames: Swift.String
+  public let documentNumber: Swift.String
+  public let nationality: Swift.String
+  public let birthDate: Foundation.Date?
+  public let sex: Swift.String?
+  public let expiryDate: Foundation.Date?
+  public let personalNumber: Swift.String
+  public let personalNumber2: Swift.String?
+  public let isDocumentNumberValid: Swift.Bool
+  public let isBirthDateValid: Swift.Bool
+  public let isExpiryDateValid: Swift.Bool
+  public let isPersonalNumberValid: Swift.Bool?
+  public let allCheckDigitsValid: Swift.Bool
+}
+final public class HMAC : cycurid_ios.Authenticator {
+  public enum Error : Swift.Error {
+    case authenticateError
+    case invalidInput
+    public static func == (a: cycurid_ios.HMAC.Error, b: cycurid_ios.HMAC.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Variant {
+    case md5
+    case sha1
+    case sha2(cycurid_ios.SHA2.Variant)
+    case sha3(cycurid_ios.SHA3.Variant)
+    @available(*, deprecated, message: "Use sha2(variant) instead.")
+    case sha256, sha384, sha512
+  }
+  public init(key: Swift.Array<Swift.UInt8>, variant: cycurid_ios.HMAC.Variant = .md5)
+  final public func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+public enum PKCS7 {
+}
+public protocol Cryptors : AnyObject {
+  func makeEncryptor() throws -> any cycurid_ios.Cryptor & cycurid_ios.Updatable
+  func makeDecryptor() throws -> any cycurid_ios.Cryptor & cycurid_ios.Updatable
+  static func randomIV(_ blockSize: Swift.Int) -> Swift.Array<Swift.UInt8>
+}
+extension cycurid_ios.Cryptors {
+  public static func randomIV(_ count: Swift.Int) -> Swift.Array<Swift.UInt8>
+}
+extension cycurid_ios.XChaCha20 {
+  convenience public init(key: Swift.String, iv: Swift.String) throws
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class COM : cycurid_ios.DataGroup {
+  public var version: Swift.String {
+    get
+  }
+  public var unicodeVersion: Swift.String {
+    get
+  }
+  public var dataGroupsPresent: [Swift.String] {
+    get
+  }
+  @objc deinit
+}
+public typealias BigInteger = cycurid_ios.CS.BigInt
+public typealias BigUInteger = cycurid_ios.CS.BigUInt
+public enum CS {
+}
+public struct CCM {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    case invalidParameter
+    case fail
+    public static func == (a: cycurid_ios.CCM.Error, b: cycurid_ios.CCM.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: cycurid_ios.BlockModeOption
+  public let customBlockSize: Swift.Int?
+  public var authenticationTag: Swift.Array<Swift.UInt8>?
+  public init(iv: Swift.Array<Swift.UInt8>, tagLength: Swift.Int, messageLength: Swift.Int, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil)
+  public init(iv: Swift.Array<Swift.UInt8>, tagLength: Swift.Int, messageLength: Swift.Int, authenticationTag: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping cycurid_ios.CipherOperationOnBlock, encryptionOperation: @escaping cycurid_ios.CipherOperationOnBlock) throws -> any cycurid_ios.CipherModeWorker
+}
+final public class XChaCha20 : cycurid_ios.BlockMode {
+  public enum Error : Swift.Error {
+    case invalidKeyOrInitializationVector
+    case notSupported
+    public static func == (a: cycurid_ios.XChaCha20.Error, b: cycurid_ios.XChaCha20.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static let blockSize: Swift.Int
+  final public let keySize: Swift.Int
+  public init(key: Swift.Array<Swift.UInt8>, iv nonce: Swift.Array<Swift.UInt8>, blockCounter: Swift.UInt32 = 0) throws
+  final public let options: cycurid_ios.BlockModeOption
+  final public let customBlockSize: Swift.Int?
+  final public func worker(blockSize: Swift.Int, cipherOperation: @escaping cycurid_ios.CipherOperationOnBlock, encryptionOperation: @escaping cycurid_ios.CipherOperationOnBlock) throws -> any cycurid_ios.CipherModeWorker
+  @objc deinit
+}
+extension cycurid_ios.XChaCha20 : cycurid_ios.Cipher {
+  final public func encrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  final public func decrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+extension cycurid_ios.XChaCha20 : cycurid_ios.Cryptors {
+  final public func makeEncryptor() throws -> any cycurid_ios.Cryptor & cycurid_ios.Updatable
+  final public func makeDecryptor() throws -> any cycurid_ios.Cryptor & cycurid_ios.Updatable
+}
+final public class AES {
+  public enum Error : Swift.Error {
+    case invalidKeySize
+    case dataPaddingRequired
+    case invalidData
+    public static func == (a: cycurid_ios.AES.Error, b: cycurid_ios.AES.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Variant : Swift.Int {
+    case aes128, aes192, aes256
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @usableFromInline
+  final internal let variantNr: Swift.Int
+  @usableFromInline
+  final internal let variantNb: Swift.Int
+  @usableFromInline
+  final internal let variantNk: Swift.Int
+  public static let blockSize: Swift.Int
+  final public let keySize: Swift.Int
+  final public let variant: cycurid_ios.AES.Variant
+  @usableFromInline
+  final internal let blockMode: any cycurid_ios.BlockMode
+  @usableFromInline
+  final internal let padding: cycurid_ios.Padding
+  @usableFromInline
+  final internal var expandedKey: Swift.Array<Swift.Array<Swift.UInt32>> {
+    get
+    set
+  }
+  @usableFromInline
+  final internal var expandedKeyInv: Swift.Array<Swift.Array<Swift.UInt32>> {
+    get
+    set
+  }
+  @usableFromInline
+  internal static let T0: [Swift.UInt32]
+  @usableFromInline
+  internal static let T0_INV: [Swift.UInt32]
+  @usableFromInline
+  internal static let T1: [Swift.UInt32]
+  @usableFromInline
+  internal static let T1_INV: [Swift.UInt32]
+  @usableFromInline
+  internal static let T2: [Swift.UInt32]
+  @usableFromInline
+  internal static let T2_INV: [Swift.UInt32]
+  @usableFromInline
+  internal static let T3: [Swift.UInt32]
+  @usableFromInline
+  internal static let T3_INV: [Swift.UInt32]
+  @usableFromInline
+  internal static let U1: [Swift.UInt32]
+  @usableFromInline
+  internal static let U2: [Swift.UInt32]
+  @usableFromInline
+  internal static let U3: [Swift.UInt32]
+  @usableFromInline
+  internal static let U4: [Swift.UInt32]
+  public init(key: Swift.Array<Swift.UInt8>, blockMode: any cycurid_ios.BlockMode, padding: cycurid_ios.Padding = .pkcs7) throws
+  @inlinable final internal func encrypt(block: Swift.ArraySlice<Swift.UInt8>) -> Swift.Array<Swift.UInt8>? {
+    if self.blockMode.options.contains(.paddingRequired) && block.count != AES.blockSize {
+      return Array(block)
+    }
+
+    let rounds = self.variantNr
+    let rk = self.expandedKey
+
+    let b00 = UInt32(block[block.startIndex.advanced(by: 0)])
+    let b01 = UInt32(block[block.startIndex.advanced(by: 1)]) << 8
+    let b02 = UInt32(block[block.startIndex.advanced(by: 2)]) << 16
+    let b03 = UInt32(block[block.startIndex.advanced(by: 3)]) << 24
+    var b0 = b00 | b01 | b02 | b03
+
+    let b10 = UInt32(block[block.startIndex.advanced(by: 4)])
+    let b11 = UInt32(block[block.startIndex.advanced(by: 5)]) << 8
+    let b12 = UInt32(block[block.startIndex.advanced(by: 6)]) << 16
+    let b13 = UInt32(block[block.startIndex.advanced(by: 7)]) << 24
+    var b1 = b10 | b11 | b12 | b13
+
+    let b20 = UInt32(block[block.startIndex.advanced(by: 8)])
+    let b21 = UInt32(block[block.startIndex.advanced(by: 9)]) << 8
+    let b22 = UInt32(block[block.startIndex.advanced(by: 10)]) << 16
+    let b23 = UInt32(block[block.startIndex.advanced(by: 11)]) << 24
+    var b2 = b20 | b21 | b22 | b23
+
+    let b30 = UInt32(block[block.startIndex.advanced(by: 12)])
+    let b31 = UInt32(block[block.startIndex.advanced(by: 13)]) << 8
+    let b32 = UInt32(block[block.startIndex.advanced(by: 14)]) << 16
+    let b33 = UInt32(block[block.startIndex.advanced(by: 15)]) << 24
+    var b3 = b30 | b31 | b32 | b33
+
+    let tLength = 4
+    let t = UnsafeMutablePointer<UInt32>.allocate(capacity: tLength)
+    t.initialize(repeating: 0, count: tLength)
+    defer {
+      t.deinitialize(count: tLength)
+      t.deallocate()
+    }
+
+    for r in 0..<rounds - 1 {
+      t[0] = b0 ^ rk[r][0]
+      t[1] = b1 ^ rk[r][1]
+      t[2] = b2 ^ rk[r][2]
+      t[3] = b3 ^ rk[r][3]
+
+      let lb00 = AES.T0[Int(t[0] & 0xff)]
+      let lb01 = AES.T1[Int((t[1] >> 8) & 0xff)]
+      let lb02 = AES.T2[Int((t[2] >> 16) & 0xff)]
+      let lb03 = AES.T3[Int(t[3] >> 24)]
+      b0 = lb00 ^ lb01 ^ lb02 ^ lb03
+
+      let lb10 = AES.T0[Int(t[1] & 0xff)]
+      let lb11 = AES.T1[Int((t[2] >> 8) & 0xff)]
+      let lb12 = AES.T2[Int((t[3] >> 16) & 0xff)]
+      let lb13 = AES.T3[Int(t[0] >> 24)]
+      b1 = lb10 ^ lb11 ^ lb12 ^ lb13
+
+      let lb20 = AES.T0[Int(t[2] & 0xff)]
+      let lb21 = AES.T1[Int((t[3] >> 8) & 0xff)]
+      let lb22 = AES.T2[Int((t[0] >> 16) & 0xff)]
+      let lb23 = AES.T3[Int(t[1] >> 24)]
+      b2 = lb20 ^ lb21 ^ lb22 ^ lb23
+
+      let lb30 = AES.T0[Int(t[3] & 0xff)]
+      let lb31 = AES.T1[Int((t[0] >> 8) & 0xff)]
+      let lb32 = AES.T2[Int((t[1] >> 16) & 0xff)]
+      let lb33 = AES.T3[Int(t[2] >> 24)]
+      b3 = lb30 ^ lb31 ^ lb32 ^ lb33
+    }
+
+    // last round
+    let r = rounds - 1
+
+    t[0] = b0 ^ rk[r][0]
+    t[1] = b1 ^ rk[r][1]
+    t[2] = b2 ^ rk[r][2]
+    t[3] = b3 ^ rk[r][3]
+
+    // rounds
+    b0 = F1(t[0], t[1], t[2], t[3]) ^ rk[rounds][0]
+    b1 = F1(t[1], t[2], t[3], t[0]) ^ rk[rounds][1]
+    b2 = F1(t[2], t[3], t[0], t[1]) ^ rk[rounds][2]
+    b3 = F1(t[3], t[0], t[1], t[2]) ^ rk[rounds][3]
+
+    let encrypted: Array<UInt8> = [
+      UInt8(b0 & 0xff), UInt8((b0 >> 8) & 0xff), UInt8((b0 >> 16) & 0xff), UInt8((b0 >> 24) & 0xff),
+      UInt8(b1 & 0xff), UInt8((b1 >> 8) & 0xff), UInt8((b1 >> 16) & 0xff), UInt8((b1 >> 24) & 0xff),
+      UInt8(b2 & 0xff), UInt8((b2 >> 8) & 0xff), UInt8((b2 >> 16) & 0xff), UInt8((b2 >> 24) & 0xff),
+      UInt8(b3 & 0xff), UInt8((b3 >> 8) & 0xff), UInt8((b3 >> 16) & 0xff), UInt8((b3 >> 24) & 0xff)
+    ]
+    return encrypted
+  }
+  @usableFromInline
+  final internal func decrypt(block: Swift.ArraySlice<Swift.UInt8>) -> Swift.Array<Swift.UInt8>?
+  @objc deinit
+}
+extension cycurid_ios.AES {
+  @usableFromInline
+  @inline(__always) final internal func F1(_ x0: Swift.UInt32, _ x1: Swift.UInt32, _ x2: Swift.UInt32, _ x3: Swift.UInt32) -> Swift.UInt32
+}
+extension cycurid_ios.AES : cycurid_ios.Cipher {
+  @inlinable final public func encrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8> {
+    let blockSize = self.blockMode.customBlockSize ?? AES.blockSize
+    let chunks = bytes.batched(by: blockSize)
+
+    var oneTimeCryptor = try makeEncryptor()
+    var out = Array<UInt8>(reserveCapacity: bytes.count)
+    for chunk in chunks {
+      out += try oneTimeCryptor.update(withBytes: chunk, isLast: false)
+    }
+    // Padding may be added at the very end
+    out += try oneTimeCryptor.finish()
+
+    if self.blockMode.options.contains(.paddingRequired) && (out.count % AES.blockSize != 0) {
+      throw Error.dataPaddingRequired
+    }
+
+    return out
+  }
+  @inlinable final public func decrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8> {
+    if self.blockMode.options.contains(.paddingRequired) && (bytes.count % AES.blockSize != 0) {
+      throw Error.dataPaddingRequired
+    }
+
+    var oneTimeCryptor = try makeDecryptor()
+    let chunks = bytes.batched(by: AES.blockSize)
+    if chunks.isEmpty {
+      throw Error.invalidData
+    }
+
+    var out = Array<UInt8>(reserveCapacity: bytes.count)
+
+    var lastIdx = chunks.startIndex
+    chunks.indices.formIndex(&lastIdx, offsetBy: chunks.count - 1)
+
+    // To properly remove padding, `isLast` has to be known when called with the last chunk of ciphertext
+    // Last chunk of ciphertext may contains padded data so next call to update(..) won't be able to remove it
+    for idx in chunks.indices {
+      out += try oneTimeCryptor.update(withBytes: chunks[idx], isLast: idx == lastIdx)
+    }
+    return out
+  }
+}
+final public class SHA3 {
+  final public let blockSize: Swift.Int
+  final public let digestLength: Swift.Int
+  final public let markByte: Swift.UInt8
+  @usableFromInline
+  final internal var accumulated: [Swift.UInt8]
+  @usableFromInline
+  final internal var accumulatedHash: Swift.Array<Swift.UInt64>
+  public enum Variant {
+    case sha224, sha256, sha384, sha512, keccak224, keccak256, keccak384, keccak512
+    public var outputLength: Swift.Int {
+      get
+    }
+    public static func == (a: cycurid_ios.SHA3.Variant, b: cycurid_ios.SHA3.Variant) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(variant: cycurid_ios.SHA3.Variant)
+  @inlinable final public func calculate(for bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8> {
+    do {
+      return try update(withBytes: bytes.slice, isLast: true)
+    } catch {
+      return []
+    }
+  }
+  final public func callAsFunction(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  @usableFromInline
+  final internal func process(block chunk: Swift.ArraySlice<Swift.UInt64>, currentHash hh: inout Swift.Array<Swift.UInt64>)
+  @objc deinit
+}
+extension cycurid_ios.SHA3 : cycurid_ios.Updatable {
+  @inlinable final public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8> {
+    self.accumulated += bytes
+
+    if isLast {
+      // Add padding
+      let markByteIndex = self.accumulated.count
+
+      // We need to always pad the input. Even if the input is a multiple of blockSize.
+      let r = self.blockSize * 8
+      let q = (r / 8) - (accumulated.count % (r / 8))
+      self.accumulated += Array<UInt8>(repeating: 0, count: q)
+
+      self.accumulated[markByteIndex] |= self.markByte
+      self.accumulated[self.accumulated.count - 1] |= 0x80
+    }
+
+    var processedBytes = 0
+    for chunk in self.accumulated.batched(by: self.blockSize) {
+      if isLast || (self.accumulated.count - processedBytes) >= self.blockSize {
+        self.process(block: chunk.toUInt64Array().slice, currentHash: &self.accumulatedHash)
+        processedBytes += chunk.count
+      }
+    }
+    self.accumulated.removeFirst(processedBytes)
+
+    // TODO: verify performance, reduce vs for..in
+    let result = self.accumulatedHash.reduce(into: Array<UInt8>()) { (result, value) in
+      result += value.bigEndian.bytes()
+    }
+
+    // reset hash value for instance
+    if isLast {
+      self.accumulatedHash = Array<UInt64>(repeating: 0, count: self.digestLength)
+    }
+
+    return Array(result[0..<self.digestLength])
+  }
+}
+extension cycurid_ios.Rabbit {
+  convenience public init(key: Swift.String) throws
+  convenience public init(key: Swift.String, iv: Swift.String) throws
+}
+@usableFromInline
+final internal class StreamDecryptor : cycurid_ios.Cryptor, cycurid_ios.Updatable {
+  @usableFromInline
+  internal enum Error : Swift.Error {
+    case unsupported
+    @usableFromInline
+    internal static func == (a: cycurid_ios.StreamDecryptor.Error, b: cycurid_ios.StreamDecryptor.Error) -> Swift.Bool
+    @usableFromInline
+    internal func hash(into hasher: inout Swift.Hasher)
+    @usableFromInline
+    internal var hashValue: Swift.Int {
+      @usableFromInline
+      get
+    }
+  }
+  @usableFromInline
+  final internal let blockSize: Swift.Int
+  @usableFromInline
+  final internal var worker: any cycurid_ios.CipherModeWorker
+  @usableFromInline
+  final internal let padding: cycurid_ios.Padding
+  @usableFromInline
+  final internal var accumulated: [Swift.UInt8]
+  @usableFromInline
+  final internal var lastBlockRemainder: Swift.Int
+  @usableFromInline
+  internal init(blockSize: Swift.Int, padding: cycurid_ios.Padding, _ worker: any cycurid_ios.CipherModeWorker) throws
+  @inlinable final public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool) throws -> Swift.Array<Swift.UInt8> {
+    self.accumulated += bytes
+
+    let toProcess = self.accumulated.prefix(max(self.accumulated.count - self.worker.additionalBufferSize, 0))
+
+    if var finalizingWorker = worker as? FinalizingDecryptModeWorker, isLast == true {
+      // will truncate suffix if needed
+      try finalizingWorker.willDecryptLast(bytes: self.accumulated.slice)
+    }
+
+    var processedBytesCount = 0
+    var plaintext = Array<UInt8>(reserveCapacity: bytes.count + self.worker.additionalBufferSize)
+    for chunk in toProcess.batched(by: self.blockSize) {
+      plaintext += self.worker.decrypt(block: chunk)
+      processedBytesCount += chunk.count
+    }
+
+    if var finalizingWorker = worker as? FinalizingDecryptModeWorker, isLast == true {
+      plaintext = Array(try finalizingWorker.didDecryptLast(bytes: plaintext.slice))
+    }
+
+    // omit unecessary calculation if not needed
+    if self.padding != .noPadding {
+      self.lastBlockRemainder = plaintext.count.quotientAndRemainder(dividingBy: self.blockSize).remainder
+    }
+
+    if isLast {
+      // CTR doesn't need padding. Really. Add padding to the last block if really want. but... don't.
+      plaintext = self.padding.remove(from: plaintext, blockSize: self.blockSize - self.lastBlockRemainder)
+    }
+
+    self.accumulated.removeFirst(processedBytesCount) // super-slow
+
+    if var finalizingWorker = worker as? FinalizingDecryptModeWorker, isLast == true {
+      plaintext = Array(try finalizingWorker.finalize(decrypt: plaintext.slice))
+    }
+
+    return plaintext
+  }
+  @inlinable final public func seek(to position: Swift.Int) throws {
+    guard var worker = self.worker as? SeekableModeWorker else {
+      throw Error.unsupported
+    }
+
+    try worker.seek(to: position)
+    self.worker = worker
+  }
+  @objc @usableFromInline
+  deinit
+}
+@_hasMissingDesignatedInitializers @objc public class AAMVAv2DocumentData : cycurid_ios.AAMVADocumentData {
+  @objc override public var firstName: Swift.String? {
+    @objc get
+  }
+  @objc deinit
+}
+final public class SHA1 {
+  @usableFromInline
+  internal static let digestLength: Swift.Int
+  @usableFromInline
+  internal static let blockSize: Swift.Int
+  @usableFromInline
+  internal static let hashInitialValue: Swift.ContiguousArray<Swift.UInt32>
+  @usableFromInline
+  final internal var accumulated: [Swift.UInt8]
+  @usableFromInline
+  final internal var processedBytesTotalCount: Swift.Int
+  @usableFromInline
+  final internal var accumulatedHash: Swift.ContiguousArray<Swift.UInt32>
+  public init()
+  @inlinable final public func calculate(for bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8> {
+    do {
+      return try update(withBytes: bytes.slice, isLast: true)
+    } catch {
+      return []
+    }
+  }
+  final public func callAsFunction(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  @usableFromInline
+  final internal func process(block chunk: Swift.ArraySlice<Swift.UInt8>, currentHash hh: inout Swift.ContiguousArray<Swift.UInt32>)
+  @objc deinit
+}
+extension cycurid_ios.SHA1 : cycurid_ios.Updatable {
+  @discardableResult
+  @inlinable final public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8> {
+    self.accumulated += bytes
+
+    if isLast {
+      let lengthInBits = (processedBytesTotalCount + self.accumulated.count) * 8
+      let lengthBytes = lengthInBits.bytes(totalBytes: 64 / 8) // A 64-bit representation of b
+
+      // Step 1. Append padding
+      bitPadding(to: &self.accumulated, blockSize: SHA1.blockSize, allowance: 64 / 8)
+
+      // Step 2. Append Length a 64-bit representation of lengthInBits
+      self.accumulated += lengthBytes
+    }
+
+    var processedBytes = 0
+    for chunk in self.accumulated.batched(by: SHA1.blockSize) {
+      if isLast || (self.accumulated.count - processedBytes) >= SHA1.blockSize {
+        self.process(block: chunk, currentHash: &self.accumulatedHash)
+        processedBytes += chunk.count
+      }
+    }
+    self.accumulated.removeFirst(processedBytes)
+    self.processedBytesTotalCount += processedBytes
+
+    // output current hash
+    var result = Array<UInt8>(repeating: 0, count: SHA1.digestLength)
+    var pos = 0
+    for idx in 0..<self.accumulatedHash.count {
+      let h = self.accumulatedHash[idx]
+      result[pos + 0] = UInt8((h >> 24) & 0xff)
+      result[pos + 1] = UInt8((h >> 16) & 0xff)
+      result[pos + 2] = UInt8((h >> 8) & 0xff)
+      result[pos + 3] = UInt8(h & 0xff)
+      pos += 4
+    }
+
+    // reset hash value for instance
+    if isLast {
+      self.accumulatedHash = SHA1.hashInitialValue
+    }
+
+    return result
+  }
+}
+extension Swift.Array {
+  @inlinable internal init(reserveCapacity: Swift.Int) {
+    self = Array<Element>()
+    self.reserveCapacity(reserveCapacity)
+  }
+  @inlinable internal var slice: Swift.ArraySlice<Element> {
+    get {
+    self[self.startIndex ..< self.endIndex]
+  }
+  }
+  @inlinable internal subscript(safe index: Swift.Array<Element>.Index) -> Element? {
+    get {
+    return indices.contains(index) ? self[index] : nil
+  }
+  }
+}
+extension Swift.Array where Element == Swift.UInt8 {
+  public init(hex: Swift.String)
+  public func toHexString() -> Swift.String
+}
+extension Swift.Array where Element == Swift.UInt8 {
+  @available(*, deprecated)
+  public func chunks(size chunksize: Swift.Int) -> Swift.Array<Swift.Array<Element>>
+  public func md5() -> [Element]
+  public func sha1() -> [Element]
+  public func sha224() -> [Element]
+  public func sha256() -> [Element]
+  public func sha384() -> [Element]
+  public func sha512() -> [Element]
+  public func sha2(_ variant: cycurid_ios.SHA2.Variant) -> [Element]
+  public func sha3(_ variant: cycurid_ios.SHA3.Variant) -> [Element]
+  public func crc32(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.UInt32
+  public func crc32c(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.UInt32
+  public func crc16(seed: Swift.UInt16? = nil) -> Swift.UInt16
+  public func encrypt(cipher: any cycurid_ios.Cipher) throws -> [Element]
+  public func decrypt(cipher: any cycurid_ios.Cipher) throws -> [Element]
+  public func authenticate<A>(with authenticator: A) throws -> [Element] where A : cycurid_ios.Authenticator
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class ActiveAuthenticationInfo : cycurid_ios.SecurityInfo {
+  override public func getObjectIdentifier() -> Swift.String
+  override public func getProtocolOIDString() -> Swift.String
+  public func getSignatureAlgorithmOIDString() -> Swift.String?
+  @objc deinit
+}
+public typealias FailedCheckType = (check: cycurid_ios.FailedCheck, failMessage: Swift.String)
+public enum FailedCheck : Swift.CaseIterable {
+  case urlSchemes
+  case existenceOfSuspiciousFiles
+  case suspiciousFilesCanBeOpened
+  case restrictedDirectoriesWriteable
+  case fork
+  case symbolicLinks
+  case dyld
+  case openedPorts
+  case pSelectFlag
+  case suspiciousObjCClasses
+  public static func == (a: cycurid_ios.FailedCheck, b: cycurid_ios.FailedCheck) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias AllCases = [cycurid_ios.FailedCheck]
+  public static var allCases: [cycurid_ios.FailedCheck] {
+    get
+  }
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Swift.FixedWidthInteger {
+  @inlinable internal func bytes(totalBytes: Swift.Int = MemoryLayout<Self>.size) -> Swift.Array<Swift.UInt8> {
+    arrayOfBytes(value: self.littleEndian, length: totalBytes)
+    // TODO: adjust bytes order
+    // var value = self.littleEndian
+    // return withUnsafeBytes(of: &value, Array.init).reversed()
+  }
+}
+@_specialize(exported: false, kind: full, where T == Swift.Int)
+@_specialize(exported: false, kind: full, where T == Swift.UInt)
+@_specialize(exported: false, kind: full, where T == Swift.UInt8)
+@_specialize(exported: false, kind: full, where T == Swift.UInt16)
+@_specialize(exported: false, kind: full, where T == Swift.UInt32)
+@_specialize(exported: false, kind: full, where T == Swift.UInt64)
+@inlinable internal func arrayOfBytes<T>(value: T, length totalBytes: Swift.Int = MemoryLayout<T>.size) -> Swift.Array<Swift.UInt8> where T : Swift.FixedWidthInteger {
+  let valuePointer = UnsafeMutablePointer<T>.allocate(capacity: 1)
+  valuePointer.pointee = value
+
+  let bytesPointer = UnsafeMutablePointer<UInt8>(OpaquePointer(valuePointer))
+  var bytes = Array<UInt8>(repeating: 0, count: totalBytes)
+  for j in 0..<min(MemoryLayout<T>.size, totalBytes) {
+    bytes[totalBytes - 1 - j] = (bytesPointer + j).pointee
+  }
+
+  valuePointer.deinitialize(count: 1)
+  valuePointer.deallocate()
+
+  return bytes
+}
+extension cycurid_ios.CS.BigUInt {
+  public init?<T>(exactly source: T) where T : Swift.BinaryInteger
+  public init<T>(_ source: T) where T : Swift.BinaryInteger
+  public init<T>(truncatingIfNeeded source: T) where T : Swift.BinaryInteger
+  public init<T>(clamping source: T) where T : Swift.BinaryInteger
+}
+extension cycurid_ios.CS.BigInt {
+  public init()
+  public init(_ integer: cycurid_ios.CS.BigUInt)
+  public init<T>(_ source: T) where T : Swift.BinaryInteger
+  public init?<T>(exactly source: T) where T : Swift.BinaryInteger
+  public init<T>(clamping source: T) where T : Swift.BinaryInteger
+  public init<T>(truncatingIfNeeded source: T) where T : Swift.BinaryInteger
+}
+extension cycurid_ios.CS.BigUInt : Swift.ExpressibleByIntegerLiteral {
+  public init(integerLiteral value: Swift.UInt64)
+  public typealias IntegerLiteralType = Swift.UInt64
+}
+extension cycurid_ios.CS.BigInt : Swift.ExpressibleByIntegerLiteral {
+  public init(integerLiteral value: Swift.Int64)
+  public typealias IntegerLiteralType = Swift.Int64
+}
+public enum SignatureError : Swift.Error {
+  case sign
+  case verify
+  public static func == (a: cycurid_ios.SignatureError, b: cycurid_ios.SignatureError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol Signature : AnyObject {
+  var keySize: Swift.Int { get }
+  func sign(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  func sign(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  func verify(signature: Swift.ArraySlice<Swift.UInt8>, for expectedData: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Bool
+  func verify(signature: Swift.Array<Swift.UInt8>, for expectedData: Swift.Array<Swift.UInt8>) throws -> Swift.Bool
+}
+extension cycurid_ios.Signature {
+  public func sign(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  public func verify(signature: Swift.Array<Swift.UInt8>, for expectedData: Swift.Array<Swift.UInt8>) throws -> Swift.Bool
+}
+public enum Bit : Swift.Int {
+  case zero
+  case one
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension cycurid_ios.Bit {
+  @inlinable internal func inverted() -> cycurid_ios.Bit {
+    self == .zero ? .one : .zero
+  }
+}
+@available(iOS 13, macOS 10.15, *)
+public enum NFCViewDisplayMessage {
+  case requestPresentPassport
+  case authenticatingWithPassport(Swift.Int)
+  case readingDataGroupProgress(cycurid_ios.DataGroupId, Swift.Int)
+  case error(cycurid_ios.NFCPassportReaderError)
+  case successfulRead
+}
+@available(iOS 13, macOS 10.15, *)
+extension cycurid_ios.NFCViewDisplayMessage {
+  public var description: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class UserData {
+  public static func returnUserInfo() -> [Swift.String : Swift.String]?
+  public static func isAgeWithinRange(min: Swift.Int, max: Swift.Int) -> Swift.Bool
+  public static func containsSelectedState(givenStates: [Swift.String]) -> Swift.Bool
+  public static func isCorrectState(givenState: Swift.String) -> Swift.Bool
+  public static func isCorrectCountry(givenCountry: Swift.String) -> Swift.Bool
+  @objc deinit
+}
+public struct CTR {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    public static func == (a: cycurid_ios.CTR.Error, b: cycurid_ios.CTR.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: cycurid_ios.BlockModeOption
+  public let customBlockSize: Swift.Int?
+  public init(iv: Swift.Array<Swift.UInt8>, counter: Swift.Int = 0)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping cycurid_ios.CipherOperationOnBlock, encryptionOperation: @escaping cycurid_ios.CipherOperationOnBlock) throws -> any cycurid_ios.CipherModeWorker
+}
+public struct CBC : cycurid_ios.BlockMode {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    public static func == (a: cycurid_ios.CBC.Error, b: cycurid_ios.CBC.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: cycurid_ios.BlockModeOption
+  public let customBlockSize: Swift.Int?
+  public init(iv: Swift.Array<Swift.UInt8>)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping cycurid_ios.CipherOperationOnBlock, encryptionOperation: @escaping cycurid_ios.CipherOperationOnBlock) throws -> any cycurid_ios.CipherModeWorker
+}
+extension Swift.UInt32 {
+  @_specialize(exported: false, kind: full, where T == Swift.ArraySlice<Swift.UInt8>)
+  @inlinable internal init<T>(bytes: T, fromIndex index: T.Index) where T : Swift.Collection, T.Element == Swift.UInt8, T.Index == Swift.Int {
+    if bytes.isEmpty {
+      self = 0
+      return
+    }
+
+    let count = bytes.count
+
+    let val0 = count > 0 ? UInt32(bytes[index.advanced(by: 0)]) << 24 : 0
+    let val1 = count > 1 ? UInt32(bytes[index.advanced(by: 1)]) << 16 : 0
+    let val2 = count > 2 ? UInt32(bytes[index.advanced(by: 2)]) << 8 : 0
+    let val3 = count > 3 ? UInt32(bytes[index.advanced(by: 3)]) : 0
+
+    self = val0 | val1 | val2 | val3
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup15 : cycurid_ios.DataGroup {
+  public var rsaPublicKey: Swift.OpaquePointer? {
+    get
+  }
+  public var ecdsaPublicKey: Swift.OpaquePointer? {
+    get
+  }
+  @objc deinit
+}
+public struct BlockModeOption : Swift.OptionSet {
+  public let rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  @usableFromInline
+  internal static let none: cycurid_ios.BlockModeOption
+  @usableFromInline
+  internal static let initializationVectorRequired: cycurid_ios.BlockModeOption
+  @usableFromInline
+  internal static let paddingRequired: cycurid_ios.BlockModeOption
+  @usableFromInline
+  internal static let useEncryptToDecrypt: cycurid_ios.BlockModeOption
+  public typealias ArrayLiteralElement = cycurid_ios.BlockModeOption
+  public typealias Element = cycurid_ios.BlockModeOption
+  public typealias RawValue = Swift.Int
+}
+public func binToHexRep(_ val: [Swift.UInt8], asArray: Swift.Bool = false) -> Swift.String
+public func binToHexRep(_ val: Swift.UInt8) -> Swift.String
+public func binToHex(_ val: Swift.UInt8) -> Swift.Int
+public func binToHex(_ val: [Swift.UInt8]) -> Swift.UInt64
+public func binToHex(_ val: Swift.ArraySlice<Swift.UInt8>) -> Swift.UInt64
+public func hexToBin(_ val: Swift.UInt64) -> [Swift.UInt8]
+public func binToInt(_ val: Swift.ArraySlice<Swift.UInt8>) -> Swift.Int
+public func binToInt(_ val: [Swift.UInt8]) -> Swift.Int
+public func intToBin(_ data: Swift.Int, pad: Swift.Int = 2) -> [Swift.UInt8]
+public func hexRepToBin(_ val: Swift.String) -> [Swift.UInt8]
+public func xor(_ kifd: [Swift.UInt8], _ response_kicc: [Swift.UInt8]) -> [Swift.UInt8]
+public func generateRandomUInt8Array(_ size: Swift.Int) -> [Swift.UInt8]
+public func pad(_ toPad: [Swift.UInt8], blockSize: Swift.Int) -> [Swift.UInt8]
+public func unpad(_ tounpad: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func mac(algoName: cycurid_ios.SecureMessagingSupportedAlgorithms, key: [Swift.UInt8], msg: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func desMAC(key: [Swift.UInt8], msg: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func aesMAC(key: [Swift.UInt8], msg: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func wrapDO(b: Swift.UInt8, arr: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func unwrapDO(tag: Swift.UInt8, wrappedData: [Swift.UInt8]) throws -> [Swift.UInt8]
+public func intToBytes(val: Swift.Int, removePadding: Swift.Bool) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func oidToBytes(oid: Swift.String, replaceTag: Swift.Bool) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func asn1Length(_ data: Swift.ArraySlice<Swift.UInt8>) throws -> (Swift.Int, Swift.Int)
+@available(iOS 13, macOS 10.15, *)
+public func asn1Length(_ data: [Swift.UInt8]) throws -> (Swift.Int, Swift.Int)
+@available(iOS 13, macOS 10.15, *)
+public func toAsn1Length(_ data: Swift.Int) throws -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcHash(data: [Swift.UInt8], hashAlgorithm: Swift.String) throws -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA1Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA224Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA256Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA512Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA384Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+public class QKMRZParser {
+  public init(ocrCorrection: Swift.Bool = false)
+  public func parse(mrzLines: [Swift.String]) -> cycurid_ios.QKMRZResult?
+  public func parse(mrzString: Swift.String) -> cycurid_ios.QKMRZResult?
+  @objc deinit
+}
+extension cycurid_ios.CS {
+  public struct BigUInt : Swift.UnsignedInteger {
+    public typealias Word = Swift.UInt
+    public init()
+    public init(words: [cycurid_ios.CS.BigUInt.Word])
+    public typealias Magnitude = cycurid_ios.CS.BigUInt
+  }
+}
+extension cycurid_ios.CS.BigUInt {
+  public static var isSigned: Swift.Bool {
+    get
+  }
+  public func signum() -> cycurid_ios.CS.BigUInt
+}
+@_hasMissingDesignatedInitializers public class QKMRZScanResult {
+  final public let documentImage: UIKit.UIImage
+  final public let documentType: Swift.String
+  final public let countryCode: Swift.String
+  final public let surnames: Swift.String
+  final public let givenNames: Swift.String
+  final public let documentNumber: Swift.String
+  final public let nationality: Swift.String
+  final public let birthDate: Foundation.Date?
+  final public let sex: Swift.String?
+  final public let expiryDate: Foundation.Date?
+  final public let personalNumber: Swift.String
+  final public let personalNumber2: Swift.String?
+  public var faceImage: UIKit.UIImage? {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class ChipAuthenticationInfo : cycurid_ios.SecurityInfo {
+  override public func getObjectIdentifier() -> Swift.String
+  override public func getProtocolOIDString() -> Swift.String
+  public func getKeyId() -> Swift.Int
+  public static func toKeyAgreementAlgorithm(oid: Swift.String) throws -> Swift.String
+  public static func toCipherAlgorithm(oid: Swift.String) throws -> Swift.String
+  public static func toKeyLength(oid: Swift.String) throws -> Swift.Int
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup2 : cycurid_ios.DataGroup {
+  public var nrImages: Swift.Int {
+    get
+  }
+  public var versionNumber: Swift.Int {
+    get
+  }
+  public var lengthOfRecord: Swift.Int {
+    get
+  }
+  public var numberOfFacialImages: Swift.Int {
+    get
+  }
+  public var facialRecordDataLength: Swift.Int {
+    get
+  }
+  public var nrFeaturePoints: Swift.Int {
+    get
+  }
+  public var gender: Swift.Int {
+    get
+  }
+  public var eyeColor: Swift.Int {
+    get
+  }
+  public var hairColor: Swift.Int {
+    get
+  }
+  public var featureMask: Swift.Int {
+    get
+  }
+  public var expression: Swift.Int {
+    get
+  }
+  public var poseAngle: Swift.Int {
+    get
+  }
+  public var poseAngleUncertainty: Swift.Int {
+    get
+  }
+  public var faceImageType: Swift.Int {
+    get
+  }
+  public var imageDataType: Swift.Int {
+    get
+  }
+  public var imageWidth: Swift.Int {
+    get
+  }
+  public var imageHeight: Swift.Int {
+    get
+  }
+  public var imageColorSpace: Swift.Int {
+    get
+  }
+  public var sourceType: Swift.Int {
+    get
+  }
+  public var deviceType: Swift.Int {
+    get
+  }
+  public var quality: Swift.Int {
+    get
+  }
+  public var imageData: [Swift.UInt8] {
+    get
+  }
+  @objc deinit
+}
+public class CMAC : cycurid_ios.Authenticator {
+  public enum Error : Swift.Error {
+    case wrongKeyLength
+    public static func == (a: cycurid_ios.CMAC.Error, b: cycurid_ios.CMAC.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(key: Swift.Array<Swift.UInt8>) throws
+  public func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  public func authenticate(_ bytes: Swift.Array<Swift.UInt8>, cipher: any cycurid_ios.Cipher) throws -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class MagStripeDocumentData : cycurid_ios.DocumentData {
+  @objc override public var firstName: Swift.String? {
+    @objc get
+  }
+  @objc override public var lastName: Swift.String? {
+    @objc get
+  }
+  @objc override public var address: Swift.String? {
+    @objc get
+  }
+  @objc override public var dateOfBirth: Swift.String? {
+    @objc get
+  }
+  @objc override public var dateOfExpiry: Swift.String? {
+    @objc get
+  }
+  @objc override public var sex: Swift.String? {
+    @objc get
+  }
+  @objc override public var documentNumber: Swift.String? {
+    @objc get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+final public class Rabbit {
+  public enum Error : Swift.Error {
+    case invalidKeyOrInitializationVector
+    public static func == (a: cycurid_ios.Rabbit.Error, b: cycurid_ios.Rabbit.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static let ivSize: Swift.Int
+  public static let keySize: Swift.Int
+  public static let blockSize: Swift.Int
+  final public var keySize: Swift.Int {
+    get
+  }
+  convenience public init(key: Swift.Array<Swift.UInt8>) throws
+  public init(key: Swift.Array<Swift.UInt8>, iv: Swift.Array<Swift.UInt8>?) throws
+  @objc deinit
+}
+extension cycurid_ios.Rabbit : cycurid_ios.Cipher {
+  final public func encrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  final public func decrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+@inlinable internal func rotateLeft(_ value: Swift.UInt8, by: Swift.UInt8) -> Swift.UInt8 {
+  ((value << by) & 0xff) | (value >> (8 - by))
+}
+@inlinable internal func rotateLeft(_ value: Swift.UInt16, by: Swift.UInt16) -> Swift.UInt16 {
+  ((value << by) & 0xffff) | (value >> (16 - by))
+}
+@inlinable internal func rotateLeft(_ value: Swift.UInt32, by: Swift.UInt32) -> Swift.UInt32 {
+  ((value << by) & 0xffffffff) | (value >> (32 - by))
+}
+@inlinable internal func rotateLeft(_ value: Swift.UInt64, by: Swift.UInt64) -> Swift.UInt64 {
+  (value << by) | (value >> (64 - by))
+}
+@inlinable internal func rotateRight(_ value: Swift.UInt16, by: Swift.UInt16) -> Swift.UInt16 {
+  (value >> by) | (value << (16 - by))
+}
+@inlinable internal func rotateRight(_ value: Swift.UInt32, by: Swift.UInt32) -> Swift.UInt32 {
+  (value >> by) | (value << (32 - by))
+}
+@inlinable internal func rotateRight(_ value: Swift.UInt64, by: Swift.UInt64) -> Swift.UInt64 {
+  ((value >> by) | (value << (64 - by)))
+}
+@inlinable internal func reversed(_ uint8: Swift.UInt8) -> Swift.UInt8 {
+  var v = uint8
+  v = (v & 0xf0) >> 4 | (v & 0x0f) << 4
+  v = (v & 0xcc) >> 2 | (v & 0x33) << 2
+  v = (v & 0xaa) >> 1 | (v & 0x55) << 1
+  return v
+}
+@inlinable internal func reversed(_ uint32: Swift.UInt32) -> Swift.UInt32 {
+  var v = uint32
+  v = ((v >> 1) & 0x55555555) | ((v & 0x55555555) << 1)
+  v = ((v >> 2) & 0x33333333) | ((v & 0x33333333) << 2)
+  v = ((v >> 4) & 0x0f0f0f0f) | ((v & 0x0f0f0f0f) << 4)
+  v = ((v >> 8) & 0x00ff00ff) | ((v & 0x00ff00ff) << 8)
+  v = ((v >> 16) & 0xffff) | ((v & 0xffff) << 16)
+  return v
+}
+@inlinable internal func xor<T, V>(_ left: T, _ right: V) -> Swift.ArraySlice<Swift.UInt8> where T : Swift.RandomAccessCollection, V : Swift.RandomAccessCollection, T.Element == Swift.UInt8, T.Index == Swift.Int, V.Element == Swift.UInt8, V.Index == Swift.Int {
+  return xor(left, right).slice
+}
+@inlinable internal func xor<T, V>(_ left: T, _ right: V) -> Swift.Array<Swift.UInt8> where T : Swift.RandomAccessCollection, V : Swift.RandomAccessCollection, T.Element == Swift.UInt8, T.Index == Swift.Int, V.Element == Swift.UInt8, V.Index == Swift.Int {
+  let length = Swift.min(left.count, right.count)
+
+  let buf = UnsafeMutablePointer<UInt8>.allocate(capacity: length)
+  buf.initialize(repeating: 0, count: length)
+  defer {
+    buf.deinitialize(count: length)
+    buf.deallocate()
+  }
+
+  // xor
+  for i in 0..<length {
+    buf[i] = left[left.startIndex.advanced(by: i)] ^ right[right.startIndex.advanced(by: i)]
+  }
+
+  return Array(UnsafeBufferPointer(start: buf, count: length))
+}
+@inline(__always) @inlinable internal func bitPadding(to data: inout Swift.Array<Swift.UInt8>, blockSize: Swift.Int, allowance: Swift.Int = 0) {
+  let msgLength = data.count
+  // Step 1. Append Padding Bits
+  // append one bit (UInt8 with one bit) to message
+  data.append(0x80)
+
+  // Step 2. append "0" bit until message length in bits ≡ 448 (mod 512)
+  let max = blockSize - allowance // 448, 986
+  if msgLength % blockSize < max { // 448
+    data += Array<UInt8>(repeating: 0, count: max - 1 - (msgLength % blockSize))
+  } else {
+    data += Array<UInt8>(repeating: 0, count: blockSize + max - 1 - (msgLength % blockSize))
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup11 : cycurid_ios.DataGroup {
+  public var fullName: Swift.String? {
+    get
+  }
+  public var personalNumber: Swift.String? {
+    get
+  }
+  public var dateOfBirth: Swift.String? {
+    get
+  }
+  public var placeOfBirth: Swift.String? {
+    get
+  }
+  public var address: Swift.String? {
+    get
+  }
+  public var telephone: Swift.String? {
+    get
+  }
+  public var profession: Swift.String? {
+    get
+  }
+  public var title: Swift.String? {
+    get
+  }
+  public var personalSummary: Swift.String? {
+    get
+  }
+  public var proofOfCitizenship: Swift.String? {
+    get
+  }
+  public var tdNumbers: Swift.String? {
+    get
+  }
+  public var custodyInfo: Swift.String? {
+    get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup7 : cycurid_ios.DataGroup {
+  public var imageData: [Swift.UInt8] {
+    get
+  }
+  @objc deinit
+}
+public enum LogLevel : Swift.Int, Swift.CaseIterable {
+  case verbose
+  case debug
+  case info
+  case warning
+  case error
+  case none
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [cycurid_ios.LogLevel]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [cycurid_ios.LogLevel] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class Log {
+  public static var logLevel: cycurid_ios.LogLevel
+  public static var storeLogs: Swift.Bool
+  public static var logData: [Swift.String]
+  public class func verbose(_ msg: @autoclosure () -> Swift.String)
+  public class func debug(_ msg: @autoclosure () -> Swift.String)
+  public class func info(_ msg: @autoclosure () -> Swift.String)
+  public class func warning(_ msg: @autoclosure () -> Swift.String)
+  public class func error(_ msg: @autoclosure () -> Swift.String)
+  public class func clearStoredLogs()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, *)
+public class TagReader {
+  @objc deinit
+}
+@objc @available(iOS 13, *)
+public class PassportReader : ObjectiveC.NSObject {
+  public var passiveAuthenticationUsesOpenSSL: Swift.Bool
+  public var count: Swift.Int
+  public init(logLevel: cycurid_ios.LogLevel = .info, masterListURL: Foundation.URL? = nil)
+  public func setMasterListURL(_ masterListURL: Foundation.URL)
+  public func overrideNFCDataAmountToRead(amount: Swift.Int)
+  #if compiler(>=5.3) && $AsyncAwait
+  public func readPassport(mrzKey: Swift.String, tags: [cycurid_ios.DataGroupId] = [], skipSecureElements: Swift.Bool = true, skipCA: Swift.Bool = false, skipPACE: Swift.Bool = false, customDisplayMessage: ((cycurid_ios.NFCViewDisplayMessage) -> Swift.String?)? = nil) async throws -> cycurid_ios.NFCPassportModel
+  #endif
+  @objc deinit
+}
+@available(iOS 13, *)
+extension cycurid_ios.PassportReader : CoreNFC.NFCTagReaderSessionDelegate {
+  public func tagReaderSessionDidBecomeActive(_ session: CoreNFC.NFCTagReaderSession)
+  public func tagReaderSession(_ session: CoreNFC.NFCTagReaderSession, didInvalidateWithError error: any Swift.Error)
+  public func tagReaderSession(_ session: CoreNFC.NFCTagReaderSession, didDetect tags: [CoreNFC.NFCTag])
+}
+extension cycurid_ios.CS.BigUInt {
+  prefix public static func ~ (a: cycurid_ios.CS.BigUInt) -> cycurid_ios.CS.BigUInt
+  public static func |= (a: inout cycurid_ios.CS.BigUInt, b: cycurid_ios.CS.BigUInt)
+  public static func &= (a: inout cycurid_ios.CS.BigUInt, b: cycurid_ios.CS.BigUInt)
+  public static func ^= (a: inout cycurid_ios.CS.BigUInt, b: cycurid_ios.CS.BigUInt)
+}
+extension cycurid_ios.CS.BigInt {
+  prefix public static func ~ (x: cycurid_ios.CS.BigInt) -> cycurid_ios.CS.BigInt
+  public static func & (lhs: inout cycurid_ios.CS.BigInt, rhs: cycurid_ios.CS.BigInt) -> cycurid_ios.CS.BigInt
+  public static func | (lhs: inout cycurid_ios.CS.BigInt, rhs: cycurid_ios.CS.BigInt) -> cycurid_ios.CS.BigInt
+  public static func ^ (lhs: inout cycurid_ios.CS.BigInt, rhs: cycurid_ios.CS.BigInt) -> cycurid_ios.CS.BigInt
+  public static func &= (lhs: inout cycurid_ios.CS.BigInt, rhs: cycurid_ios.CS.BigInt)
+  public static func |= (lhs: inout cycurid_ios.CS.BigInt, rhs: cycurid_ios.CS.BigInt)
+  public static func ^= (lhs: inout cycurid_ios.CS.BigInt, rhs: cycurid_ios.CS.BigInt)
+}
+extension cycurid_ios.CS.BigUInt {
+  public mutating func subtractReportingOverflow(_ b: cycurid_ios.CS.BigUInt, shiftedBy shift: Swift.Int = 0) -> Swift.Bool
+  public func subtractingReportingOverflow(_ other: cycurid_ios.CS.BigUInt, shiftedBy shift: Swift.Int) -> (partialValue: cycurid_ios.CS.BigUInt, overflow: Swift.Bool)
+  public func subtractingReportingOverflow(_ other: cycurid_ios.CS.BigUInt) -> (partialValue: cycurid_ios.CS.BigUInt, overflow: Swift.Bool)
+  public mutating func subtract(_ other: cycurid_ios.CS.BigUInt, shiftedBy shift: Swift.Int = 0)
+  public func subtracting(_ other: cycurid_ios.CS.BigUInt, shiftedBy shift: Swift.Int = 0) -> cycurid_ios.CS.BigUInt
+  public mutating func decrement(shiftedBy shift: Swift.Int = 0)
+  public static func - (a: cycurid_ios.CS.BigUInt, b: cycurid_ios.CS.BigUInt) -> cycurid_ios.CS.BigUInt
+  public static func -= (a: inout cycurid_ios.CS.BigUInt, b: cycurid_ios.CS.BigUInt)
+}
+extension cycurid_ios.CS.BigInt {
+  public mutating func negate()
+  public static func - (a: cycurid_ios.CS.BigInt, b: cycurid_ios.CS.BigInt) -> cycurid_ios.CS.BigInt
+  public static func -= (a: inout cycurid_ios.CS.BigInt, b: cycurid_ios.CS.BigInt)
+}
+extension cycurid_ios.CS.BigUInt {
+  public func quotientAndRemainder(dividingBy y: cycurid_ios.CS.BigUInt) -> (quotient: cycurid_ios.CS.BigUInt, remainder: cycurid_ios.CS.BigUInt)
+  public static func / (x: cycurid_ios.CS.BigUInt, y: cycurid_ios.CS.BigUInt) -> cycurid_ios.CS.BigUInt
+  public static func % (x: cycurid_ios.CS.BigUInt, y: cycurid_ios.CS.BigUInt) -> cycurid_ios.CS.BigUInt
+  public static func /= (x: inout cycurid_ios.CS.BigUInt, y: cycurid_ios.CS.BigUInt)
+  public static func %= (x: inout cycurid_ios.CS.BigUInt, y: cycurid_ios.CS.BigUInt)
+}
+extension cycurid_ios.CS.BigInt {
+  public func quotientAndRemainder(dividingBy y: cycurid_ios.CS.BigInt) -> (quotient: cycurid_ios.CS.BigInt, remainder: cycurid_ios.CS.BigInt)
+  public static func / (a: cycurid_ios.CS.BigInt, b: cycurid_ios.CS.BigInt) -> cycurid_ios.CS.BigInt
+  public static func % (a: cycurid_ios.CS.BigInt, b: cycurid_ios.CS.BigInt) -> cycurid_ios.CS.BigInt
+  public func modulus(_ mod: cycurid_ios.CS.BigInt) -> cycurid_ios.CS.BigInt
+}
+extension cycurid_ios.CS.BigInt {
+  public static func /= (a: inout cycurid_ios.CS.BigInt, b: cycurid_ios.CS.BigInt)
+  public static func %= (a: inout cycurid_ios.CS.BigInt, b: cycurid_ios.CS.BigInt)
+}
+@_hasMissingDesignatedInitializers @objc public class AAMVAv3DocumentData : cycurid_ios.AAMVADocumentData {
+  @objc override public var firstName: Swift.String? {
+    @objc get
+  }
+  @objc deinit
+}
+@available(iOS 13, macOS 10.15, *)
+public enum DataGroupId : Swift.Int, Swift.CaseIterable {
+  case COM
+  case DG1
+  case DG2
+  case DG3
+  case DG4
+  case DG5
+  case DG6
+  case DG7
+  case DG8
+  case DG9
+  case DG10
+  case DG11
+  case DG12
+  case DG13
+  case DG14
+  case DG15
+  case DG16
+  case SOD
+  case Unknown
+  public func getName() -> Swift.String
+  public static func getIDFromName(name: Swift.String) -> cycurid_ios.DataGroupId
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [cycurid_ios.DataGroupId]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [cycurid_ios.DataGroupId] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class Reachability {
+  @objc deinit
+}
+extension Swift.Collection where Self.Element == Swift.UInt8, Self.Index == Swift.Int {
+  @inlinable internal func toUInt32Array() -> Swift.Array<Swift.UInt32> {
+    guard !isEmpty else {
+      return []
+    }
+
+    let c = strideCount(from: startIndex, to: endIndex, by: 4)
+    return Array<UInt32>(unsafeUninitializedCapacity: c) { buf, count in
+      var counter = 0
+      for idx in stride(from: startIndex, to: endIndex, by: 4) {
+        let val = UInt32(bytes: self, fromIndex: idx).bigEndian
+        buf[counter] = val
+        counter += 1
+      }
+      count = counter
+      assert(counter == c)
+    }
+  }
+  @inlinable internal func toUInt64Array() -> Swift.Array<Swift.UInt64> {
+    guard !isEmpty else {
+      return []
+    }
+
+    let c = strideCount(from: startIndex, to: endIndex, by: 8)
+    return Array<UInt64>(unsafeUninitializedCapacity: c) { buf, count in
+      var counter = 0
+      for idx in stride(from: startIndex, to: endIndex, by: 8) {
+        let val = UInt64(bytes: self, fromIndex: idx).bigEndian
+        buf[counter] = val
+        counter += 1
+      }
+      count = counter
+      assert(counter == c)
+    }
+  }
+}
+@usableFromInline
+internal func strideCount(from: Swift.Int, to: Swift.Int, by: Swift.Int) -> Swift.Int
+@_hasMissingDesignatedInitializers @objc public class AAMVAv9DocumentData : cycurid_ios.AAMVADocumentData {
+  @objc deinit
+}
+extension cycurid_ios.CS {
+  public struct BigInt : Swift.SignedInteger {
+    public enum Sign {
+      case plus
+      case minus
+      public static func == (a: cycurid_ios.CS.BigInt.Sign, b: cycurid_ios.CS.BigInt.Sign) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public typealias Magnitude = cycurid_ios.CS.BigUInt
+    public typealias Word = cycurid_ios.CS.BigUInt.Word
+    public static var isSigned: Swift.Bool {
+      get
+    }
+    public var magnitude: cycurid_ios.CS.BigUInt
+    public var sign: cycurid_ios.CS.BigInt.Sign
+    public init(sign: cycurid_ios.CS.BigInt.Sign, magnitude: cycurid_ios.CS.BigUInt)
+    public var isZero: Swift.Bool {
+      get
+    }
+    public func signum() -> cycurid_ios.CS.BigInt
+  }
+}
+extension Swift.String {
+  @inlinable public var bytes: Swift.Array<Swift.UInt8> {
+    get {
+    data(using: String.Encoding.utf8, allowLossyConversion: true)?.bytes ?? Array(utf8)
+  }
+  }
+  @inlinable public func md5() -> Swift.String {
+    self.bytes.md5().toHexString()
+  }
+  @inlinable public func sha1() -> Swift.String {
+    self.bytes.sha1().toHexString()
+  }
+  @inlinable public func sha224() -> Swift.String {
+    self.bytes.sha224().toHexString()
+  }
+  @inlinable public func sha256() -> Swift.String {
+    self.bytes.sha256().toHexString()
+  }
+  @inlinable public func sha384() -> Swift.String {
+    self.bytes.sha384().toHexString()
+  }
+  @inlinable public func sha512() -> Swift.String {
+    self.bytes.sha512().toHexString()
+  }
+  @inlinable public func sha3(_ variant: cycurid_ios.SHA3.Variant) -> Swift.String {
+    self.bytes.sha3(variant).toHexString()
+  }
+  @inlinable public func crc32(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.String {
+    self.bytes.crc32(seed: seed, reflect: reflect).bytes().toHexString()
+  }
+  @inlinable public func crc32c(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.String {
+    self.bytes.crc32c(seed: seed, reflect: reflect).bytes().toHexString()
+  }
+  @inlinable public func crc16(seed: Swift.UInt16? = nil) -> Swift.String {
+    self.bytes.crc16(seed: seed).bytes().toHexString()
+  }
+  @inlinable public func encrypt(cipher: any cycurid_ios.Cipher) throws -> Swift.String {
+    try self.bytes.encrypt(cipher: cipher).toHexString()
+  }
+  @inlinable public func encryptToBase64(cipher: any cycurid_ios.Cipher) throws -> Swift.String {
+    try self.bytes.encrypt(cipher: cipher).toBase64()
+  }
+  @inlinable public func authenticate<A>(with authenticator: A) throws -> Swift.String where A : cycurid_ios.Authenticator {
+    try self.bytes.authenticate(with: authenticator).toHexString()
+  }
+}
+final public class SHA2 {
+  @usableFromInline
+  final internal let variant: cycurid_ios.SHA2.Variant
+  @usableFromInline
+  final internal let size: Swift.Int
+  @usableFromInline
+  final internal let blockSize: Swift.Int
+  @usableFromInline
+  final internal let digestLength: Swift.Int
+  @usableFromInline
+  final internal var accumulated: [Swift.UInt8]
+  @usableFromInline
+  final internal var processedBytesTotalCount: Swift.Int
+  @usableFromInline
+  final internal var accumulatedHash32: [Swift.UInt32]
+  @usableFromInline
+  final internal var accumulatedHash64: [Swift.UInt64]
+  @frozen public enum Variant : Swift.RawRepresentable {
+    case sha224, sha256, sha384, sha512
+    public var digestLength: Swift.Int {
+      get
+    }
+    public var blockSize: Swift.Int {
+      get
+    }
+    public typealias RawValue = Swift.Int
+    public var rawValue: cycurid_ios.SHA2.Variant.RawValue {
+      get
+    }
+    public init?(rawValue: cycurid_ios.SHA2.Variant.RawValue)
+    @usableFromInline
+    internal var h: Swift.Array<Swift.UInt64> {
+      get
+    }
+    @usableFromInline
+    internal var finalLength: Swift.Int {
+      get
+    }
+  }
+  public init(variant: cycurid_ios.SHA2.Variant)
+  @inlinable final public func calculate(for bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8> {
+    do {
+      return try update(withBytes: bytes.slice, isLast: true)
+    } catch {
+      return []
+    }
+  }
+  final public func callAsFunction(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  @usableFromInline
+  final internal func process64(block chunk: Swift.ArraySlice<Swift.UInt8>, currentHash hh: inout Swift.Array<Swift.UInt64>)
+  @usableFromInline
+  final internal func process32(block chunk: Swift.ArraySlice<Swift.UInt8>, currentHash hh: inout Swift.Array<Swift.UInt32>)
+  @objc deinit
+}
+extension cycurid_ios.SHA2 : cycurid_ios.Updatable {
+  @inlinable final public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8> {
+    self.accumulated += bytes
+
+    if isLast {
+      let lengthInBits = (processedBytesTotalCount + self.accumulated.count) * 8
+      let lengthBytes = lengthInBits.bytes(totalBytes: self.blockSize / 8) // A 64-bit/128-bit representation of b. blockSize fit by accident.
+
+      // Step 1. Append padding
+      bitPadding(to: &self.accumulated, blockSize: self.blockSize, allowance: self.blockSize / 8)
+
+      // Step 2. Append Length a 64-bit representation of lengthInBits
+      self.accumulated += lengthBytes
+    }
+
+    var processedBytes = 0
+    for chunk in self.accumulated.batched(by: self.blockSize) {
+      if isLast || (self.accumulated.count - processedBytes) >= self.blockSize {
+        switch self.variant {
+          case .sha224, .sha256:
+            self.process32(block: chunk, currentHash: &self.accumulatedHash32)
+          case .sha384, .sha512:
+            self.process64(block: chunk, currentHash: &self.accumulatedHash64)
+          }
+        processedBytes += chunk.count
+      }
+    }
+    self.accumulated.removeFirst(processedBytes)
+    self.processedBytesTotalCount += processedBytes
+
+    // output current hash
+    var result = Array<UInt8>(repeating: 0, count: variant.digestLength)
+    switch self.variant {
+      case .sha224, .sha256:
+        var pos = 0
+        for idx in 0..<self.accumulatedHash32.count where idx < self.variant.finalLength {
+          let h = accumulatedHash32[idx]
+          result[pos + 0] = UInt8((h >> 24) & 0xff)
+          result[pos + 1] = UInt8((h >> 16) & 0xff)
+          result[pos + 2] = UInt8((h >> 8) & 0xff)
+          result[pos + 3] = UInt8(h & 0xff)
+          pos += 4
+        }
+      case .sha384, .sha512:
+        var pos = 0
+        for idx in 0..<self.accumulatedHash64.count where idx < self.variant.finalLength {
+          let h = accumulatedHash64[idx]
+          result[pos + 0] = UInt8((h >> 56) & 0xff)
+          result[pos + 1] = UInt8((h >> 48) & 0xff)
+          result[pos + 2] = UInt8((h >> 40) & 0xff)
+          result[pos + 3] = UInt8((h >> 32) & 0xff)
+          result[pos + 4] = UInt8((h >> 24) & 0xff)
+          result[pos + 5] = UInt8((h >> 16) & 0xff)
+          result[pos + 6] = UInt8((h >> 8) & 0xff)
+          result[pos + 7] = UInt8(h & 0xff)
+          pos += 8
+        }
+    }
+
+    // reset hash value for instance
+    if isLast {
+      switch self.variant {
+        case .sha224, .sha256:
+          self.accumulatedHash32 = self.variant.h.lazy.map { UInt32($0) } // FIXME: UInt64 for process64
+        case .sha384, .sha512:
+          self.accumulatedHash64 = self.variant.h
+      }
+    }
+
+    return result
+  }
+}
+extension cycurid_ios.CS.BigUInt {
+  public static func >>= <Other>(lhs: inout cycurid_ios.CS.BigUInt, rhs: Other) where Other : Swift.BinaryInteger
+  public static func <<= <Other>(lhs: inout cycurid_ios.CS.BigUInt, rhs: Other) where Other : Swift.BinaryInteger
+  public static func >> <Other>(lhs: cycurid_ios.CS.BigUInt, rhs: Other) -> cycurid_ios.CS.BigUInt where Other : Swift.BinaryInteger
+  public static func << <Other>(lhs: cycurid_ios.CS.BigUInt, rhs: Other) -> cycurid_ios.CS.BigUInt where Other : Swift.BinaryInteger
+}
+extension cycurid_ios.CS.BigInt {
+  public static func &<< (left: cycurid_ios.CS.BigInt, right: cycurid_ios.CS.BigInt) -> cycurid_ios.CS.BigInt
+  public static func &<<= (left: inout cycurid_ios.CS.BigInt, right: cycurid_ios.CS.BigInt)
+  public static func &>> (left: cycurid_ios.CS.BigInt, right: cycurid_ios.CS.BigInt) -> cycurid_ios.CS.BigInt
+  public static func &>>= (left: inout cycurid_ios.CS.BigInt, right: cycurid_ios.CS.BigInt)
+  public static func << <Other>(lhs: cycurid_ios.CS.BigInt, rhs: Other) -> cycurid_ios.CS.BigInt where Other : Swift.BinaryInteger
+  public static func <<= <Other>(lhs: inout cycurid_ios.CS.BigInt, rhs: Other) where Other : Swift.BinaryInteger
+  public static func >> <Other>(lhs: cycurid_ios.CS.BigInt, rhs: Other) -> cycurid_ios.CS.BigInt where Other : Swift.BinaryInteger
+  public static func >>= <Other>(lhs: inout cycurid_ios.CS.BigInt, rhs: Other) where Other : Swift.BinaryInteger
+}
+extension cycurid_ios.ChaCha20 {
+  convenience public init(key: Swift.String, iv: Swift.String) throws
+}
+@_hasMissingDesignatedInitializers @objc public class AAMVAv6DocumentData : cycurid_ios.AAMVADocumentData {
+  @objc deinit
+}
+@available(iOS 13, macOS 10.15, *)
+public enum NFCPassportReaderError : Swift.Error {
+  case ResponseError(Swift.String, Swift.UInt8, Swift.UInt8)
+  case InvalidResponse
+  case UnexpectedError
+  case NFCNotSupported
+  case NoConnectedTag
+  case D087Malformed
+  case InvalidResponseChecksum
+  case MissingMandatoryFields
+  case CannotDecodeASN1Length
+  case InvalidASN1Value
+  case UnableToProtectAPDU
+  case UnableToUnprotectAPDU
+  case UnsupportedDataGroup
+  case DataGroupNotRead
+  case UnknownTag
+  case UnknownImageFormat
+  case NotImplemented
+  case TagNotValid
+  case ConnectionError
+  case UserCanceled
+  case InvalidMRZKey
+  case MoreThanOneTagFound
+  case InvalidHashAlgorithmSpecified
+  case UnsupportedCipherAlgorithm
+  case UnsupportedMappingType
+  case PACEError(Swift.String, Swift.String)
+  case ChipAuthenticationFailed
+  case InvalidDataPassed(Swift.String)
+  case NotYetSupported(Swift.String)
+}
+@available(iOS 13, macOS 10.15, *)
+extension cycurid_ios.NFCPassportReaderError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+@available(iOS 13, macOS 10.15, *)
+public enum OpenSSLError : Swift.Error {
+  case UnableToGetX509CertificateFromPKCS7(Swift.String)
+  case UnableToVerifyX509CertificateForSOD(Swift.String)
+  case VerifyAndReturnSODEncapsulatedData(Swift.String)
+  case UnableToReadECPublicKey(Swift.String)
+  case UnableToExtractSignedDataFromPKCS7(Swift.String)
+  case VerifySignedAttributes(Swift.String)
+  case UnableToParseASN1(Swift.String)
+  case UnableToDecryptRSASignature(Swift.String)
+}
+@available(iOS 13, macOS 10.15, *)
+extension cycurid_ios.OpenSSLError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public enum PassiveAuthenticationError : Swift.Error {
+  case UnableToParseSODHashes(Swift.String)
+  case InvalidDataGroupHash(Swift.String)
+  case SODMissing(Swift.String)
+}
+extension cycurid_ios.PassiveAuthenticationError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+@objc public protocol BarcodeParsing {
+  @objc func parseData(_ data: Foundation.Data) throws -> cycurid_ios.DocumentData
+}
+extension cycurid_ios.Blowfish {
+  convenience public init(key: Swift.String, iv: Swift.String, padding: cycurid_ios.Padding = .pkcs7) throws
+}
+extension cycurid_ios.CS.BigUInt : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension cycurid_ios.CS.BigInt : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension cycurid_ios.CS.BigUInt : Swift.Strideable {
+  public typealias Stride = cycurid_ios.CS.BigInt
+  public func advanced(by n: cycurid_ios.CS.BigInt) -> cycurid_ios.CS.BigUInt
+  public func distance(to other: cycurid_ios.CS.BigUInt) -> cycurid_ios.CS.BigInt
+}
+extension cycurid_ios.CS.BigInt : Swift.Strideable {
+  public typealias Stride = cycurid_ios.CS.BigInt
+  public func advanced(by n: cycurid_ios.CS.BigInt.Stride) -> cycurid_ios.CS.BigInt
+  public func distance(to other: cycurid_ios.CS.BigInt) -> cycurid_ios.CS.BigInt.Stride
+}
+@usableFromInline
+internal struct BatchedCollectionIndex<Base> where Base : Swift.Collection {
+}
+extension cycurid_ios.BatchedCollectionIndex : Swift.Comparable {
+  @usableFromInline
+  internal static func == <BaseCollection>(lhs: cycurid_ios.BatchedCollectionIndex<BaseCollection>, rhs: cycurid_ios.BatchedCollectionIndex<BaseCollection>) -> Swift.Bool where BaseCollection : Swift.Collection
+  @usableFromInline
+  internal static func < <BaseCollection>(lhs: cycurid_ios.BatchedCollectionIndex<BaseCollection>, rhs: cycurid_ios.BatchedCollectionIndex<BaseCollection>) -> Swift.Bool where BaseCollection : Swift.Collection
+}
+@usableFromInline
+internal struct BatchedCollection<Base> : Swift.Collection where Base : Swift.Collection {
+  @usableFromInline
+  internal init(base: Base, size: Swift.Int)
+  @usableFromInline
+  internal typealias Index = cycurid_ios.BatchedCollectionIndex<Base>
+  @usableFromInline
+  internal var startIndex: cycurid_ios.BatchedCollection<Base>.Index {
+    get
+  }
+  @usableFromInline
+  internal var endIndex: cycurid_ios.BatchedCollection<Base>.Index {
+    get
+  }
+  @usableFromInline
+  internal func index(after idx: cycurid_ios.BatchedCollection<Base>.Index) -> cycurid_ios.BatchedCollection<Base>.Index
+  @usableFromInline
+  internal subscript(idx: cycurid_ios.BatchedCollection<Base>.Index) -> Base.SubSequence {
+    get
+  }
+  @usableFromInline
+  internal typealias Element = Base.SubSequence
+  @usableFromInline
+  internal typealias Indices = Swift.DefaultIndices<cycurid_ios.BatchedCollection<Base>>
+  @usableFromInline
+  internal typealias Iterator = Swift.IndexingIterator<cycurid_ios.BatchedCollection<Base>>
+  @usableFromInline
+  internal typealias SubSequence = Swift.Slice<cycurid_ios.BatchedCollection<Base>>
+}
+extension Swift.Collection {
+  @inlinable internal func batched(by size: Swift.Int) -> cycurid_ios.BatchedCollection<Self> {
+    BatchedCollection(base: self, size: size)
+  }
+}
+public enum CipherError : Swift.Error {
+  case encrypt
+  case decrypt
+  public static func == (a: cycurid_ios.CipherError, b: cycurid_ios.CipherError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol Cipher : AnyObject {
+  var keySize: Swift.Int { get }
+  func encrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  func encrypt(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  func decrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  func decrypt(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+extension cycurid_ios.Cipher {
+  public func encrypt(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  public func decrypt(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+extension cycurid_ios.CS.BigUInt {
+  public static func + (a: cycurid_ios.CS.BigUInt, b: cycurid_ios.CS.BigUInt) -> cycurid_ios.CS.BigUInt
+  public static func += (a: inout cycurid_ios.CS.BigUInt, b: cycurid_ios.CS.BigUInt)
+}
+extension cycurid_ios.CS.BigInt {
+  public static func + (a: cycurid_ios.CS.BigInt, b: cycurid_ios.CS.BigInt) -> cycurid_ios.CS.BigInt
+  public static func += (a: inout cycurid_ios.CS.BigInt, b: cycurid_ios.CS.BigInt)
+}
+public protocol _UInt8Type {
+}
+extension Swift.UInt8 : cycurid_ios._UInt8Type {
+}
+extension Swift.UInt8 {
+  public func bits() -> [cycurid_ios.Bit]
+  public func bits() -> Swift.String
+}
+extension cycurid_ios.AES {
+  convenience public init(key: Swift.String, iv: Swift.String, padding: cycurid_ios.Padding = .pkcs7) throws
+}
+@available(iOS 13, *)
+public struct ResponseAPDU {
+  public var data: [Swift.UInt8]
+  public var sw1: Swift.UInt8
+  public var sw2: Swift.UInt8
+  public init(data: [Swift.UInt8], sw1: Swift.UInt8, sw2: Swift.UInt8)
+}
+extension cycurid_ios.CS.BigUInt {
+  public func squareRoot() -> cycurid_ios.CS.BigUInt
+}
+extension cycurid_ios.CS.BigInt {
+  public func squareRoot() -> cycurid_ios.CS.BigInt
+}
+extension cycurid_ios.Poly1305.Error : Swift.Equatable {}
+extension cycurid_ios.Poly1305.Error : Swift.Hashable {}
+@available(iOS 13, macOS 10.15, *)
+extension cycurid_ios.CertificateType : Swift.Equatable {}
+@available(iOS 13, macOS 10.15, *)
+extension cycurid_ios.CertificateType : Swift.Hashable {}
+@available(iOS 13, macOS 10.15, *)
+extension cycurid_ios.CertificateItem : Swift.Equatable {}
+@available(iOS 13, macOS 10.15, *)
+extension cycurid_ios.CertificateItem : Swift.Hashable {}
+@available(iOS 13, macOS 10.15, *)
+extension cycurid_ios.CertificateItem : Swift.RawRepresentable {}
+@available(iOS 13, macOS 10.15, *)
+extension cycurid_ios.DocTypeEnum : Swift.Equatable {}
+@available(iOS 13, macOS 10.15, *)
+extension cycurid_ios.DocTypeEnum : Swift.Hashable {}
+@available(iOS 13, macOS 10.15, *)
+extension cycurid_ios.DocTypeEnum : Swift.RawRepresentable {}
+extension cycurid_ios.PCBC.Error : Swift.Equatable {}
+extension cycurid_ios.PCBC.Error : Swift.Hashable {}
+extension cycurid_ios.PassportAuthenticationStatus : Swift.Equatable {}
+extension cycurid_ios.PassportAuthenticationStatus : Swift.Hashable {}
+extension cycurid_ios.Environment : Swift.Equatable {}
+extension cycurid_ios.Environment : Swift.Hashable {}
+extension cycurid_ios.BarcodeParserError : Swift.Equatable {}
+extension cycurid_ios.BarcodeParserError : Swift.Hashable {}
+extension cycurid_ios.BarcodeParserError : Swift.RawRepresentable {}
+extension cycurid_ios.CFB.Error : Swift.Equatable {}
+extension cycurid_ios.CFB.Error : Swift.Hashable {}
+extension cycurid_ios.CFB.SegmentSize : Swift.Equatable {}
+extension cycurid_ios.CFB.SegmentSize : Swift.Hashable {}
+extension cycurid_ios.CFB.SegmentSize : Swift.RawRepresentable {}
+extension cycurid_ios.StreamEncryptor.Error : Swift.Equatable {}
+extension cycurid_ios.StreamEncryptor.Error : Swift.Hashable {}
+extension cycurid_ios.OFB.Error : Swift.Equatable {}
+extension cycurid_ios.OFB.Error : Swift.Hashable {}
+extension cycurid_ios.SecureMessagingSupportedAlgorithms : Swift.Equatable {}
+extension cycurid_ios.SecureMessagingSupportedAlgorithms : Swift.Hashable {}
+extension cycurid_ios.Padding : Swift.Equatable {}
+extension cycurid_ios.Padding : Swift.Hashable {}
+extension cycurid_ios.CycuridType : Swift.Equatable {}
+extension cycurid_ios.CycuridType : Swift.Hashable {}
+extension cycurid_ios.CycuridType : Swift.RawRepresentable {}
+extension cycurid_ios.BlockEncryptor.Error : Swift.Equatable {}
+extension cycurid_ios.BlockEncryptor.Error : Swift.Hashable {}
+extension cycurid_ios.Blowfish.Error : Swift.Equatable {}
+extension cycurid_ios.Blowfish.Error : Swift.Hashable {}
+extension cycurid_ios.BlockDecryptor.Error : Swift.Equatable {}
+extension cycurid_ios.BlockDecryptor.Error : Swift.Hashable {}
+extension cycurid_ios.OCB.Mode : Swift.Equatable {}
+extension cycurid_ios.OCB.Mode : Swift.Hashable {}
+extension cycurid_ios.OCB.Error : Swift.Equatable {}
+extension cycurid_ios.OCB.Error : Swift.Hashable {}
+extension cycurid_ios.PACEMappingType : Swift.Equatable {}
+extension cycurid_ios.PACEMappingType : Swift.Hashable {}
+extension cycurid_ios.ChaCha20.Error : Swift.Equatable {}
+extension cycurid_ios.ChaCha20.Error : Swift.Hashable {}
+extension cycurid_ios.RNCryptor.Error : Swift.Equatable {}
+extension cycurid_ios.RNCryptor.Error : Swift.Hashable {}
+extension cycurid_ios.RNCryptor.Error : Swift.RawRepresentable {}
+extension cycurid_ios.RNCryptor.DecryptorV3 : cycurid_ios.RNCryptorType {}
+extension cycurid_ios.HKDF.Error : Swift.Equatable {}
+extension cycurid_ios.HKDF.Error : Swift.Hashable {}
+extension cycurid_ios.GCM.Mode : Swift.Equatable {}
+extension cycurid_ios.GCM.Mode : Swift.Hashable {}
+extension cycurid_ios.GCM.Error : Swift.Equatable {}
+extension cycurid_ios.GCM.Error : Swift.Hashable {}
+extension cycurid_ios.PKCS5.PBKDF2.Error : Swift.Equatable {}
+extension cycurid_ios.PKCS5.PBKDF2.Error : Swift.Hashable {}
+extension cycurid_ios.PKCS5.PBKDF1.Error : Swift.Equatable {}
+extension cycurid_ios.PKCS5.PBKDF1.Error : Swift.Hashable {}
+extension cycurid_ios.PKCS5.PBKDF1.Variant : Swift.Equatable {}
+extension cycurid_ios.PKCS5.PBKDF1.Variant : Swift.Hashable {}
+extension cycurid_ios.HMAC.Error : Swift.Equatable {}
+extension cycurid_ios.HMAC.Error : Swift.Hashable {}
+extension cycurid_ios.CCM : cycurid_ios.BlockMode {}
+extension cycurid_ios.CCM.Error : Swift.Equatable {}
+extension cycurid_ios.CCM.Error : Swift.Hashable {}
+extension cycurid_ios.XChaCha20.Error : Swift.Equatable {}
+extension cycurid_ios.XChaCha20.Error : Swift.Hashable {}
+extension cycurid_ios.AES.Error : Swift.Equatable {}
+extension cycurid_ios.AES.Error : Swift.Hashable {}
+extension cycurid_ios.AES.Variant : Swift.Equatable {}
+extension cycurid_ios.AES.Variant : Swift.Hashable {}
+extension cycurid_ios.AES.Variant : Swift.RawRepresentable {}
+extension cycurid_ios.SHA3.Variant : Swift.Equatable {}
+extension cycurid_ios.SHA3.Variant : Swift.Hashable {}
+extension cycurid_ios.StreamDecryptor.Error : Swift.Equatable {}
+extension cycurid_ios.StreamDecryptor.Error : Swift.Hashable {}
+extension cycurid_ios.FailedCheck : Swift.Equatable {}
+extension cycurid_ios.FailedCheck : Swift.Hashable {}
+extension cycurid_ios.SignatureError : Swift.Equatable {}
+extension cycurid_ios.SignatureError : Swift.Hashable {}
+extension cycurid_ios.Bit : Swift.Equatable {}
+extension cycurid_ios.Bit : Swift.Hashable {}
+extension cycurid_ios.Bit : Swift.RawRepresentable {}
+extension cycurid_ios.CTR : cycurid_ios.BlockMode {}
+extension cycurid_ios.CTR.Error : Swift.Equatable {}
+extension cycurid_ios.CTR.Error : Swift.Hashable {}
+extension cycurid_ios.CBC.Error : Swift.Equatable {}
+extension cycurid_ios.CBC.Error : Swift.Hashable {}
+extension cycurid_ios.CMAC.Error : Swift.Equatable {}
+extension cycurid_ios.CMAC.Error : Swift.Hashable {}
+extension cycurid_ios.Rabbit.Error : Swift.Equatable {}
+extension cycurid_ios.Rabbit.Error : Swift.Hashable {}
+extension cycurid_ios.LogLevel : Swift.Equatable {}
+extension cycurid_ios.LogLevel : Swift.Hashable {}
+extension cycurid_ios.LogLevel : Swift.RawRepresentable {}
+@available(iOS 13, macOS 10.15, *)
+extension cycurid_ios.DataGroupId : Swift.Equatable {}
+@available(iOS 13, macOS 10.15, *)
+extension cycurid_ios.DataGroupId : Swift.Hashable {}
+@available(iOS 13, macOS 10.15, *)
+extension cycurid_ios.DataGroupId : Swift.RawRepresentable {}
+extension cycurid_ios.CS.BigInt.Sign : Swift.Equatable {}
+extension cycurid_ios.CS.BigInt.Sign : Swift.Hashable {}
+extension cycurid_ios.SHA2.Variant : Swift.Equatable {}
+extension cycurid_ios.SHA2.Variant : Swift.Hashable {}
+extension cycurid_ios.SHA2.Variant : Swift.Sendable {}
+extension cycurid_ios.CipherError : Swift.Equatable {}
+extension cycurid_ios.CipherError : Swift.Hashable {}

@@ -3,7 +3,12 @@ buildscript {
   def kotlin_version = rootProject.ext.has("kotlinVersion") ? rootProject.ext.get("kotlinVersion") : project.properties["CycuridSdk_kotlinVersion"]
 
   repositories {
+    mavenLocal()
     google()
+    // maven {
+    //     name = "GitHubPackages"
+    //     url = uri("https://maven.pkg.github.com/Cycurid/android-cycurid-sdk")
+    //   }
     mavenCentral()
   }
 
@@ -99,7 +104,12 @@ android {
 }
 
 repositories {
+  mavenLocal()
   mavenCentral()
+        //   maven {
+        //     name = "GitHubPackages"
+        //     url = uri("https://maven.pkg.github.com/Cycurid/android-cycurid-sdk")
+        // }
   google()
 }
 
@@ -111,6 +121,7 @@ dependencies {
   //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  implementation "com.library.cycurid:cycuridsdk:1.0.20"
 }
 
 if (isNewArchitectureEnabled()) {
