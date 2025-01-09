@@ -10,8 +10,11 @@ npm install react-native-cycurid-sdk
 
 ## Usage
 
+### Refer to documentation for more details:
 https://docs.cycurid.com/
 
+
+A Basic Example:
 ```js
 export default function App() {
   const [livenessResult, setLivenessResult] = useState<string | null>(null);
