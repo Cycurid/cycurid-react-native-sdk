@@ -27,7 +27,6 @@ class CycuridSdkModule(reactContext: ReactApplicationContext) :
             resultCode: Int,
             data: Intent?
         ) {
-          val apiFlow = CycuridType.isHuman
           if (requestCode == Constants.CYCURID_REQUEST_CODE) {
               val res = data!!.getStringExtra("CYCURID_RESULT")
               if (cyruridResultPromise != null) {
@@ -65,6 +64,9 @@ class CycuridSdkModule(reactContext: ReactApplicationContext) :
     when (type) {
         "isHuman" -> flowType = CycuridType.isHuman
         "onboarding" -> flowType = CycuridType.onboarding
+        "verification" -> flowType = CycuridType.verification
+        "identification" -> flowType = CycuridType.identification
+        "dataExtraction" -> flowType = CycuridType.dataExtraction
         else -> { 
             flowType = CycuridType.isHuman
         }

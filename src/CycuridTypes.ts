@@ -1,6 +1,9 @@
 export enum CycurIdType {
   isHuman = 'isHuman',
   onboarding = 'onboarding',
+  verification = 'verification',
+  identification = 'identification',
+  dataExtraction = 'dataExtraction',
 }
 
 export class CycuridConfig {
