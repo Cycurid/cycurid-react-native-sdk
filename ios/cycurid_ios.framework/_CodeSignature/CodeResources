@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		nWKYsJ04hskKm7A4MwDk8B9eZsk=
+		</data>
 		<key>Assets.car</key>
 		<data>
 		qohhGCvOGyyNZzXH5J71gDRSiQo=
@@ -15,10 +19,6 @@
 		<key>Headers/AAMVA_Barcode_Parser.h</key>
 		<data>
 		fF5OxcsZZ4eUpMDze/qK5f3BqwY=
-		</data>
-		<key>Headers/CycuridClass.h</key>
-		<data>
-		wLZ2sJfNYbtlXfuZ+UyxuNEYYFQ=
 		</data>
 		<key>Headers/Mtcnn.h</key>
 		<data>
@@ -506,15 +506,15 @@
 		</data>
 		<key>Modules/cycurid_ios.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		uYwlsu6Y5m14CG1NU8WIlmITdTo=
+		zKRyKItG/GUnRVTlv7fKr4k/rac=
 		</data>
 		<key>Modules/cycurid_ios.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		wvHSUvcF1e/+v5K8O/lMgbgJ68A=
+		mgjIbtkn3IRSdBQ9cuEMcj5HIT4=
 		</data>
 		<key>Modules/cycurid_ios.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		+xFNgiVZqZZeqXu9K/C/Uff+Njo=
+		6egfBqvamH2UVBzreU4UQKYlJ0U=
 		</data>
 		<key>Modules/cycurid_ios.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -522,11 +522,11 @@
 		</data>
 		<key>Modules/cycurid_ios.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		+xFNgiVZqZZeqXu9K/C/Uff+Njo=
+		6egfBqvamH2UVBzreU4UQKYlJ0U=
 		</data>
 		<key>Modules/cycurid_ios.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		QrR9mnuDGbJHBndJDuhmU7lbqos=
+		nVdgpb4x64mkHv1U8fl5Bdce8Y4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -651,13 +651,6 @@
 			<key>hash2</key>
 			<data>
 			VVzkwGOKuK1c19gXqWpEWIX6J+j3nolJ2aG1xy6k+Ww=
-			</data>
-		</dict>
-		<key>Headers/CycuridClass.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			iJpzwHsFxYOij1NXBcR47apD0dypnp5U1IctKafnm9Q=
 			</data>
 		</dict>
 		<key>Headers/Mtcnn.h</key>
@@ -1504,21 +1497,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			n2y3kKwAeiduF1WcKW+BOT6c4N4/eMgX+lhF/Htej0I=
+			/vlgAKWZ2cJDijylhwXsdfmR7817Cc2XbTZPm0GiVlU=
 			</data>
 		</dict>
 		<key>Modules/cycurid_ios.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			V3i3lE8deItZPnwWH2LIOXHDGFK43aMUvOU3pCclY8A=
+			c9I5QPmKvePtXcGdhEi6lsaTwc3vBevIR/V05PCAKXo=
 			</data>
 		</dict>
 		<key>Modules/cycurid_ios.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0jBWjWcAELM67Q8TOB+aHYmBgt9IOhJ16hEERO9/cC8=
+			AcyTig0EsgBXD6O5VheH6v9WxMlKLIhKZksQ75z5zTc=
 			</data>
 		</dict>
 		<key>Modules/cycurid_ios.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -1532,14 +1525,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0jBWjWcAELM67Q8TOB+aHYmBgt9IOhJ16hEERO9/cC8=
+			AcyTig0EsgBXD6O5VheH6v9WxMlKLIhKZksQ75z5zTc=
 			</data>
 		</dict>
 		<key>Modules/cycurid_ios.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Yt9AmztQ8sbpKzYm/RbbsW8+DZasNOVw1eDNiZBOE8Q=
+			8JBG9ISfIz93cRgqvEQEDyy7LtX2LHYE8cNYUExJwRw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

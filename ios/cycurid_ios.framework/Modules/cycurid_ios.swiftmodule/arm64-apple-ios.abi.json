@@ -16483,630 +16483,6 @@
             "funcSelfKind": "NonMutating"
           },
           {
-            "kind": "Function",
-            "name": "getCryptoKeys",
-            "printedName": "getCryptoKeys()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11cycurid_ios12CycurIDClassC13getCryptoKeysSSSgyFZ",
-            "mangledName": "$s11cycurid_ios12CycurIDClassC13getCryptoKeysSSSgyFZ",
-            "moduleName": "cycurid_ios",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getIdData",
-            "printedName": "getIdData()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String : Swift.String]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Swift.String]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:SD"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11cycurid_ios12CycurIDClassC9getIdDataSDyS2SGSgyFZ",
-            "mangledName": "$s11cycurid_ios12CycurIDClassC9getIdDataSDyS2SGSgyFZ",
-            "moduleName": "cycurid_ios",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getLicenseData",
-            "printedName": "getLicenseData()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String : Swift.String]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Swift.String]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:SD"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11cycurid_ios12CycurIDClassC14getLicenseDataSDyS2SGSgyFZ",
-            "mangledName": "$s11cycurid_ios12CycurIDClassC14getLicenseDataSDyS2SGSgyFZ",
-            "moduleName": "cycurid_ios",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getPassportData",
-            "printedName": "getPassportData()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String : Swift.String]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Swift.String]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:SD"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11cycurid_ios12CycurIDClassC15getPassportDataSDyS2SGSgyFZ",
-            "mangledName": "$s11cycurid_ios12CycurIDClassC15getPassportDataSDyS2SGSgyFZ",
-            "moduleName": "cycurid_ios",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "deleteAllData",
-            "printedName": "deleteAllData()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11cycurid_ios12CycurIDClassC13deleteAllDatayyFZ",
-            "mangledName": "$s11cycurid_ios12CycurIDClassC13deleteAllDatayyFZ",
-            "moduleName": "cycurid_ios",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "returnUserInfo",
-            "printedName": "returnUserInfo()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String : Swift.String]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Swift.String]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:SD"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11cycurid_ios12CycurIDClassC14returnUserInfoSDyS2SGSgyFZ",
-            "mangledName": "$s11cycurid_ios12CycurIDClassC14returnUserInfoSDyS2SGSgyFZ",
-            "moduleName": "cycurid_ios",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getClaims",
-            "printedName": "getClaims(params:completionHandler:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : Any]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ProtocolComposition",
-                    "printedName": "Any"
-                  }
-                ],
-                "usr": "s:SD"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "([Swift.String]?) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[Swift.String]?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[Swift.String]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11cycurid_ios12CycurIDClassC9getClaims6params17completionHandlerySDySSypG_ySaySSGSgctFZ",
-            "mangledName": "$s11cycurid_ios12CycurIDClassC9getClaims6params17completionHandlerySDySSypG_ySaySSGSgctFZ",
-            "moduleName": "cycurid_ios",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getClaimData",
-            "printedName": "getClaimData(params:completionHandler:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : Any]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ProtocolComposition",
-                    "printedName": "Any"
-                  }
-                ],
-                "usr": "s:SD"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "([Swift.String : Swift.String]?) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[Swift.String : Swift.String]?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Dictionary",
-                        "printedName": "[Swift.String : Swift.String]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:SD"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11cycurid_ios12CycurIDClassC12getClaimData6params17completionHandlerySDySSypG_ySDyS2SGSgctFZ",
-            "mangledName": "$s11cycurid_ios12CycurIDClassC12getClaimData6params17completionHandlerySDySSypG_ySDyS2SGSgctFZ",
-            "moduleName": "cycurid_ios",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "verifyMerchantDetails",
-            "printedName": "verifyMerchantDetails(params:completionHandler:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : Swift.String]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:SD"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Any?) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Any?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ProtocolComposition",
-                        "printedName": "Any"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11cycurid_ios12CycurIDClassC21verifyMerchantDetails6params17completionHandlerySDyS2SG_yypSgctFZ",
-            "mangledName": "$s11cycurid_ios12CycurIDClassC21verifyMerchantDetails6params17completionHandlerySDyS2SG_yypSgctFZ",
-            "moduleName": "cycurid_ios",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "allowMerchantAcces",
-            "printedName": "allowMerchantAcces(params:completionHandler:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : Swift.String]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:SD"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Swift.String?) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11cycurid_ios12CycurIDClassC18allowMerchantAcces6params17completionHandlerySDyS2SG_ySSSgctFZ",
-            "mangledName": "$s11cycurid_ios12CycurIDClassC18allowMerchantAcces6params17completionHandlerySDyS2SG_ySSSgctFZ",
-            "moduleName": "cycurid_ios",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "denyMerchantAccess",
-            "printedName": "denyMerchantAccess(params:completionHandler:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : Swift.String]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:SD"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Swift.String?) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11cycurid_ios12CycurIDClassC18denyMerchantAccess6params17completionHandlerySDyS2SG_ySSSgctFZ",
-            "mangledName": "$s11cycurid_ios12CycurIDClassC18denyMerchantAccess6params17completionHandlerySDyS2SG_ySSSgctFZ",
-            "moduleName": "cycurid_ios",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getProfilePicture",
-            "printedName": "getProfilePicture()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIImage?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIImage",
-                    "printedName": "UIKit.UIImage",
-                    "usr": "c:objc(cs)UIImage"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11cycurid_ios12CycurIDClassC17getProfilePictureSo7UIImageCSgyFZ",
-            "mangledName": "$s11cycurid_ios12CycurIDClassC17getProfilePictureSo7UIImageCSgyFZ",
-            "moduleName": "cycurid_ios",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -79314,7 +78690,14 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 35114,
+      "offset": 1300,
+      "length": 28,
+      "value": "\"https:\/\/oauth.cycurid.com\/\""
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/NetworkManager.swift",
+      "kind": "StringLiteral",
+      "offset": 37217,
       "length": 6,
       "value": "\"\r\n\""
     },
@@ -79874,623 +79257,630 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 2397,
+      "offset": 2471,
       "length": 53,
       "value": "\"We could not read the information on your document.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 2479,
+      "offset": 2553,
       "length": 133,
       "value": "\"A document with matching data has already been uploaded. Please double check that this has not already been uploaded and try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 2639,
+      "offset": 2713,
       "length": 138,
       "value": "\"The document you are trying to upload is expired. Please double check that this is the right document you want to upload, and try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 2807,
+      "offset": 2881,
       "length": 93,
       "value": "\"Could not authenticate your ID. Please make sure the ID is completely visible and readable.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 2936,
+      "offset": 3010,
       "length": 151,
       "value": "\"The information on your document does not match with data found in previously uploaded documents. Please double check the documen data and try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 3122,
+      "offset": 3196,
       "length": 264,
       "value": "\"The information on your account does not match the information detected in the document. Please try the process again, or try adding a different document. If the problem persists, please contact your local dealership to verify your ID has not been tampered with.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 3409,
+      "offset": 3483,
       "length": 199,
       "value": "\"We could not read the information on your passport. Please ensure that the document is clean and contains no scratches, dirt, streak, markings or anything that would distrupt the scanning proccess.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 3640,
+      "offset": 3714,
       "length": 59,
       "value": "\"We are unable to connect to our server. Please try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 3732,
+      "offset": 3806,
       "length": 69,
       "value": "\"We are unable to extract data from your document. Please try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 3836,
+      "offset": 3910,
       "length": 78,
       "value": "\"We are unable to detect the NFC Chip within your passport. Please try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 3945,
-      "length": 113,
-      "value": "\"To ensure information is processed accurately, it is recommended that you take the photo on a white background.\""
-    },
-    {
-      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
-      "kind": "StringLiteral",
-      "offset": 4084,
+      "offset": 4022,
       "length": 73,
       "value": "\"We are currently unable to handle your request. Please try again later.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 4190,
+      "offset": 4126,
       "length": 113,
       "value": "\"To ensure information is processed accurately, it is recommended that you take the photo on a white background.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 4335,
+      "offset": 4265,
+      "length": 73,
+      "value": "\"We are currently unable to handle your request. Please try again later.\""
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
+      "kind": "StringLiteral",
+      "offset": 4371,
       "length": 113,
       "value": "\"To ensure information is processed accurately, it is recommended that you take the photo on a white background.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 4481,
+      "offset": 4516,
+      "length": 113,
+      "value": "\"To ensure information is processed accurately, it is recommended that you take the photo on a white background.\""
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
+      "kind": "StringLiteral",
+      "offset": 4662,
       "length": 113,
       "value": "\"To ensure information is processed accurately, it is recommended that you take the photo on a white background.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 4619,
+      "offset": 4800,
       "length": 5,
       "value": "20000"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 4651,
+      "offset": 4832,
       "length": 5,
       "value": "20001"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 4689,
+      "offset": 4870,
       "length": 5,
       "value": "20002"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 4727,
+      "offset": 4908,
       "length": 5,
       "value": "20003"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 4765,
+      "offset": 4946,
       "length": 5,
       "value": "20004"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 4803,
+      "offset": 4984,
       "length": 5,
       "value": "20005"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 4841,
+      "offset": 5022,
       "length": 5,
       "value": "20006"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 4879,
+      "offset": 5060,
       "length": 5,
       "value": "20007"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 4917,
+      "offset": 5098,
       "length": 5,
       "value": "20008"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 4974,
+      "offset": 5155,
       "length": 5,
       "value": "20009"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5025,
+      "offset": 5206,
       "length": 5,
       "value": "20010"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5104,
+      "offset": 5285,
       "length": 5,
       "value": "20100"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5136,
+      "offset": 5317,
       "length": 5,
       "value": "20101"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5174,
+      "offset": 5355,
       "length": 5,
       "value": "20102"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5212,
+      "offset": 5393,
       "length": 5,
       "value": "20103"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5250,
+      "offset": 5431,
       "length": 5,
       "value": "20104"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5288,
+      "offset": 5469,
       "length": 5,
       "value": "20105"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5326,
+      "offset": 5507,
       "length": 5,
       "value": "20106"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5364,
+      "offset": 5545,
       "length": 5,
       "value": "20107"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5402,
+      "offset": 5583,
       "length": 5,
       "value": "20108"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5468,
+      "offset": 5649,
       "length": 5,
       "value": "20200"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5506,
+      "offset": 5687,
       "length": 5,
       "value": "20201"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5544,
+      "offset": 5725,
       "length": 5,
       "value": "20300"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5582,
+      "offset": 5763,
       "length": 5,
       "value": "20301"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5620,
+      "offset": 5801,
       "length": 5,
       "value": "20400"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5658,
+      "offset": 5839,
       "length": 5,
       "value": "20401"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5696,
+      "offset": 5877,
       "length": 5,
       "value": "20402"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5734,
+      "offset": 5915,
       "length": 5,
       "value": "20403"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5772,
+      "offset": 5953,
       "length": 5,
       "value": "20404"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5813,
+      "offset": 5994,
       "length": 5,
       "value": "21000"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5851,
+      "offset": 6032,
       "length": 5,
       "value": "21001"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5889,
+      "offset": 6070,
       "length": 5,
       "value": "21002"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5927,
+      "offset": 6108,
       "length": 5,
       "value": "21003"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5964,
+      "offset": 6145,
       "length": 5,
       "value": "21100"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6002,
+      "offset": 6183,
       "length": 5,
       "value": "21101"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6040,
+      "offset": 6221,
       "length": 5,
       "value": "21102"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6079,
+      "offset": 6260,
       "length": 5,
       "value": "21200"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6111,
+      "offset": 6292,
       "length": 5,
       "value": "21201"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6143,
+      "offset": 6324,
       "length": 5,
       "value": "21202"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6178,
+      "offset": 6359,
       "length": 5,
       "value": "21203"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6212,
+      "offset": 6393,
       "length": 5,
       "value": "21204"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6253,
+      "offset": 6434,
       "length": 5,
       "value": "21205"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6293,
+      "offset": 6474,
       "length": 5,
       "value": "21206"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6326,
+      "offset": 6507,
       "length": 5,
       "value": "21300"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6358,
+      "offset": 6539,
       "length": 5,
       "value": "21301"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6392,
+      "offset": 6573,
       "length": 5,
       "value": "21302"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6424,
+      "offset": 6605,
       "length": 5,
       "value": "21303"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6465,
+      "offset": 6646,
       "length": 5,
       "value": "21304"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6521,
+      "offset": 6702,
       "length": 5,
       "value": "21305"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6552,
+      "offset": 6733,
       "length": 5,
       "value": "21400"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6584,
+      "offset": 6765,
       "length": 5,
       "value": "21401"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6622,
+      "offset": 6803,
       "length": 5,
       "value": "21402"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6660,
+      "offset": 6841,
       "length": 5,
       "value": "21403"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6698,
+      "offset": 6879,
       "length": 5,
       "value": "21404"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6736,
+      "offset": 6917,
       "length": 5,
       "value": "21405"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6774,
+      "offset": 6955,
       "length": 5,
       "value": "21406"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6812,
+      "offset": 6993,
       "length": 5,
       "value": "21407"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6850,
+      "offset": 7031,
       "length": 5,
       "value": "21408"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6888,
+      "offset": 7069,
       "length": 5,
       "value": "21409"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6927,
+      "offset": 7108,
       "length": 5,
       "value": "22000"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6965,
+      "offset": 7146,
       "length": 5,
       "value": "22001"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7003,
+      "offset": 7184,
       "length": 5,
       "value": "22002"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7041,
+      "offset": 7222,
       "length": 5,
       "value": "22101"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7079,
+      "offset": 7260,
       "length": 5,
       "value": "22102"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7120,
+      "offset": 7301,
       "length": 5,
       "value": "21500"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 7217,
+      "offset": 7398,
       "length": 105,
       "value": "\"Unable to process the request. If the problem persists, please close and restart the app and try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 7367,
+      "offset": 7548,
       "length": 96,
       "value": "\"Your biometrics are not associated with this device. Please use the device you signed up with.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 7515,
+      "offset": 7696,
       "length": 52,
       "value": "\"We were unable to identify you.\nPlease try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 7610,
+      "offset": 7791,
       "length": 101,
       "value": "\"You already have an account with Cycurid, please login from the device you setup your account with.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 7758,
+      "offset": 7939,
       "length": 117,
       "value": "\"We are unable to recognize you due to the lighting conditions. Please make sure your camera is clean and try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 7913,
+      "offset": 8094,
       "length": 111,
       "value": "\"We are currently unable to handle your request. Make sure your internet connection works and try again later.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 8069,
+      "offset": 8250,
       "length": 73,
       "value": "\"We are currently unable to handle your request. Please try again later.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 8180,
+      "offset": 8361,
       "length": 120,
       "value": "\"There was an error in processing the request. If the problem persists, please close and restart the app and try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 8343,
+      "offset": 8524,
       "length": 44,
       "value": "\"The user already onboarded been onboarded.\""
     },
@@ -80525,7 +79915,7 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/CycuridClass.swift",
       "kind": "StringLiteral",
-      "offset": 22482,
+      "offset": 22506,
       "length": 9,
       "value": "\"license\""
     },
@@ -86797,7 +86187,7 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/ReviewMRZViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 18246,
+      "offset": 18441,
       "length": 5,
       "value": "false"
     },

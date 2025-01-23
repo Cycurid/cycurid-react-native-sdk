@@ -40,6 +40,7 @@
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = CycuridSdkExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-CycuridSdkExample-CycuridSdkExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CycuridSdkExample-CycuridSdkExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-CycuridSdkExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CycuridSdkExample.debug.xcconfig"; path = "Target Support Files/Pods-CycuridSdkExample/Pods-CycuridSdkExample.debug.xcconfig"; sourceTree = "<group>"; };
+		43E1B2642D41AEA8009B0BED /* CycuridSdkExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = CycuridSdkExample.entitlements; path = CycuridSdkExample/CycuridSdkExample.entitlements; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-CycuridSdkExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CycuridSdkExample.release.xcconfig"; path = "Target Support Files/Pods-CycuridSdkExample/Pods-CycuridSdkExample.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-CycuridSdkExample-CycuridSdkExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CycuridSdkExample-CycuridSdkExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-CycuridSdkExample-CycuridSdkExampleTests/Pods-CycuridSdkExample-CycuridSdkExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-CycuridSdkExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CycuridSdkExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +89,7 @@
 		13B07FAE1A68108700A75B9A /* CycuridSdkExample */ = {
 			isa = PBXGroup;
 			children = (
+				43E1B2642D41AEA8009B0BED /* CycuridSdkExample.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -469,6 +471,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = CycuridSdkExample/CycuridSdkExample.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 66KL79WTH4;
 				ENABLE_BITCODE = NO;
@@ -498,6 +501,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = CycuridSdkExample/CycuridSdkExample.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 66KL79WTH4;
 				INFOPLIST_FILE = CycuridSdkExample/Info.plist;

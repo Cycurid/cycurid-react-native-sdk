@@ -834,18 +834,6 @@ public struct CycuridOptions {
   public func beginProcess(flow: cycurid_ios.CycuridType, delegateClass: Any)
   public func beginProcessReact(vc: UIKit.UIViewController)
   public func beginProcessDocumentUpload(flow: cycurid_ios.CycuridType, delegateClass: Any)
-  public static func getCryptoKeys() -> Swift.String?
-  public static func getIdData() -> [Swift.String : Swift.String]?
-  public static func getLicenseData() -> [Swift.String : Swift.String]?
-  public static func getPassportData() -> [Swift.String : Swift.String]?
-  public static func deleteAllData()
-  public static func returnUserInfo() -> [Swift.String : Swift.String]?
-  public static func getClaims(params: [Swift.String : Any], completionHandler: @escaping ([Swift.String]?) -> Swift.Void)
-  public static func getClaimData(params: [Swift.String : Any], completionHandler: @escaping ([Swift.String : Swift.String]?) -> Swift.Void)
-  public static func verifyMerchantDetails(params: [Swift.String : Swift.String], completionHandler: @escaping (Any?) -> Swift.Void)
-  public static func allowMerchantAcces(params: [Swift.String : Swift.String], completionHandler: @escaping (Swift.String?) -> Swift.Void)
-  public static func denyMerchantAccess(params: [Swift.String : Swift.String], completionHandler: @escaping (Swift.String?) -> Swift.Void)
-  public static func getProfilePicture() -> UIKit.UIImage?
   @objc override dynamic public init()
   @objc deinit
 }

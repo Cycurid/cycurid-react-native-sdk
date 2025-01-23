@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NFCReaderUsageDescription</key>
+	<string>Access is required to scan NFC tags for reading data.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Camera usage required for liveness detection</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -49,5 +51,10 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+	<array>
+		<string>com.apple.developer.nfc.readersession.iso7816.select-identifiers</string>
+		<string>A0000002471001</string>
+	</array>
 </dict>
 </plist>
