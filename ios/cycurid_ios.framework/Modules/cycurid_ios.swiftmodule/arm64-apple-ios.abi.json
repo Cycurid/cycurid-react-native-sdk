@@ -78697,7 +78697,7 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 37217,
+      "offset": 37707,
       "length": 6,
       "value": "\"\r\n\""
     },
@@ -79257,632 +79257,639 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 2471,
+      "offset": 2556,
       "length": 53,
       "value": "\"We could not read the information on your document.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 2553,
+      "offset": 2638,
       "length": 133,
       "value": "\"A document with matching data has already been uploaded. Please double check that this has not already been uploaded and try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 2713,
+      "offset": 2798,
       "length": 138,
       "value": "\"The document you are trying to upload is expired. Please double check that this is the right document you want to upload, and try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 2881,
+      "offset": 2966,
       "length": 93,
       "value": "\"Could not authenticate your ID. Please make sure the ID is completely visible and readable.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 3010,
+      "offset": 3095,
       "length": 151,
       "value": "\"The information on your document does not match with data found in previously uploaded documents. Please double check the documen data and try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 3196,
+      "offset": 3281,
       "length": 264,
       "value": "\"The information on your account does not match the information detected in the document. Please try the process again, or try adding a different document. If the problem persists, please contact your local dealership to verify your ID has not been tampered with.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 3483,
+      "offset": 3568,
       "length": 199,
       "value": "\"We could not read the information on your passport. Please ensure that the document is clean and contains no scratches, dirt, streak, markings or anything that would distrupt the scanning proccess.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 3714,
+      "offset": 3799,
       "length": 59,
       "value": "\"We are unable to connect to our server. Please try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 3806,
+      "offset": 3891,
       "length": 69,
       "value": "\"We are unable to extract data from your document. Please try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 3910,
+      "offset": 3995,
       "length": 78,
       "value": "\"We are unable to detect the NFC Chip within your passport. Please try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 4022,
+      "offset": 4107,
       "length": 73,
       "value": "\"We are currently unable to handle your request. Please try again later.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 4126,
+      "offset": 4211,
       "length": 113,
       "value": "\"To ensure information is processed accurately, it is recommended that you take the photo on a white background.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 4265,
+      "offset": 4350,
       "length": 73,
       "value": "\"We are currently unable to handle your request. Please try again later.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 4371,
+      "offset": 4456,
       "length": 113,
       "value": "\"To ensure information is processed accurately, it is recommended that you take the photo on a white background.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 4516,
+      "offset": 4601,
       "length": 113,
       "value": "\"To ensure information is processed accurately, it is recommended that you take the photo on a white background.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 4662,
+      "offset": 4747,
       "length": 113,
       "value": "\"To ensure information is processed accurately, it is recommended that you take the photo on a white background.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 4800,
+      "offset": 4885,
       "length": 5,
       "value": "20000"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 4832,
+      "offset": 4917,
       "length": 5,
       "value": "20001"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 4870,
+      "offset": 4955,
       "length": 5,
       "value": "20002"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 4908,
+      "offset": 4993,
       "length": 5,
       "value": "20003"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 4946,
+      "offset": 5031,
       "length": 5,
       "value": "20004"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 4984,
+      "offset": 5069,
       "length": 5,
       "value": "20005"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5022,
+      "offset": 5107,
       "length": 5,
       "value": "20006"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5060,
+      "offset": 5145,
       "length": 5,
       "value": "20007"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5098,
+      "offset": 5183,
       "length": 5,
       "value": "20008"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5155,
+      "offset": 5240,
       "length": 5,
       "value": "20009"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5206,
+      "offset": 5291,
       "length": 5,
       "value": "20010"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5285,
+      "offset": 5370,
       "length": 5,
       "value": "20100"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5317,
+      "offset": 5402,
       "length": 5,
       "value": "20101"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5355,
+      "offset": 5440,
       "length": 5,
       "value": "20102"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5393,
+      "offset": 5478,
       "length": 5,
       "value": "20103"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5431,
+      "offset": 5516,
       "length": 5,
       "value": "20104"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5469,
+      "offset": 5554,
       "length": 5,
       "value": "20105"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5507,
+      "offset": 5592,
       "length": 5,
       "value": "20106"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5545,
+      "offset": 5630,
       "length": 5,
       "value": "20107"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5583,
+      "offset": 5668,
       "length": 5,
       "value": "20108"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5649,
+      "offset": 5734,
       "length": 5,
       "value": "20200"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5687,
+      "offset": 5772,
       "length": 5,
       "value": "20201"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5725,
+      "offset": 5810,
       "length": 5,
       "value": "20300"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5763,
+      "offset": 5848,
       "length": 5,
       "value": "20301"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5801,
+      "offset": 5886,
       "length": 5,
       "value": "20400"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5839,
+      "offset": 5924,
       "length": 5,
       "value": "20401"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5877,
+      "offset": 5962,
       "length": 5,
       "value": "20402"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5915,
+      "offset": 6000,
       "length": 5,
       "value": "20403"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5953,
+      "offset": 6038,
       "length": 5,
       "value": "20404"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5994,
+      "offset": 6079,
       "length": 5,
       "value": "21000"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6032,
+      "offset": 6117,
       "length": 5,
       "value": "21001"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6070,
+      "offset": 6155,
       "length": 5,
       "value": "21002"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6108,
+      "offset": 6193,
       "length": 5,
       "value": "21003"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6145,
+      "offset": 6230,
       "length": 5,
       "value": "21100"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6183,
+      "offset": 6268,
       "length": 5,
       "value": "21101"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6221,
+      "offset": 6306,
       "length": 5,
       "value": "21102"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6260,
+      "offset": 6345,
       "length": 5,
       "value": "21200"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6292,
+      "offset": 6377,
       "length": 5,
       "value": "21201"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6324,
+      "offset": 6409,
       "length": 5,
       "value": "21202"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6359,
+      "offset": 6444,
       "length": 5,
       "value": "21203"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6393,
+      "offset": 6478,
       "length": 5,
       "value": "21204"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6434,
+      "offset": 6519,
       "length": 5,
       "value": "21205"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6474,
+      "offset": 6559,
       "length": 5,
       "value": "21206"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6507,
+      "offset": 6592,
       "length": 5,
       "value": "21300"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6539,
+      "offset": 6624,
       "length": 5,
       "value": "21301"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6573,
+      "offset": 6658,
       "length": 5,
       "value": "21302"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6605,
+      "offset": 6690,
       "length": 5,
       "value": "21303"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6646,
+      "offset": 6731,
       "length": 5,
       "value": "21304"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6702,
+      "offset": 6787,
       "length": 5,
       "value": "21305"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6733,
+      "offset": 6818,
       "length": 5,
       "value": "21400"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6765,
+      "offset": 6850,
       "length": 5,
       "value": "21401"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6803,
+      "offset": 6888,
       "length": 5,
       "value": "21402"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6841,
+      "offset": 6926,
       "length": 5,
       "value": "21403"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6879,
+      "offset": 6964,
       "length": 5,
       "value": "21404"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6917,
+      "offset": 7002,
       "length": 5,
       "value": "21405"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6955,
+      "offset": 7040,
       "length": 5,
       "value": "21406"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6993,
+      "offset": 7078,
       "length": 5,
       "value": "21407"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7031,
+      "offset": 7116,
       "length": 5,
       "value": "21408"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7069,
+      "offset": 7154,
       "length": 5,
       "value": "21409"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7108,
+      "offset": 7193,
       "length": 5,
       "value": "22000"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7146,
+      "offset": 7231,
       "length": 5,
       "value": "22001"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7184,
+      "offset": 7269,
       "length": 5,
       "value": "22002"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7222,
+      "offset": 7307,
       "length": 5,
       "value": "22101"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7260,
+      "offset": 7345,
       "length": 5,
       "value": "22102"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7301,
+      "offset": 7386,
       "length": 5,
       "value": "21500"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 7398,
+      "offset": 7483,
       "length": 105,
       "value": "\"Unable to process the request. If the problem persists, please close and restart the app and try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 7548,
+      "offset": 7633,
       "length": 96,
       "value": "\"Your biometrics are not associated with this device. Please use the device you signed up with.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 7696,
+      "offset": 7781,
       "length": 52,
       "value": "\"We were unable to identify you.\nPlease try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 7791,
-      "length": 101,
-      "value": "\"You already have an account with Cycurid, please login from the device you setup your account with.\""
+      "offset": 7876,
+      "length": 62,
+      "value": "\"The user id already exists. Please use a different username.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 7939,
+      "offset": 7985,
       "length": 117,
       "value": "\"We are unable to recognize you due to the lighting conditions. Please make sure your camera is clean and try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 8094,
+      "offset": 8140,
       "length": 111,
       "value": "\"We are currently unable to handle your request. Make sure your internet connection works and try again later.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 8250,
+      "offset": 8296,
       "length": 73,
       "value": "\"We are currently unable to handle your request. Please try again later.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 8361,
+      "offset": 8407,
       "length": 120,
       "value": "\"There was an error in processing the request. If the problem persists, please close and restart the app and try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 8524,
+      "offset": 8570,
       "length": 44,
       "value": "\"The user already onboarded been onboarded.\""
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
+      "kind": "StringLiteral",
+      "offset": 8660,
+      "length": 29,
+      "value": "\"Face mismatch between User.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/CycuridClass.swift",
@@ -83149,28 +83156,28 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 28466,
+      "offset": 28558,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 32483,
+      "offset": 32575,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 32544,
+      "offset": 32636,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 33872,
+      "offset": 33964,
       "length": 5,
       "value": "false"
     },
@@ -84409,98 +84416,98 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Documents\/Controllers\/UpdateAddressViewController.swift",
       "kind": "StringLiteral",
-      "offset": 12844,
+      "offset": 13158,
       "length": 17,
       "value": "\"Poppins-Regular\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Documents\/Controllers\/UpdateAddressViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 12869,
+      "offset": 13183,
       "length": 4,
       "value": "12.0"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Documents\/Controllers\/UpdateAddressViewController.swift",
       "kind": "StringLiteral",
-      "offset": 13055,
+      "offset": 13369,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Documents\/Controllers\/UpdateAddressViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 13148,
+      "offset": 13462,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Documents\/Controllers\/UpdateAddressViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 13158,
+      "offset": 13472,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Documents\/Controllers\/UpdateAddressViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 13170,
+      "offset": 13484,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Documents\/Controllers\/UpdateAddressViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 13180,
+      "offset": 13494,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Documents\/Controllers\/UpdateAddressViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 14784,
+      "offset": 15098,
       "length": 5,
       "value": "0.496"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Documents\/Controllers\/UpdateAddressViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 14798,
+      "offset": 15112,
       "length": 5,
       "value": "0.496"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Documents\/Controllers\/UpdateAddressViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 14811,
+      "offset": 15125,
       "length": 5,
       "value": "0.496"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Documents\/Controllers\/UpdateAddressViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 14825,
+      "offset": 15139,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Documents\/Controllers\/UpdateAddressViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 14886,
+      "offset": 15200,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Documents\/Controllers\/UpdateAddressViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 15117,
+      "offset": 15431,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Documents\/Controllers\/UpdateAddressViewController.swift",
       "kind": "StringLiteral",
-      "offset": 14656,
+      "offset": 14970,
       "length": 8,
       "value": "\"cycurid_ios.LogoView\""
     },
