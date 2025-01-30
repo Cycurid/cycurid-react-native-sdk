@@ -1,6 +1,6 @@
 {
   "name": "react-native-cycurid-sdk",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Cycurid liveness verification",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
