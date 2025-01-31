@@ -79173,14 +79173,14 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportReviewViewController.swift",
       "kind": "StringLiteral",
-      "offset": 20214,
+      "offset": 20338,
       "length": 17,
       "value": "\"Poppins-Regular\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportReviewViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 20239,
+      "offset": 20363,
       "length": 4,
       "value": "12.0"
     },
@@ -84654,28 +84654,28 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/GeneralControllers\/ChooseIDViewController.swift",
       "kind": "StringLiteral",
-      "offset": 14577,
+      "offset": 14701,
       "length": 18,
       "value": "\"Poppins-SemiBold\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/GeneralControllers\/ChooseIDViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 14603,
+      "offset": 14727,
       "length": 4,
       "value": "16.0"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/GeneralControllers\/ChooseIDViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 14963,
+      "offset": 15087,
       "length": 3,
       "value": "8.0"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/GeneralControllers\/ChooseIDViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 17386,
+      "offset": 17510,
       "length": 4,
       "value": "true"
     },
@@ -85550,56 +85550,56 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Licence\/Controllers\/DocumentScanViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 7126,
+      "offset": 7250,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Licence\/Controllers\/DocumentScanViewController.swift",
       "kind": "Array",
-      "offset": 7168,
+      "offset": 7292,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Licence\/Controllers\/DocumentScanViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 7210,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Licence\/Controllers\/DocumentScanViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7230,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Licence\/Controllers\/DocumentScanViewController.swift",
-      "kind": "BooleanLiteral",
       "offset": 7334,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Licence\/Controllers\/DocumentScanViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7354,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Licence\/Controllers\/DocumentScanViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7458,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Licence\/Controllers\/DocumentScanViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 7375,
+      "offset": 7499,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Licence\/Controllers\/DocumentScanViewController.swift",
       "kind": "Array",
-      "offset": 7415,
+      "offset": 7539,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Licence\/Controllers\/DocumentScanViewController.swift",
       "kind": "Array",
-      "offset": 7456,
+      "offset": 7580,
       "length": 2,
       "value": "[]"
     },
@@ -86194,7 +86194,7 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/ReviewMRZViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 18513,
+      "offset": 18624,
       "length": 5,
       "value": "false"
     },
