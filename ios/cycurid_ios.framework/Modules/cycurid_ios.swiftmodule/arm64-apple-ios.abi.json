@@ -79832,62 +79832,62 @@
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
       "offset": 7633,
-      "length": 96,
-      "value": "\"Your biometrics are not associated with this device. Please use the device you signed up with.\""
+      "length": 52,
+      "value": "\"Your biometrics are not associated with this user.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 7781,
+      "offset": 7737,
       "length": 52,
       "value": "\"We were unable to identify you.\nPlease try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 7876,
+      "offset": 7832,
       "length": 62,
       "value": "\"The user id already exists. Please use a different username.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 7985,
+      "offset": 7941,
       "length": 117,
       "value": "\"We are unable to recognize you due to the lighting conditions. Please make sure your camera is clean and try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 8140,
+      "offset": 8096,
       "length": 111,
       "value": "\"We are currently unable to handle your request. Make sure your internet connection works and try again later.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 8296,
+      "offset": 8252,
       "length": 73,
       "value": "\"We are currently unable to handle your request. Please try again later.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 8407,
+      "offset": 8363,
       "length": 120,
       "value": "\"There was an error in processing the request. If the problem persists, please close and restart the app and try again.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 8570,
+      "offset": 8526,
       "length": 44,
       "value": "\"The user already onboarded been onboarded.\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Utils\/ErrorCodes.swift",
       "kind": "StringLiteral",
-      "offset": 8660,
+      "offset": 8616,
       "length": 29,
       "value": "\"Face mismatch between User.\""
     },
@@ -82974,210 +82974,210 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 8601,
+      "offset": 8725,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 8638,
+      "offset": 8762,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 8673,
+      "offset": 8797,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "StringLiteral",
-      "offset": 8711,
+      "offset": 8835,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 8741,
+      "offset": 8865,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 8783,
+      "offset": 8907,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 8818,
+      "offset": 8942,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 8863,
+      "offset": 8987,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 8897,
+      "offset": 9021,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 8934,
+      "offset": 9058,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 8969,
+      "offset": 9093,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "Array",
-      "offset": 9006,
+      "offset": 9130,
       "length": 43,
       "value": "[\"Move head forward\", \"Move head backward\"]"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9090,
+      "offset": 9214,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9121,
+      "offset": 9245,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 9166,
+      "offset": 9290,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 9212,
+      "offset": 9336,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9251,
+      "offset": 9375,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "Array",
-      "offset": 9303,
+      "offset": 9427,
       "length": 20,
       "value": "[0.0, 0.0, 0.0, 0.0]"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "Array",
-      "offset": 9376,
+      "offset": 9500,
       "length": 10,
       "value": "[0.0, 0.0]"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "Array",
-      "offset": 9436,
+      "offset": 9560,
       "length": 20,
       "value": "[0.0, 0.0, 0.0, 0.0]"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 9499,
+      "offset": 9623,
       "length": 3,
       "value": "0.1"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 9531,
+      "offset": 9655,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 9561,
+      "offset": 9685,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 9591,
+      "offset": 9715,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 24049,
+      "offset": 24173,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 24078,
+      "offset": 24202,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 28558,
+      "offset": 28682,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 32575,
+      "offset": 32699,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 32636,
+      "offset": 32760,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Liveness\/Controllers\/LivenessViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 33964,
+      "offset": 34088,
       "length": 5,
       "value": "false"
     },
@@ -86194,7 +86194,7 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/ReviewMRZViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 18441,
+      "offset": 18513,
       "length": 5,
       "value": "false"
     },
