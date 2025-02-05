@@ -29,10 +29,16 @@ class CycuridSdkModule(reactContext: ReactApplicationContext) :
         ) {
           if (requestCode == Constants.CYCURID_REQUEST_CODE) {
               val res = data!!.getStringExtra("CYCURID_RESULT")
+              val exit = data!!.getIntExtra("data", -1)
+              Log.i("SDKTEST", "INCOMING RESULT: ${res}")
               if (cyruridResultPromise != null) {
                     if (resultCode == Activity.RESULT_OK && data != null) {
+                      if (exit == 0) {
+                        cyruridResultPromise?.resolve("User exit.")
+                      } else {
                         val result = data.getStringExtra("CYCURID_RESULT")
                         cyruridResultPromise?.resolve(result)
+                      }
                     } else {
                         cyruridResultPromise?.reject("CANCELED", "Process was canceled or failed.")
                     }
