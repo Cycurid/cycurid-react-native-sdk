@@ -78697,7 +78697,7 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 37707,
+      "offset": 37709,
       "length": 6,
       "value": "\"\r\n\""
     },
@@ -79908,21 +79908,21 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/CycuridClass.swift",
       "kind": "Dictionary",
-      "offset": 4735,
+      "offset": 4733,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/CycuridClass.swift",
       "kind": "BooleanLiteral",
-      "offset": 5152,
+      "offset": 5150,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/CycuridClass.swift",
       "kind": "StringLiteral",
-      "offset": 22506,
+      "offset": 22504,
       "length": 9,
       "value": "\"license\""
     },
@@ -84738,14 +84738,14 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Licence\/AAMVAParser\/IdUtils.swift",
       "kind": "Array",
-      "offset": 5515,
+      "offset": 5523,
       "length": 386,
       "value": "[\"AK\", \"AL\", \"AR\", \"AZ\", \"CA\", \"CO\", \"CT\", \"DC\", \"DE\", \"FL\", \"GA\", \"HI\", \"IA\", \"ID\", \"IL\", \"IN\", \"KS\", \"KY\", \"LA\", \"MA\", \"MD\", \"ME\", \"MI\", \"MN\", \"MO\", \"MS\", \"MT\", \"NC\", \"ND\", \"NE\", \"NH\", \"NJ\", \"NM\", \"NV\", \"NY\", \"OH\", \"OK\", \"OR\", \"PA\", \"RI\", \"SC\", \"SD\", \"TN\", \"TX\", \"UT\", \"VA\", \"VT\", \"WA\", \"WI\", \"WV\", \"WY\"]"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Licence\/AAMVAParser\/IdUtils.swift",
       "kind": "Array",
-      "offset": 5931,
+      "offset": 5939,
       "length": 189,
       "value": "[\"AB\", \"BC\", \"MB\", \"NB\", \"NL\", \"NS\", \"NT\", \"NU\", \"ON\", \"PE\", \"QC\", \"SK\", \"YT\"]"
     },
