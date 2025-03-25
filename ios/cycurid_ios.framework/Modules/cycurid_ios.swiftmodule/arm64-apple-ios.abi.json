@@ -16453,6 +16453,31 @@
           },
           {
             "kind": "Function",
+            "name": "passportTest",
+            "printedName": "passportTest(delegateClass:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11cycurid_ios12CycurIDClassC12passportTest13delegateClassyyp_tF",
+            "mangledName": "$s11cycurid_ios12CycurIDClassC12passportTest13delegateClassyyp_tF",
+            "moduleName": "cycurid_ios",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "beginProcessDocumentUpload",
             "printedName": "beginProcessDocumentUpload(flow:delegateClass:)",
             "children": [
@@ -28899,6 +28924,20 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "cycurid_ios"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "cycurid_ios"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -30755,6 +30794,37 @@
         "superclassNames": [
           "cycurid_ios.DataGroup"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "cycurid_ios",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "cycurid_ios"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "cycurid_ios"
+      },
+      {
+        "kind": "Import",
+        "name": "Vision",
+        "printedName": "Vision",
+        "declKind": "Import",
+        "moduleName": "cycurid_ios"
       },
       {
         "kind": "TypeDecl",
@@ -39364,6 +39434,13 @@
             "mangledName": "$s11cycurid_ios8CryptorsP"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "cycurid_ios"
       },
       {
         "kind": "Import",
@@ -49728,14 +49805,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UIImage",
-                "printedName": "UIKit.UIImage",
-                "usr": "c:objc(cs)UIImage"
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:11cycurid_ios15QKMRZScanResultC13documentImageSo7UIImageCvp",
-            "mangledName": "$s11cycurid_ios15QKMRZScanResultC13documentImageSo7UIImageCvp",
+            "usr": "s:11cycurid_ios15QKMRZScanResultC13documentImageSo7UIImageCSgvp",
+            "mangledName": "$s11cycurid_ios15QKMRZScanResultC13documentImageSo7UIImageCSgvp",
             "moduleName": "cycurid_ios",
             "declAttributes": [
               "Final",
@@ -49752,14 +49837,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UIImage",
-                    "printedName": "UIKit.UIImage",
-                    "usr": "c:objc(cs)UIImage"
+                    "name": "Optional",
+                    "printedName": "UIKit.UIImage?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIImage",
+                        "printedName": "UIKit.UIImage",
+                        "usr": "c:objc(cs)UIImage"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:11cycurid_ios15QKMRZScanResultC13documentImageSo7UIImageCvg",
-                "mangledName": "$s11cycurid_ios15QKMRZScanResultC13documentImageSo7UIImageCvg",
+                "usr": "s:11cycurid_ios15QKMRZScanResultC13documentImageSo7UIImageCSgvg",
+                "mangledName": "$s11cycurid_ios15QKMRZScanResultC13documentImageSo7UIImageCSgvg",
                 "moduleName": "cycurid_ios",
                 "implicit": true,
                 "declAttributes": [
@@ -50357,65 +50450,6 @@
                 "declAttributes": [
                   "Final"
                 ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "faceImage",
-            "printedName": "faceImage",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIImage?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIImage",
-                    "printedName": "UIKit.UIImage",
-                    "usr": "c:objc(cs)UIImage"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11cycurid_ios15QKMRZScanResultC9faceImageSo7UIImageCSgvp",
-            "mangledName": "$s11cycurid_ios15QKMRZScanResultC9faceImageSo7UIImageCSgvp",
-            "moduleName": "cycurid_ios",
-            "declAttributes": [
-              "SetterAccess",
-              "Lazy",
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "UIKit.UIImage?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UIImage",
-                        "printedName": "UIKit.UIImage",
-                        "usr": "c:objc(cs)UIImage"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11cycurid_ios15QKMRZScanResultC9faceImageSo7UIImageCSgvg",
-                "mangledName": "$s11cycurid_ios15QKMRZScanResultC9faceImageSo7UIImageCSgvg",
-                "moduleName": "cycurid_ios",
-                "implicit": true,
                 "accessorKind": "get"
               }
             ]
@@ -79922,7 +79956,7 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/CycuridClass.swift",
       "kind": "StringLiteral",
-      "offset": 22504,
+      "offset": 23503,
       "length": 9,
       "value": "\"license\""
     },
@@ -81068,6 +81102,90 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 773,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 925,
+      "length": 50,
+      "value": "\"com.example.apple-samplecode.CaptureSessionQueue\""
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1132,
+      "length": 51,
+      "value": "\"com.example.apple-samplecode.VideoDataOutputQueue\""
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1438,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1444,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1454,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1465,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1897,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1903,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1923,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1929,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 18012,
+      "length": 4,
+      "value": "true"
+    },
+    {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/NFCPassportReader\/DataGroups\/SOD.swift",
       "kind": "Array",
       "offset": 2158,
@@ -81213,6 +81331,62 @@
       "offset": 2203,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/StringUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 39,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/StringUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 62,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/StringUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 84,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/StringUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 97,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/StringUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 115,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/StringUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3362,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/StringUtils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3615,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/StringUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 3639,
+      "length": 2,
+      "value": "\"\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/CryptoSwift\/AES.swift",
@@ -83551,34 +83725,6 @@
       "offset": 290,
       "length": 5,
       "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/QKMRZScanner\/QKMRZScanResult.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1080,
-      "length": 3,
-      "value": "-30"
-    },
-    {
-      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/QKMRZScanner\/QKMRZScanResult.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1089,
-      "length": 3,
-      "value": "-85"
-    },
-    {
-      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/QKMRZScanner\/QKMRZScanResult.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1107,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/QKMRZScanner\/QKMRZScanResult.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1114,
-      "length": 2,
-      "value": "50"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/NFCPassportReader\/DataGroups\/ChipAuthenticationInfo.swift",
@@ -86194,7 +86340,7 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/ReviewMRZViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 18624,
+      "offset": 18666,
       "length": 5,
       "value": "false"
     },

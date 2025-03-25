@@ -833,6 +833,7 @@ public struct CycuridOptions {
   public static func testSaveKeychain(jwt: Swift.String)
   public func beginProcess(flow: cycurid_ios.CycuridType, delegateClass: Any)
   public func beginProcessReact(vc: UIKit.UIViewController)
+  public func passportTest(delegateClass: Any)
   public func beginProcessDocumentUpload(flow: cycurid_ios.CycuridType, delegateClass: Any)
   @objc override dynamic public init()
   @objc deinit
@@ -3012,7 +3013,7 @@ extension cycurid_ios.CS.BigUInt {
   public func signum() -> cycurid_ios.CS.BigUInt
 }
 @_hasMissingDesignatedInitializers public class QKMRZScanResult {
-  final public let documentImage: UIKit.UIImage
+  final public let documentImage: UIKit.UIImage?
   final public let documentType: Swift.String
   final public let countryCode: Swift.String
   final public let surnames: Swift.String
@@ -3024,9 +3025,6 @@ extension cycurid_ios.CS.BigUInt {
   final public let expiryDate: Foundation.Date?
   final public let personalNumber: Swift.String
   final public let personalNumber2: Swift.String?
-  public var faceImage: UIKit.UIImage? {
-    get
-  }
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
