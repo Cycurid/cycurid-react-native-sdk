@@ -16453,6 +16453,31 @@
           },
           {
             "kind": "Function",
+            "name": "passportTest",
+            "printedName": "passportTest(delegateClass:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11cycurid_ios12CycurIDClassC12passportTest13delegateClassyyp_tF",
+            "mangledName": "$s11cycurid_ios12CycurIDClassC12passportTest13delegateClassyyp_tF",
+            "moduleName": "cycurid_ios",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "beginProcessDocumentUpload",
             "printedName": "beginProcessDocumentUpload(flow:delegateClass:)",
             "children": [
@@ -16478,8 +16503,7 @@
             "mangledName": "$s11cycurid_ios12CycurIDClassC26beginProcessDocumentUpload4flow13delegateClassyAA11CycuridTypeO_yptF",
             "moduleName": "cycurid_ios",
             "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -79932,7 +79956,7 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/CycuridClass.swift",
       "kind": "StringLiteral",
-      "offset": 23547,
+      "offset": 23503,
       "length": 9,
       "value": "\"license\""
     },
@@ -81157,7 +81181,7 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 17860,
+      "offset": 18020,
       "length": 4,
       "value": "true"
     },

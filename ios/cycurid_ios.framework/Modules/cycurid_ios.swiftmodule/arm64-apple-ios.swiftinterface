@@ -833,6 +833,7 @@ public struct CycuridOptions {
   public static func testSaveKeychain(jwt: Swift.String)
   public func beginProcess(flow: cycurid_ios.CycuridType, delegateClass: Any)
   public func beginProcessReact(vc: UIKit.UIViewController)
+  public func passportTest(delegateClass: Any)
   public func beginProcessDocumentUpload(flow: cycurid_ios.CycuridType, delegateClass: Any)
   @objc override dynamic public init()
   @objc deinit
