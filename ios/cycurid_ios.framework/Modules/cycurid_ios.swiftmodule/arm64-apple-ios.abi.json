@@ -81110,78 +81110,99 @@
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 815,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 853,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 890,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
       "kind": "StringLiteral",
-      "offset": 925,
+      "offset": 1043,
       "length": 50,
       "value": "\"com.example.apple-samplecode.CaptureSessionQueue\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1132,
+      "offset": 1250,
       "length": 51,
       "value": "\"com.example.apple-samplecode.VideoDataOutputQueue\""
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1438,
+      "offset": 1556,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1444,
+      "offset": 1562,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1454,
+      "offset": 1572,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1465,
+      "offset": 1583,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1897,
+      "offset": 2015,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1903,
+      "offset": 2021,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1923,
+      "offset": 2041,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1929,
+      "offset": 2047,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/PassportScanViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 18020,
+      "offset": 19627,
       "length": 4,
       "value": "true"
     },
@@ -86340,7 +86361,28 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/ReviewMRZViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 18672,
+      "offset": 536,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/ReviewMRZViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 574,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/ReviewMRZViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 611,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/ReviewMRZViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 19214,
       "length": 5,
       "value": "false"
     },
