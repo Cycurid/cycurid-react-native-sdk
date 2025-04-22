@@ -2860,6 +2860,7 @@ public enum NFCViewDisplayMessage {
   case authenticatingWithPassport(Swift.Int)
   case readingDataGroupProgress(cycurid_ios.DataGroupId, Swift.Int)
   case error(cycurid_ios.NFCPassportReaderError)
+  case activeAuthentication
   case successfulRead
 }
 @available(iOS 13, macOS 10.15, *)
@@ -3710,6 +3711,7 @@ public enum NFCPassportReaderError : Swift.Error {
   case ConnectionError
   case UserCanceled
   case InvalidMRZKey
+  case TimeOutError
   case MoreThanOneTagFound
   case InvalidHashAlgorithmSpecified
   case UnsupportedCipherAlgorithm
@@ -3718,6 +3720,7 @@ public enum NFCPassportReaderError : Swift.Error {
   case ChipAuthenticationFailed
   case InvalidDataPassed(Swift.String)
   case NotYetSupported(Swift.String)
+  case Unknown(any Swift.Error)
 }
 @available(iOS 13, macOS 10.15, *)
 extension cycurid_ios.NFCPassportReaderError : Foundation.LocalizedError {

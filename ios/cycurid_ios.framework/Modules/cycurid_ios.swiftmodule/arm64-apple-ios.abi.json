@@ -46493,6 +46493,43 @@
           },
           {
             "kind": "Var",
+            "name": "activeAuthentication",
+            "printedName": "activeAuthentication",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(cycurid_ios.NFCViewDisplayMessage.Type) -> cycurid_ios.NFCViewDisplayMessage",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NFCViewDisplayMessage",
+                    "printedName": "cycurid_ios.NFCViewDisplayMessage",
+                    "usr": "s:11cycurid_ios21NFCViewDisplayMessageO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "cycurid_ios.NFCViewDisplayMessage.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NFCViewDisplayMessage",
+                        "printedName": "cycurid_ios.NFCViewDisplayMessage",
+                        "usr": "s:11cycurid_ios21NFCViewDisplayMessageO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11cycurid_ios21NFCViewDisplayMessageO20activeAuthenticationyA2CmF",
+            "mangledName": "$s11cycurid_ios21NFCViewDisplayMessageO20activeAuthenticationyA2CmF",
+            "moduleName": "cycurid_ios"
+          },
+          {
+            "kind": "Var",
             "name": "successfulRead",
             "printedName": "successfulRead",
             "children": [
@@ -60146,6 +60183,43 @@
           },
           {
             "kind": "Var",
+            "name": "TimeOutError",
+            "printedName": "TimeOutError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(cycurid_ios.NFCPassportReaderError.Type) -> cycurid_ios.NFCPassportReaderError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NFCPassportReaderError",
+                    "printedName": "cycurid_ios.NFCPassportReaderError",
+                    "usr": "s:11cycurid_ios22NFCPassportReaderErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "cycurid_ios.NFCPassportReaderError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NFCPassportReaderError",
+                        "printedName": "cycurid_ios.NFCPassportReaderError",
+                        "usr": "s:11cycurid_ios22NFCPassportReaderErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11cycurid_ios22NFCPassportReaderErrorO07TimeOutE0yA2CmF",
+            "mangledName": "$s11cycurid_ios22NFCPassportReaderErrorO07TimeOutE0yA2CmF",
+            "moduleName": "cycurid_ios"
+          },
+          {
+            "kind": "Var",
             "name": "MoreThanOneTagFound",
             "printedName": "MoreThanOneTagFound",
             "children": [
@@ -60490,6 +60564,56 @@
             "declKind": "EnumElement",
             "usr": "s:11cycurid_ios22NFCPassportReaderErrorO15NotYetSupportedyACSScACmF",
             "mangledName": "$s11cycurid_ios22NFCPassportReaderErrorO15NotYetSupportedyACSScACmF",
+            "moduleName": "cycurid_ios"
+          },
+          {
+            "kind": "Var",
+            "name": "Unknown",
+            "printedName": "Unknown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(cycurid_ios.NFCPassportReaderError.Type) -> (any Swift.Error) -> cycurid_ios.NFCPassportReaderError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(any Swift.Error) -> cycurid_ios.NFCPassportReaderError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NFCPassportReaderError",
+                        "printedName": "cycurid_ios.NFCPassportReaderError",
+                        "usr": "s:11cycurid_ios22NFCPassportReaderErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "cycurid_ios.NFCPassportReaderError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NFCPassportReaderError",
+                        "printedName": "cycurid_ios.NFCPassportReaderError",
+                        "usr": "s:11cycurid_ios22NFCPassportReaderErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11cycurid_ios22NFCPassportReaderErrorO7UnknownyACs0E0_pcACmF",
+            "mangledName": "$s11cycurid_ios22NFCPassportReaderErrorO7UnknownyACs0E0_pcACmF",
             "moduleName": "cycurid_ios"
           },
           {
@@ -78731,7 +78855,7 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/NetworkManager.swift",
       "kind": "StringLiteral",
-      "offset": 37709,
+      "offset": 38658,
       "length": 6,
       "value": "\"\r\n\""
     },
@@ -86382,7 +86506,7 @@
     {
       "filePath": "\/Users\/ekam\/Apps\/CYCURID-SDKS\/Cycurid-iOS-SDK\/cycurid-ios\/cycurid-ios\/Passport\/Controllers\/ReviewMRZViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 19214,
+      "offset": 20693,
       "length": 5,
       "value": "false"
     },
