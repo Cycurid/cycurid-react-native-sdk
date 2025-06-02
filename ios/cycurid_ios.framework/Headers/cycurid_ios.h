@@ -114,7 +114,6 @@
 #import "lhash.h"
 #import "asn1err.h"
 
-#import "objcthemis.h"
 
 //! Project version number for cycurid_ios.
 FOUNDATION_EXPORT double cycurid_iosVersionNumber;

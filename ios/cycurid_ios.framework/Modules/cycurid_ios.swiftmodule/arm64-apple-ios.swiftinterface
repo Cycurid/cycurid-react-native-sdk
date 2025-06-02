@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name cycurid_ios
+// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name cycurid_ios
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
 import AVFoundation
 import AVKit
 import AudioToolbox
@@ -74,6 +75,7 @@ public enum CertificateItem : Swift.String {
   case notBefore
   case notAfter
   public init?(rawValue: Swift.String)
+  @available(iOS 13, macOS 10.15, *)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -140,6 +142,7 @@ public enum DocTypeEnum : Swift.String {
   case TD2
   case OTHER
   public init?(rawValue: Swift.String)
+  @available(iOS 13, macOS 10.15, *)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -467,9 +470,7 @@ extension cycurid_ios.CS.BigInt : Swift.CustomPlaygroundDisplayConvertible {
 @available(iOS 13, *)
 public class PACEHandler {
   public init(cardAccess: cycurid_ios.CardAccess, tagReader: cycurid_ios.TagReader) throws
-  #if compiler(>=5.3) && $AsyncAwait
   public func doPACE(mrzKey: Swift.String) async throws
-  #endif
   @objc deinit
 }
 @available(iOS 13, *)
@@ -479,9 +480,7 @@ public class BACHandler {
   public var kifd: [Swift.UInt8]
   public init()
   public init(tagReader: cycurid_ios.TagReader)
-  #if compiler(>=5.3) && $AsyncAwait
   public func performBACAndGetSessionKeys(mrzKey: Swift.String) async throws
-  #endif
   public func sessionKeys(data: [Swift.UInt8]) throws -> ([Swift.UInt8], [Swift.UInt8], [Swift.UInt8])
   @objc deinit
 }
@@ -663,7 +662,7 @@ final internal class StreamEncryptor : cycurid_ios.Cryptor, cycurid_ios.Updatabl
   @inlinable final public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool) throws -> Swift.Array<Swift.UInt8> {
     var accumulated = Array(bytes)
     if isLast {
-      // CTR doesn't need padding. Really. Add padding to the last block if really want. but... don't.
+       
       accumulated = self.padding.add(to: accumulated, blockSize: self.blockSize - self.lastBlockRemainder)
     }
 
@@ -672,7 +671,7 @@ final internal class StreamEncryptor : cycurid_ios.Cryptor, cycurid_ios.Updatabl
       encrypted += self.worker.encrypt(block: chunk)
     }
 
-    // omit unecessary calculation if not needed
+     
     if self.padding != .noPadding {
       self.lastBlockRemainder = encrypted.count.quotientAndRemainder(dividingBy: self.blockSize).remainder
     }
@@ -833,7 +832,6 @@ public struct CycuridOptions {
   public static func testSaveKeychain(jwt: Swift.String)
   public func beginProcess(flow: cycurid_ios.CycuridType, delegateClass: Any)
   public func beginProcessReact(vc: UIKit.UIViewController)
-  public func passportTest(delegateClass: Any)
   public func beginProcessDocumentUpload(flow: cycurid_ios.CycuridType, delegateClass: Any)
   @objc override dynamic public init()
   @objc deinit
@@ -953,9 +951,9 @@ extension cycurid_ios.Checksum {
   }
 }
 extension UIKit.UIImageView {
-  @_Concurrency.MainActor(unsafe) public func loadGif(name: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func loadGif(name: Swift.String)
   @available(iOS 9.0, *)
-  @_Concurrency.MainActor(unsafe) public func loadGif(asset: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func loadGif(asset: Swift.String)
 }
 extension UIKit.UIImage {
   public class func gif(data: Foundation.Data) -> UIKit.UIImage?
@@ -1711,15 +1709,15 @@ public class BlockDecryptor : cycurid_ios.Cryptor, cycurid_ios.Updatable {
   @inlinable public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8> {
     self.accumulated += bytes
 
-    // If a worker (eg GCM) can combine ciphertext + tag
-    // we need to remove tag from the ciphertext.
+     
+     
     if !isLast && self.accumulated.count < self.blockSize + self.worker.additionalBufferSize {
       return []
     }
 
     let accumulatedWithoutSuffix: Array<UInt8>
     if self.worker.additionalBufferSize > 0 {
-      // FIXME: how slow is that?
+       
       accumulatedWithoutSuffix = Array(self.accumulated.prefix(self.accumulated.count - self.worker.additionalBufferSize))
     } else {
       accumulatedWithoutSuffix = self.accumulated
@@ -1727,13 +1725,13 @@ public class BlockDecryptor : cycurid_ios.Cryptor, cycurid_ios.Updatable {
 
     var processedBytesCount = 0
     var plaintext = Array<UInt8>(reserveCapacity: accumulatedWithoutSuffix.count)
-    // Processing in a block-size manner. It's good for block modes, but bad for stream modes.
+     
     for var chunk in accumulatedWithoutSuffix.batched(by: self.blockSize) {
       if isLast || (accumulatedWithoutSuffix.count - processedBytesCount) >= blockSize {
         let isLastChunk = processedBytesCount + chunk.count == accumulatedWithoutSuffix.count
 
         if isLast, isLastChunk, var finalizingWorker = worker as? FinalizingDecryptModeWorker {
-          chunk = try finalizingWorker.willDecryptLast(bytes: chunk + accumulated.suffix(worker.additionalBufferSize)) // tag size
+          chunk = try finalizingWorker.willDecryptLast(bytes: chunk + accumulated.suffix(worker.additionalBufferSize))  
         }
 
         if !chunk.isEmpty {
@@ -1747,7 +1745,7 @@ public class BlockDecryptor : cycurid_ios.Cryptor, cycurid_ios.Updatable {
         processedBytesCount += chunk.count
       }
     }
-    accumulated.removeFirst(processedBytesCount) // super-slow
+    accumulated.removeFirst(processedBytesCount)  
 
     if isLast {
       if accumulatedWithoutSuffix.isEmpty, var finalizingWorker = worker as? FinalizingDecryptModeWorker {
@@ -2399,7 +2397,7 @@ final public class AES {
       b3 = lb30 ^ lb31 ^ lb32 ^ lb33
     }
 
-    // last round
+     
     let r = rounds - 1
 
     t[0] = b0 ^ rk[r][0]
@@ -2407,7 +2405,7 @@ final public class AES {
     t[2] = b2 ^ rk[r][2]
     t[3] = b3 ^ rk[r][3]
 
-    // rounds
+     
     b0 = F1(t[0], t[1], t[2], t[3]) ^ rk[rounds][0]
     b1 = F1(t[1], t[2], t[3], t[0]) ^ rk[rounds][1]
     b2 = F1(t[2], t[3], t[0], t[1]) ^ rk[rounds][2]
@@ -2439,7 +2437,7 @@ extension cycurid_ios.AES : cycurid_ios.Cipher {
     for chunk in chunks {
       out += try oneTimeCryptor.update(withBytes: chunk, isLast: false)
     }
-    // Padding may be added at the very end
+     
     out += try oneTimeCryptor.finish()
 
     if self.blockMode.options.contains(.paddingRequired) && (out.count % AES.blockSize != 0) {
@@ -2464,8 +2462,8 @@ extension cycurid_ios.AES : cycurid_ios.Cipher {
     var lastIdx = chunks.startIndex
     chunks.indices.formIndex(&lastIdx, offsetBy: chunks.count - 1)
 
-    // To properly remove padding, `isLast` has to be known when called with the last chunk of ciphertext
-    // Last chunk of ciphertext may contains padded data so next call to update(..) won't be able to remove it
+     
+     
     for idx in chunks.indices {
       out += try oneTimeCryptor.update(withBytes: chunks[idx], isLast: idx == lastIdx)
     }
@@ -2509,10 +2507,10 @@ extension cycurid_ios.SHA3 : cycurid_ios.Updatable {
     self.accumulated += bytes
 
     if isLast {
-      // Add padding
+       
       let markByteIndex = self.accumulated.count
 
-      // We need to always pad the input. Even if the input is a multiple of blockSize.
+       
       let r = self.blockSize * 8
       let q = (r / 8) - (accumulated.count % (r / 8))
       self.accumulated += Array<UInt8>(repeating: 0, count: q)
@@ -2530,12 +2528,12 @@ extension cycurid_ios.SHA3 : cycurid_ios.Updatable {
     }
     self.accumulated.removeFirst(processedBytes)
 
-    // TODO: verify performance, reduce vs for..in
+     
     let result = self.accumulatedHash.reduce(into: Array<UInt8>()) { (result, value) in
       result += value.bigEndian.bytes()
     }
 
-    // reset hash value for instance
+     
     if isLast {
       self.accumulatedHash = Array<UInt64>(repeating: 0, count: self.digestLength)
     }
@@ -2580,7 +2578,7 @@ final internal class StreamDecryptor : cycurid_ios.Cryptor, cycurid_ios.Updatabl
     let toProcess = self.accumulated.prefix(max(self.accumulated.count - self.worker.additionalBufferSize, 0))
 
     if var finalizingWorker = worker as? FinalizingDecryptModeWorker, isLast == true {
-      // will truncate suffix if needed
+       
       try finalizingWorker.willDecryptLast(bytes: self.accumulated.slice)
     }
 
@@ -2595,17 +2593,17 @@ final internal class StreamDecryptor : cycurid_ios.Cryptor, cycurid_ios.Updatabl
       plaintext = Array(try finalizingWorker.didDecryptLast(bytes: plaintext.slice))
     }
 
-    // omit unecessary calculation if not needed
+     
     if self.padding != .noPadding {
       self.lastBlockRemainder = plaintext.count.quotientAndRemainder(dividingBy: self.blockSize).remainder
     }
 
     if isLast {
-      // CTR doesn't need padding. Really. Add padding to the last block if really want. but... don't.
+       
       plaintext = self.padding.remove(from: plaintext, blockSize: self.blockSize - self.lastBlockRemainder)
     }
 
-    self.accumulated.removeFirst(processedBytesCount) // super-slow
+    self.accumulated.removeFirst(processedBytesCount)  
 
     if var finalizingWorker = worker as? FinalizingDecryptModeWorker, isLast == true {
       plaintext = Array(try finalizingWorker.finalize(decrypt: plaintext.slice))
@@ -2663,12 +2661,12 @@ extension cycurid_ios.SHA1 : cycurid_ios.Updatable {
 
     if isLast {
       let lengthInBits = (processedBytesTotalCount + self.accumulated.count) * 8
-      let lengthBytes = lengthInBits.bytes(totalBytes: 64 / 8) // A 64-bit representation of b
+      let lengthBytes = lengthInBits.bytes(totalBytes: 64 / 8)  
 
-      // Step 1. Append padding
+       
       bitPadding(to: &self.accumulated, blockSize: SHA1.blockSize, allowance: 64 / 8)
 
-      // Step 2. Append Length a 64-bit representation of lengthInBits
+       
       self.accumulated += lengthBytes
     }
 
@@ -2682,7 +2680,7 @@ extension cycurid_ios.SHA1 : cycurid_ios.Updatable {
     self.accumulated.removeFirst(processedBytes)
     self.processedBytesTotalCount += processedBytes
 
-    // output current hash
+     
     var result = Array<UInt8>(repeating: 0, count: SHA1.digestLength)
     var pos = 0
     for idx in 0..<self.accumulatedHash.count {
@@ -2694,7 +2692,7 @@ extension cycurid_ios.SHA1 : cycurid_ios.Updatable {
       pos += 4
     }
 
-    // reset hash value for instance
+     
     if isLast {
       self.accumulatedHash = SHA1.hashInitialValue
     }
@@ -2760,11 +2758,11 @@ public enum FailedCheck : Swift.CaseIterable {
   case pSelectFlag
   case suspiciousObjCClasses
   public static func == (a: cycurid_ios.FailedCheck, b: cycurid_ios.FailedCheck) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
   public typealias AllCases = [cycurid_ios.FailedCheck]
-  public static var allCases: [cycurid_ios.FailedCheck] {
+  nonisolated public static var allCases: [cycurid_ios.FailedCheck] {
     get
   }
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -2772,9 +2770,9 @@ public enum FailedCheck : Swift.CaseIterable {
 extension Swift.FixedWidthInteger {
   @inlinable internal func bytes(totalBytes: Swift.Int = MemoryLayout<Self>.size) -> Swift.Array<Swift.UInt8> {
     arrayOfBytes(value: self.littleEndian, length: totalBytes)
-    // TODO: adjust bytes order
-    // var value = self.littleEndian
-    // return withUnsafeBytes(of: &value, Array.init).reversed()
+     
+     
+     
   }
 }
 @_specialize(exported: false, kind: full, where T == Swift.Int)
@@ -3220,7 +3218,7 @@ extension cycurid_ios.Rabbit : cycurid_ios.Cipher {
     buf.deallocate()
   }
 
-  // xor
+   
   for i in 0..<length {
     buf[i] = left[left.startIndex.advanced(by: i)] ^ right[right.startIndex.advanced(by: i)]
   }
@@ -3229,13 +3227,13 @@ extension cycurid_ios.Rabbit : cycurid_ios.Cipher {
 }
 @inline(__always) @inlinable internal func bitPadding(to data: inout Swift.Array<Swift.UInt8>, blockSize: Swift.Int, allowance: Swift.Int = 0) {
   let msgLength = data.count
-  // Step 1. Append Padding Bits
-  // append one bit (UInt8 with one bit) to message
+   
+   
   data.append(0x80)
 
-  // Step 2. append "0" bit until message length in bits ≡ 448 (mod 512)
-  let max = blockSize - allowance // 448, 986
-  if msgLength % blockSize < max { // 448
+   
+  let max = blockSize - allowance  
+  if msgLength % blockSize < max {  
     data += Array<UInt8>(repeating: 0, count: max - 1 - (msgLength % blockSize))
   } else {
     data += Array<UInt8>(repeating: 0, count: blockSize + max - 1 - (msgLength % blockSize))
@@ -3298,7 +3296,7 @@ public enum LogLevel : Swift.Int, Swift.CaseIterable {
   public init?(rawValue: Swift.Int)
   public typealias AllCases = [cycurid_ios.LogLevel]
   public typealias RawValue = Swift.Int
-  public static var allCases: [cycurid_ios.LogLevel] {
+  nonisolated public static var allCases: [cycurid_ios.LogLevel] {
     get
   }
   public var rawValue: Swift.Int {
@@ -3328,9 +3326,7 @@ public class PassportReader : ObjectiveC.NSObject {
   public init(logLevel: cycurid_ios.LogLevel = .info, masterListURL: Foundation.URL? = nil)
   public func setMasterListURL(_ masterListURL: Foundation.URL)
   public func overrideNFCDataAmountToRead(amount: Swift.Int)
-  #if compiler(>=5.3) && $AsyncAwait
   public func readPassport(mrzKey: Swift.String, tags: [cycurid_ios.DataGroupId] = [], skipSecureElements: Swift.Bool = true, skipCA: Swift.Bool = false, skipPACE: Swift.Bool = false, customDisplayMessage: ((cycurid_ios.NFCViewDisplayMessage) -> Swift.String?)? = nil) async throws -> cycurid_ios.NFCPassportModel
-  #endif
   @objc deinit
 }
 @available(iOS 13, *)
@@ -3416,9 +3412,11 @@ public enum DataGroupId : Swift.Int, Swift.CaseIterable {
   public func getName() -> Swift.String
   public static func getIDFromName(name: Swift.String) -> cycurid_ios.DataGroupId
   public init?(rawValue: Swift.Int)
+  @available(iOS 13, macOS 10.15, *)
   public typealias AllCases = [cycurid_ios.DataGroupId]
+  @available(iOS 13, macOS 10.15, *)
   public typealias RawValue = Swift.Int
-  public static var allCases: [cycurid_ios.DataGroupId] {
+  nonisolated public static var allCases: [cycurid_ios.DataGroupId] {
     get
   }
   public var rawValue: Swift.Int {
@@ -3600,12 +3598,12 @@ extension cycurid_ios.SHA2 : cycurid_ios.Updatable {
 
     if isLast {
       let lengthInBits = (processedBytesTotalCount + self.accumulated.count) * 8
-      let lengthBytes = lengthInBits.bytes(totalBytes: self.blockSize / 8) // A 64-bit/128-bit representation of b. blockSize fit by accident.
+      let lengthBytes = lengthInBits.bytes(totalBytes: self.blockSize / 8)  
 
-      // Step 1. Append padding
+       
       bitPadding(to: &self.accumulated, blockSize: self.blockSize, allowance: self.blockSize / 8)
 
-      // Step 2. Append Length a 64-bit representation of lengthInBits
+       
       self.accumulated += lengthBytes
     }
 
@@ -3624,7 +3622,7 @@ extension cycurid_ios.SHA2 : cycurid_ios.Updatable {
     self.accumulated.removeFirst(processedBytes)
     self.processedBytesTotalCount += processedBytes
 
-    // output current hash
+     
     var result = Array<UInt8>(repeating: 0, count: variant.digestLength)
     switch self.variant {
       case .sha224, .sha256:
@@ -3653,11 +3651,11 @@ extension cycurid_ios.SHA2 : cycurid_ios.Updatable {
         }
     }
 
-    // reset hash value for instance
+     
     if isLast {
       switch self.variant {
         case .sha224, .sha256:
-          self.accumulatedHash32 = self.variant.h.lazy.map { UInt32($0) } // FIXME: UInt64 for process64
+          self.accumulatedHash32 = self.variant.h.lazy.map { UInt32($0) }  
         case .sha384, .sha512:
           self.accumulatedHash64 = self.variant.h
       }
@@ -3997,5 +3995,6 @@ extension cycurid_ios.CS.BigInt.Sign : Swift.Hashable {}
 extension cycurid_ios.SHA2.Variant : Swift.Equatable {}
 extension cycurid_ios.SHA2.Variant : Swift.Hashable {}
 extension cycurid_ios.SHA2.Variant : Swift.Sendable {}
+extension cycurid_ios.SHA2.Variant : Swift.BitwiseCopyable {}
 extension cycurid_ios.CipherError : Swift.Equatable {}
 extension cycurid_ios.CipherError : Swift.Hashable {}

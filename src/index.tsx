@@ -6,13 +6,25 @@ export function initCycurid(
   options: CycuridConfig
 ): Promise<string> {
   return new Promise((resolve, reject) => {
-    CycuridSdk.initCycurid(type, options.toJson())
-      .then((result: string) => {
-        resolve(result);
-      })
-      .catch((error: any) => {
-        reject(error);
-      });
+    if (
+      options.apiKey == null ||
+      options.secretKey == null ||
+      options.userId == null
+    ) {
+      reject(
+        new Error(
+          'Missing required configuration: apiKey, secretKey, or userId is null or undefined.'
+        )
+      );
+    } else {
+      CycuridSdk.initCycurid(type, options.toJson())
+        .then((result: string) => {
+          resolve(result);
+        })
+        .catch((error: any) => {
+          reject(error);
+        });
+    }
   });
 }
 

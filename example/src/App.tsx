@@ -12,8 +12,8 @@ export default function App() {
   const handleButtonPress = async (type: CycurIdType) => {
     console.log(`Starting process for: ${type}`);
     const config = new CycuridConfig(
-      'It04Ip0M5o2rPeQN9yheVHcmsFq79zdA',
-      'Ueymke3TDVL8TED7Ec5qIzPXSVrr5c4gl_ANQrz2p4NSo5dI7X5j6I6b',
+      'MERCHANT_KEY',
+      'SECRET_KEY',
       'ekam_test_01'
     );
 
